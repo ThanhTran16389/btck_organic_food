@@ -83,45 +83,52 @@ INSERT INTO
     )
 VALUES
     (
-        'Upgrade Your Wardrobe: Fashion Finds Await!',
-        'fashion-finds-await',
+        'Organic And Heathy',
+        'organic-and-heathy',
         '/storage/photos/1/banner/banner-01.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(99, 99, 99);\">Get Up to 10% on your every purchase!</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Organic And Heathy</span></h2>',
         'active'
     ),
     (
-        'Staycation Essentials: Create Your Haven!',
-        'create-your-haven',
-        '/storage/photos/1/banner/banner-07.jpg',
-        '<p>Get Up to 35% OFF</p>',
+        'Organic And Heathy Food',
+        'organic-and-heathy-food',
+        '/storage/photos/1/banner/banner-02.jpg',
+        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Organic And Heathy Food</span></h2>',
         'active'
     ),
     (
-        'Exclusive Online Offers',
-        'exclusive-online-offers',
+        'ENJOY WITH HEATHY FOOD',
+        'enjoy-with-heathy-food',
+        '/storage/photos/1/banner/banner-03.jpg',
+        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">ENJOY WITH HEATHY FOOD</span></h2>',
+        'active'
+    ),
+    (
+        'Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath',
+        'natural-organic-heath',
+        '/storage/photos/1/banner/banner-04.jpg',
+        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath</span></h2>',
+        'active'
+    ),
+    (
+        'Eat Heathy, Eat Organic',
+        'eat-heathy-eat-organic',
+        '/storage/photos/1/banner/banner-05.jpg',
+        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Eat Heathy, Eat Organic</span></h2>',
+        'active'
+    ),
+    (
+        'Organic and Heathy Heathy',
+        'organic-and-heathy-heathy',
         '/storage/photos/1/banner/banner-06.jpg',
-        '<span style=\"color: rgb(15, 15, 15); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space-collapse: preserve;\">Online Offers: Yours to Discover!</span><br>',
+        '<h2><span style=\"font-weight: bold; color: rgb(188, 221, 201);\">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span></h2>',
         'active'
     ),
     (
-        'T-SHIRT POLO THỂ THAO',
-        't-shirt-polo-the-thao',
-        '/storage/photos/1/banner/banner-01a.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(99, 99, 99);\">SIP ÊM MỀM MẶC LÀ HMMM</span></h2>',
-        'active'
-    ),
-    (
-        'HIGH COZINESS',
-        'high-coziness',
-        '/storage/photos/1/banner/banner-01b.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(99, 99, 99);\">SIP ÊM MỀM MẶC LÀ HMMM</span></h2>',
-        'active'
-    ),
-    (
-        'BREEZY SUMMER STYLE',
-        'breezy-summer-style',
-        '/storage/photos/1/banner/banner-01c.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(99, 99, 99);\">SIP ÊM MỀM MẶC LÀ HMMM</span></h2>',
+        'Natural Food Vegetarian',
+        'natural-food-vegetarian',
+        '/storage/photos/1/banner/banner-07.jpg',
+        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Natural Food Vegetarian</span></h2>',
         'active'
     );
 

@@ -65,7 +65,7 @@ Ví dụ: `"php.validate.executablePath": "D:/Soft/xampp/php/php.exe", `
 **Bước 6: Cấu hình cho các extension hỗ trợ**
 Theo dõi: [Link](https://ourcodeworld.com/articles/read/349/how-to-install-and-enable-the-imagick-extension-in-xampp-for-windows)
 
-Nếu bạn dùng window thì hãy tải các bản cài đặt dll và thêm config cho file `php.ini` như sau (nhớ sửa lại được dẫn xampp của bạn):
+Nếu dùng window thì tải các bản cài đặt dll và thêm config cho file `php.ini` như sau (sửa lại được dẫn xampp):
 
 ```ini
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -78,15 +78,13 @@ upload_tmp_dir = C:\xampp\temp
 ```
 
 **Bước 7: Cấu hình cho package**
-Kiểm tra trong composer.json bạn sẽ thấy có 2 package là: `unisharp/laravel-filemanager` và `intervention/image-laravel`. Đây là 2 gói hỗ trợ quản lý file hình ảnh. Bạn có thể đọc tài liệu trực tiếp tại: [Laravel File Manager](https://unisharp.github.io/laravel-filemanager) và [Intervention Image](https://github.com/Intervention/image)
+Cài 2 gói : `unisharp/laravel-filemanager` và `intervention/image-laravel`vào composer.json. 2 gói này hỗ trợ quản lý file hình ảnh. Đọc tài liệu trực tiếp tại: [Laravel File Manager](https://unisharp.github.io/laravel-filemanager) và [Intervention Image](https://github.com/Intervention/image)
 
 Trong phần này bạn chỉ cần chạy lệnh:
 
 ```shell
 sh laravel-filemanager.sh
 ```
-
-| Dùng quyền admin trên window hoặc bổ sung `sudo` trên Mac
 
 Sau khi cài đặt xong bạn thử vào một màn hình bất kỳ có tính năng chọn hình ảnh để upload. Ví dụ: `.../public/admin/banner/creates`
 
