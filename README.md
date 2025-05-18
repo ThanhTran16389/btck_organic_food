@@ -58,7 +58,7 @@ Email : customer@mail.com
 Password: customer@mail.com
 ```
 
-**Bước 5 Đổi lại `php.validate.executablePath` trong file `.vscode/settings.json `cho phù hợp với máy của bạn**
+**Bước 5 Đổi lại `php.validate.executablePath` trong file `.vscode/settings.json `cho phù hợp với máy**
 
 Ví dụ: `"php.validate.executablePath": "D:/Soft/xampp/php/php.exe", `
 

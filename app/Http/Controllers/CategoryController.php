@@ -27,8 +27,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $parent_cats = Category::where('is_parent', 1)->orderBy('title', 'ASC')->get();
-
+        // $parent_cats = Category::where('is_parent', 1)->orderBy('title', 'ASC')->get();
+        $parent_cats = Category::where('is_parent', 1)->orderBy('id', 'ASC')->get();
+        dd ($parent_cats);
         return view('backend.category.create')->with('parent_cats', $parent_cats);
     }
 

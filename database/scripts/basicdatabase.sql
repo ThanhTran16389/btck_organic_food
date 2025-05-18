@@ -997,8 +997,8 @@ INSERT INTO
     )
 VALUES
     (
-        'Men\'s Fashion',
-        'mens-fashion',
+        'Nutritious cereals',
+        'nutritious-cereals',
         '/storage/photos/1/categories/mini-banner1.jpg',
         1,
         NULL,
@@ -1006,8 +1006,8 @@ VALUES
         'active'
     ),
     (
-        'Women\'s Fashion',
-        'womens-fashion',
+        'Pulses',
+        'pulses',
         '/storage/photos/1/categories/mini-banner2.jpg',
         1,
         NULL,
@@ -1015,8 +1015,8 @@ VALUES
         'active'
     ),
     (
-        'Kid\'s',
-        'kids',
+        'Spices and Condiments',
+        'spices-and-condiments',
         '/storage/photos/1/mini-banner3.jpg',
         1,
         NULL,
@@ -1024,8 +1024,8 @@ VALUES
         'active'
     ),
     (
-        'Combo\'s',
-        'combos',
+        'Cooking Oils',
+        'cooking-oils',
         '/storage/photos/1/mini-banner4.jpg',
         1,
         NULL,
@@ -1033,8 +1033,8 @@ VALUES
         'active'
     ),
     (
-        'Jogger\'s',
-        'joggers',
+        'Fruit Pulps',
+        'fruit-pulps',
         '/storage/photos/1/mini-banner5.jpg',
         1,
         NULL,
@@ -1042,92 +1042,47 @@ VALUES
         'active'
     ),
     (
-        'T-shirt\'s',
-        't-shirts',
+        'Agro Products',
+        'agro-products',
         NULL,
-        0,
         1,
+        NULL,
         1,
         'active'
     ),
     (
-        'Jeans pants',
-        'jeans-pants',
+        'Oils',
+        'oils',
         NULL,
-        0,
         1,
+        NULL,
         1,
         'active'
     ),
     (
-        'Sweater & Jackets',
-        'sweater-jackets',
+        'Wheat and Wheat Flour',
+        'wheat-and-wheat-flour',
         NULL,
-        0,
         1,
+        NULL,
         1,
         'active'
     ),
     (
-        'Rain Coats & Trenches',
-        'rain-coats-trenches',
+        'Rice and Rice Products',
+        'rice-and-rice-products',
         NULL,
-        0,
         1,
+        NULL,
         1,
         'active'
     ),
     (
-        'Dress',
-        'dress',
+        'Others',
+        'others',
         NULL,
-        0,
-        2,
         1,
-        'active'
-    ),
-    (
-        'Hoodies and Sweatshirts',
-        'hoodies-and-sweatshirts',
         NULL,
-        0,
-        2,
-        1,
-        'active'
-    ),
-    (
-        'Tops and Tshirt',
-        'tops-and-tshirt',
-        NULL,
-        0,
-        2,
-        1,
-        'active'
-    ),
-    (
-        'Pants',
-        'pants',
-        NULL,
-        0,
-        2,
-        1,
-        'active'
-    ),
-    (
-        'Shoes',
-        'shoes',
-        NULL,
-        0,
-        1,
-        1,
-        'active'
-    ),
-    (
-        'Cardigans',
-        'cardigans',
-        NULL,
-        0,
-        2,
         1,
         'active'
     );

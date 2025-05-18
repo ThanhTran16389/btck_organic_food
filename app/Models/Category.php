@@ -10,7 +10,7 @@ class Category extends Model
 
     public function parent_info()
     {
-        return $this->hasOne(Category::class, 'id', 'parent_id');
+        return $this->hasOne(Category::class, 'id', 'parent_id');//join bảng
     }
 
     public static function getAllCategory()
