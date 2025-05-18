@@ -12,28 +12,18 @@
 ### Hướng dẫn cài đặt
 
 **Bước 1: Cài đặt các gói phụ thuộc và config source**
-Để khởi chạy source này trước tiên bạn cần copy `.env.example` thành `.env` và sửa lại các config theo mong muốn, đặc biệt là config mysql.
-
-Tiếp theo hãy cài đặt composer, tạo key cho project và cache lại các config.
-
-Bạn có thể làm các điều này hoặc chạy file `install.sh` để chúng được thực hiện tự động.
 
 ```shell
+cài đặt các gói composer
+chạy file install.sh bằng lệnh
 sh install.sh
 ```
 
 | Dùng quyền admin trên window hoặc bổ sung `sudo` trên Mac
 
 **Bước 2: Tạo cơ sở dữ liệu mẫu**
-
-Trước khi khởi chạy demo bạn cần kết nối nó với một cơ sở dữ liệu mysql.
-Có 2 cách làm là tự thay đổi các file config hoặc sử dụng file sh được chuẩn bị sẵn. Mục đích cuối cần đạt ở bước này là làm được các yêu cầu sau:
-
--   Tạo mới database `ecommerceadvlara` trong mysql
--   Chạy file sql mới nhất trong thư mục `/database/scripts` để tạo mới các table và data trong database vừa mới tạo
--   Sau khi chạy xong hãy kiểm tra lại đã có data hay chưa
-
-Nếu muốn bạn có thể chạy tự động file `database.sh` bằng cách sao chép `.env.example` thành `.env` rồi config lại file `.env` cho đúng với cấu hình database bạn muốn, sau đó chạy
+Trong file .env thiết lập kết nối dữ liệu với DB và đặt tên cơ sở dữ liệu là btck_ogranic_store
+chạy file database.sh bằng dòng lệnh bên dưới
 
 ```shell
 sh database.sh
@@ -41,24 +31,7 @@ sh database.sh
 
 | Dùng quyền admin trên window hoặc bổ sung `sudo` trên Mac
 
-Trong quá trình chạy có thể của sổ lệnh sẽ hỏi mật khẩu, bạn hãy dùng mật khẩu mysql account, tránh nhầm với mật khẩu máy tính.
-
-Database sẽ tự động được thêm và sau khi hoàn tất lệnh.
-
-Nếu bạn gặp lỗi `mysql command not found` bạn có thể tạo database bằng tay và import toàn bộ databasee trong thư file: `database\scripts\runner.sql`
-
-Hoặc bạn có thể fix lỗi `mysql command not found` bằng cách thêm path mysql vào danh sách path:
-
-Cách làm: Tìm ứng dụng tên như ảnh sau:
-![alt text](./other/image1.png)
-
-Chọn Advanced > Environment Variables
-![alt text](./other/image2.png)
-
-Thêm path mysql
-![alt text](./other/image3.png)
-
-Tắt git bash hoặc cmd đang mở và thử chạy lại `sh database.sh`
+Trường hợp gặp lỗi `mysql command not found` thì tạo database bằng tay và import toàn bộ databasee trong thư file: `database\scripts\basicdatabase.sql`
 
 **Bước 3: Cấu hình lại file `.env`**
 
@@ -139,3 +112,8 @@ php artisan config:cache
 
 // Sau khi thực hiện có thể khởi động lại Apache
 ```
+
+GHI CHÚ CHO PHẦN COMMIT:
+Cách đặt tên file commit: yyyy+MM+dd_Tênfile cần commit_Version1,2,3,4..nn
+ví dụ:
+20250518_Readme_v1
