@@ -281,8 +281,6 @@ UNLOCK TABLES;
 
 -- ====================================================================================
 -- ====================================================================================
--- ====================================================================================
--- ====================================================================================
 -- Table structure for table `messages`
 --
 DROP TABLE IF EXISTS `messages`;
@@ -1006,7 +1004,7 @@ VALUES
     (
         'Nutritious cereals',
         'nutritious-cereals',
-        '/storage/photos/1/categories/mini-banner1.jpg',
+        '/storage/photos/1/catergories/Nutritious_cereals/',
         1,
         NULL,
         1,
@@ -1407,7 +1405,7 @@ VALUES
         3
     ),
     (
-        'That\' cool',
+        'That is cool',
         'active',
         NULL,
         3,
@@ -1448,6 +1446,182 @@ VALUES
     );
 
 /*!40000 ALTER TABLE `post_comments` ENABLE KEYS */
+;
+
+UNLOCK TABLES;
+
+-- ====================================================================================
+-- ====================================================================================
+--
+-- Table structure for table `product_reviews`
+--
+DROP TABLE IF EXISTS `product_reviews`;
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */
+;
+
+/*!40101 SET character_set_client = utf8 */
+;
+
+CREATE TABLE `product_reviews` (
+    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+    `rate` tinyint(4) NOT NULL DEFAULT 0,
+    `review` text DEFAULT NULL,
+    `status` enum('active', 'inactive') NOT NULL DEFAULT 'active',
+    `user_id` bigint(20) unsigned DEFAULT NULL,
+    `product_id` bigint(20) unsigned DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT current_timestamp,
+    `updated_at` timestamp NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
+    `delete_at` timestamp NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `product_reviews_user_id_foreign` (`user_id`),
+    KEY `product_reviews_product_id_foreign` (`product_id`),
+    CONSTRAINT `product_reviews_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE
+    SET
+        NULL,
+        CONSTRAINT `product_reviews_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE
+    SET
+        NULL
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+/*!40101 SET character_set_client = @saved_cs_client */
+;
+
+--
+-- Dumping data for table `product_reviews`
+--
+LOCK TABLES `product_reviews` WRITE;
+
+/*!40000 ALTER TABLE `product_reviews` DISABLE KEYS */
+;
+
+/*!40000 ALTER TABLE `product_reviews` ENABLE KEYS */
+;
+
+UNLOCK TABLES;
+
+-- ====================================================================================
+-- ====================================================================================
+--
+-- Table structure for table `carts`
+--
+DROP TABLE IF EXISTS `carts`;
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */
+;
+
+/*!40101 SET character_set_client = utf8 */
+;
+
+CREATE TABLE `carts` (
+    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+    `price` double(8, 2) NOT NULL,
+    `status` enum('new', 'progress', 'delivered', 'cancel') NOT NULL DEFAULT 'new',
+    `quantity` int(11) NOT NULL,
+    `amount` double(8, 2) NOT NULL,
+    `user_id` bigint(20) unsigned DEFAULT NULL,
+    `product_id` bigint(20) unsigned NOT NULL,
+    `order_id` bigint(20) unsigned DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT current_timestamp,
+    `updated_at` timestamp NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
+    `delete_at` timestamp NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `carts_product_id_foreign` (`product_id`),
+    KEY `carts_user_id_foreign` (`user_id`),
+    KEY `carts_order_id_foreign` (`order_id`),
+    CONSTRAINT `carts_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE
+    SET
+        NULL,
+        CONSTRAINT `carts_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+        CONSTRAINT `carts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 10 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+/*!40101 SET character_set_client = @saved_cs_client */
+;
+
+--
+-- Dumping data for table `carts`
+--
+LOCK TABLES `carts` WRITE;
+
+/*!40000 ALTER TABLE `carts` DISABLE KEYS */
+;
+
+INSERT INTO
+    `carts` (`price`, `status`, `quantity`, `amount`)
+VALUES
+    (
+        66.00,
+        'new',
+        2,
+        5
+    ),
+    (
+        77.00,
+        'progress',
+        1,
+        9
+    ) (
+        75.00,
+        'delivered',
+        5,
+        20
+    );
+
+/*!40000 ALTER TABLE `carts` ENABLE KEYS */
+;
+
+UNLOCK TABLES;
+
+-- ====================================================================================
+-- ====================================================================================
+--
+-- Table structure for table `wishlists`
+--
+DROP TABLE IF EXISTS `wishlists`;
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */
+;
+
+/*!40101 SET character_set_client = utf8 */
+;
+
+CREATE TABLE `wishlists` (
+    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+    `price` double(8, 2) NOT NULL,
+    `quantity` int(11) NOT NULL,
+    `amount` double(8, 2) NOT NULL,
+    `product_id` bigint(20) unsigned NOT NULL,
+    `cart_id` bigint(20) unsigned DEFAULT NULL,
+    `user_id` bigint(20) unsigned DEFAULT NULL,
+    `created_at` timestamp NOT NULL DEFAULT current_timestamp,
+    `updated_at` timestamp NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
+    `delete_at` timestamp NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `wishlists_product_id_foreign` (`product_id`),
+    KEY `wishlists_user_id_foreign` (`user_id`),
+    KEY `wishlists_cart_id_foreign` (`cart_id`),
+    CONSTRAINT `wishlists_cart_id_foreign` FOREIGN KEY (`cart_id`) REFERENCES `carts` (`id`) ON DELETE
+    SET
+        NULL,
+        CONSTRAINT `wishlists_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
+        CONSTRAINT `wishlists_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE
+    SET
+        NULL
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+/*!40101 SET character_set_client = @saved_cs_client */
+;
+
+--
+-- Dumping data for table `wishlists`
+--
+LOCK TABLES `wishlists` WRITE;
+
+/*!40000 ALTER TABLE `wishlists` DISABLE KEYS */
+;
+
+/*!40000 ALTER TABLE `wishlists` ENABLE KEYS */
 ;
 
 UNLOCK TABLES;
@@ -1503,6 +1677,8 @@ VALUES
 
 UNLOCK TABLES;
 
+-- ====================================================================================
+-- ====================================================================================
 --
 -- Table structure for table `cache_locks`
 --
@@ -1537,71 +1713,8 @@ LOCK TABLES `cache_locks` WRITE;
 
 UNLOCK TABLES;
 
---
--- Table structure for table `carts`
---
-DROP TABLE IF EXISTS `carts`;
-
-/*!40101 SET @saved_cs_client     = @@character_set_client */
-;
-
-/*!40101 SET character_set_client = utf8 */
-;
-
-CREATE TABLE `carts` (
-    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-    `product_id` bigint(20) unsigned NOT NULL,
-    `order_id` bigint(20) unsigned DEFAULT NULL,
-    `user_id` bigint(20) unsigned DEFAULT NULL,
-    `price` double(8, 2) NOT NULL,
-    `status` enum('new', 'progress', 'delivered', 'cancel') NOT NULL DEFAULT 'new',
-    `quantity` int(11) NOT NULL,
-    `amount` double(8, 2) NOT NULL,
-    `created_at` timestamp NULL DEFAULT NULL,
-    `updated_at` timestamp NULL DEFAULT NULL,
-    PRIMARY KEY (`id`),
-    KEY `carts_product_id_foreign` (`product_id`),
-    KEY `carts_user_id_foreign` (`user_id`),
-    KEY `carts_order_id_foreign` (`order_id`),
-    CONSTRAINT `carts_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE
-    SET
-        NULL,
-        CONSTRAINT `carts_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
-        CONSTRAINT `carts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
-/*!40101 SET character_set_client = @saved_cs_client */
-;
-
---
--- Dumping data for table `carts`
---
-LOCK TABLES `carts` WRITE;
-
-/*!40000 ALTER TABLE `carts` DISABLE KEYS */
-;
-
-INSERT INTO
-    `carts`
-VALUES
-    (
-        6,
-        14,
-        NULL,
-        2,
-        63.00,
-        'new',
-        1,
-        63.00,
-        '2023-11-28 14:51:26',
-        '2023-11-28 15:01:35'
-    );
-
-/*!40000 ALTER TABLE `carts` ENABLE KEYS */
-;
-
-UNLOCK TABLES;
-
+-- ====================================================================================
+-- ====================================================================================
 --
 -- Table structure for table `failed_jobs`
 --
@@ -1639,6 +1752,8 @@ LOCK TABLES `failed_jobs` WRITE;
 
 UNLOCK TABLES;
 
+-- ====================================================================================
+-- ====================================================================================
 --
 -- Table structure for table `migrations`
 --
@@ -1735,6 +1850,8 @@ VALUES
 
 UNLOCK TABLES;
 
+-- ====================================================================================
+-- ====================================================================================
 --
 -- Table structure for table `password_resets`
 --
@@ -1769,55 +1886,8 @@ LOCK TABLES `password_resets` WRITE;
 
 UNLOCK TABLES;
 
---
--- Table structure for table `product_reviews`
---
-DROP TABLE IF EXISTS `product_reviews`;
-
-/*!40101 SET @saved_cs_client     = @@character_set_client */
-;
-
-/*!40101 SET character_set_client = utf8 */
-;
-
-CREATE TABLE `product_reviews` (
-    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-    `user_id` bigint(20) unsigned DEFAULT NULL,
-    `product_id` bigint(20) unsigned DEFAULT NULL,
-    `rate` tinyint(4) NOT NULL DEFAULT 0,
-    `review` text DEFAULT NULL,
-    `status` enum('active', 'inactive') NOT NULL DEFAULT 'active',
-    `created_at` timestamp NULL DEFAULT NULL,
-    `updated_at` timestamp NULL DEFAULT NULL,
-    PRIMARY KEY (`id`),
-    KEY `product_reviews_user_id_foreign` (`user_id`),
-    KEY `product_reviews_product_id_foreign` (`product_id`),
-    CONSTRAINT `product_reviews_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE
-    SET
-        NULL,
-        CONSTRAINT `product_reviews_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE
-    SET
-        NULL
-) ENGINE = InnoDB AUTO_INCREMENT = 21 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
-/*!40101 SET character_set_client = @saved_cs_client */
-;
-
---
--- Dumping data for table `product_reviews`
---
-LOCK TABLES `product_reviews` WRITE;
-
-/*!40000 ALTER TABLE `product_reviews` DISABLE KEYS */
-;
-
-/*!40000 ALTER TABLE `product_reviews` ENABLE KEYS */
-;
-
-UNLOCK TABLES;
-
---
---
+-- ====================================================================================
+-- ====================================================================================
 -- Table structure for table `sessions`
 --
 DROP TABLE IF EXISTS `sessions`;
@@ -1868,56 +1938,8 @@ VALUES
 
 UNLOCK TABLES;
 
---
--- Table structure for table `wishlists`
---
-DROP TABLE IF EXISTS `wishlists`;
-
-/*!40101 SET @saved_cs_client     = @@character_set_client */
-;
-
-/*!40101 SET character_set_client = utf8 */
-;
-
-CREATE TABLE `wishlists` (
-    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-    `product_id` bigint(20) unsigned NOT NULL,
-    `cart_id` bigint(20) unsigned DEFAULT NULL,
-    `user_id` bigint(20) unsigned DEFAULT NULL,
-    `price` double(8, 2) NOT NULL,
-    `quantity` int(11) NOT NULL,
-    `amount` double(8, 2) NOT NULL,
-    `created_at` timestamp NULL DEFAULT NULL,
-    `updated_at` timestamp NULL DEFAULT NULL,
-    PRIMARY KEY (`id`),
-    KEY `wishlists_product_id_foreign` (`product_id`),
-    KEY `wishlists_user_id_foreign` (`user_id`),
-    KEY `wishlists_cart_id_foreign` (`cart_id`),
-    CONSTRAINT `wishlists_cart_id_foreign` FOREIGN KEY (`cart_id`) REFERENCES `carts` (`id`) ON DELETE
-    SET
-        NULL,
-        CONSTRAINT `wishlists_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
-        CONSTRAINT `wishlists_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE
-    SET
-        NULL
-) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
-/*!40101 SET character_set_client = @saved_cs_client */
-;
-
---
--- Dumping data for table `wishlists`
---
-LOCK TABLES `wishlists` WRITE;
-
-/*!40000 ALTER TABLE `wishlists` DISABLE KEYS */
-;
-
-/*!40000 ALTER TABLE `wishlists` ENABLE KEYS */
-;
-
-UNLOCK TABLES;
-
+-- ====================================================================================
+-- ====================================================================================
 --
 -- Dumping routines for database 'ecommerceadvlara'
 --

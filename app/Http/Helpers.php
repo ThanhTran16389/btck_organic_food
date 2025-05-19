@@ -16,6 +16,7 @@ class Helper
 {
     public static function messageList()
     {
+        // lấy dữ liệu thông báo trong bảng messeage để theo dõi tình trạng đơn hàng.
         return Message::whereNull('read_at')->orderBy('created_at', 'desc')->get();
     }
 
