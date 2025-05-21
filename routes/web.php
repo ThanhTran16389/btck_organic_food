@@ -3,7 +3,6 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BannerController;
-use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CouponController;
@@ -64,7 +63,7 @@ Route::get('product-detail/{slug}', [FrontendController::class, 'productDetail']
 Route::post('/product/search', [FrontendController::class, 'productSearch'])->name('product.search');
 Route::get('/product-cat/{slug}', [FrontendController::class, 'productCat'])->name('product-cat');
 Route::get('/product-sub-cat/{slug}/{sub_slug}', [FrontendController::class, 'productSubCat'])->name('product-sub-cat');
-Route::get('/product-brand/{slug}', [FrontendController::class, 'productBrand'])->name('product-brand');
+// Route::get('/product-brand/{slug}', [FrontendController::class, 'productBrand'])->name('product-brand');
 // Cart section
 Route::get('/add-to-cart/{slug}', [CartController::class, 'addToCart'])->name('add-to-cart')->middleware('user');
 Route::post('/add-to-cart', [CartController::class, 'singleAddToCart'])->name('single-add-to-cart')->middleware('user');
@@ -134,9 +133,9 @@ Route::middleware([Authenticate::class, AdminMiddleware::class])
         // User
         Route::resource('users', UsersController::class);
         // user route
-        Route::resource('users', UsersController::class);
+        // Route::resource('users', UsersController::class);
         // Brand
-        Route::resource('brand', BrandController::class);
+        // Route::resource('brand', BrandController::class);
         // Profile
         Route::get('/profile', [AdminController::class, 'profile'])->name('admin-profile');
         Route::post('/profile/{id}', [AdminController::class, 'profileUpdate'])->name('profile-update');

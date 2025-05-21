@@ -27,7 +27,6 @@
                                 <th>Discount</th>
                                 <th>Size</th>
                                 <th>Condition</th>
-                                <th>Brand</th>
                                 <th>Stock</th>
                                 <th>Photo</th>
                                 <th>Status</th>
@@ -42,10 +41,10 @@
                                         ->select('title')
                                         ->where('id', $product->child_cat_id)
                                         ->get();
-                                    $brands = DB::table('brands')
-                                        ->select('title')
-                                        ->where('id', $product->brand_id)
-                                        ->get();
+                                    // $brands = DB::table('brands')
+                                    //     ->select('title')
+                                    //     ->where('id', $product->brand_id)
+                                    //     ->get();
                                 @endphp
                                 <tr>
                                     <td>{{ $product->id }}</td>
@@ -60,7 +59,7 @@
                                     <td> {{ $product->discount }}%</td>
                                     <td>{{ $product->size }}</td>
                                     <td>{{ $product->condition }}</td>
-                                    <td> {{ ucfirst($product->brand->title) }}</td>
+                                    {{-- <td> {{ ucfirst($product->brand->title) }}</td> --}}
                                     <td>
                                         @if ($product->stock > 0)
                                             <span class="badge badge-primary">{{ $product->stock }}</span>

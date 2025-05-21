@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
+// use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -29,10 +29,11 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $brand = Brand::get();
+        // $brand = Brand::get();
         $category = Category::where('is_parent', 1)->get();
 
-        return view('backend.product.create')->with('categories', $category)->with('brands', $brand);
+        return view('backend.product.create')->with('categories', $category);
+        // return view('backend.product.create')->with('categories', $category)->with('brands', $brand);
     }
 
     /**
@@ -50,7 +51,7 @@ class ProductController extends Controller
             'size' => 'nullable',
             'stock' => 'required|numeric',
             'cat_id' => 'required|exists:categories,id',
-            'brand_id' => 'nullable|exists:brands,id',
+            // 'brand_id' => 'nullable|exists:brands,id',
             'child_cat_id' => 'nullable|exists:categories,id',
             'is_featured' => 'sometimes|in:1',
             'status' => 'required|in:active,inactive',
@@ -103,14 +104,14 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        $brand = Brand::get();
+        // $brand = Brand::get();
         $product = Product::findOrFail($id);
         $category = Category::where('is_parent', 1)->get();
         $items = Product::where('id', $id)->get();
 
-        return view('backend.product.edit')->with('product', $product)
-            ->with('brands', $brand)
-            ->with('categories', $category)->with('items', $items);
+        return view('backend.product.edit')->with('product', $product) //lấy danh mục sản phẩm
+            // ->with('brands', $brand)
+            ->with('categories', $category)->with('items', $items); //lấy danh mục sản phẩm
     }
 
     /**
@@ -132,7 +133,7 @@ class ProductController extends Controller
             'cat_id' => 'required|exists:categories,id',
             'child_cat_id' => 'nullable|exists:categories,id',
             'is_featured' => 'sometimes|in:1',
-            'brand_id' => 'nullable|exists:brands,id',
+            // 'brand_id' => 'nullable|exists:brands,id',
             'status' => 'required|in:active,inactive',
             'condition' => 'required|in:default,new,hot',
             'price' => 'required|numeric',

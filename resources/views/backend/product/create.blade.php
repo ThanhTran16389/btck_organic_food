@@ -97,70 +97,56 @@
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <label for="brand_id">Brand</label>
-                    {{-- {{$brands}} --}}
-
-                    <select name="brand_id" class="form-control">
-                        <option value="">--Select Brand--</option>
-                        @foreach ($brands as $brand)
-                            <option value="{{ $brand->id }}">{{ $brand->title }}</option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="condition">Condition</label>
-                    <select name="condition" class="form-control">
-                        <option value="">--Select Condition--</option>
-                        <option value="default">Default</option>
-                        <option value="new">New</option>
-                        <option value="hot">Hot</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="stock">Quantity <span class="text-danger">*</span></label>
-                    <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"
-                        value="{{ old('stock') }}" class="form-control">
-                    @error('stock')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-                <div class="form-group">
-                    <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <a id="lfm" data-input="thumbnail" data-preview="holder"
-                                class="btn btn-secondary text-white">
-                                <i class="fa fa-picture-o"></i> Choose
-                            </a>
-                        </span>
-                        <input id="thumbnail" class="form-control" type="text" name="photo"
-                            value="{{ old('photo') }}">
-                    </div>
-                    <div id="holder" style="margin-top:15px;max-height:100px;"></div>
-                    @error('photo')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <div class="form-group">
-                    <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
-                    <select name="status" class="form-control">
-                        <option value="active">Active</option>
-                        <option value="inactive">Inactive</option>
-                    </select>
-                    @error('status')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-                <div class="form-group mb-3">
-                    <button type="reset" class="btn btn-warning">Reset</button>
-                    <button class="btn btn-success" type="submit">Submit</button>
-                </div>
-            </form>
+        <div class="form-group">
+            <label for="condition">Condition</label>
+            <select name="condition" class="form-control">
+                <option value="">--Select Condition--</option>
+                <option value="default">Default</option>
+                <option value="new">New</option>
+                <option value="hot">Hot</option>
+            </select>
         </div>
+
+        <div class="form-group">
+            <label for="stock">Quantity <span class="text-danger">*</span></label>
+            <input id="quantity" type="number" name="stock" min="0" placeholder="Enter quantity"
+                value="{{ old('stock') }}" class="form-control">
+            @error('stock')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+        <div class="form-group">
+            <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-secondary text-white">
+                        <i class="fa fa-picture-o"></i> Choose
+                    </a>
+                </span>
+                <input id="thumbnail" class="form-control" type="text" name="photo" value="{{ old('photo') }}">
+            </div>
+            <div id="holder" style="margin-top:15px;max-height:100px;"></div>
+            @error('photo')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+
+        <div class="form-group">
+            <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
+            <select name="status" class="form-control">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            @error('status')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
+        </div>
+        <div class="form-group mb-3">
+            <button type="reset" class="btn btn-warning">Reset</button>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+        </form>
+    </div>
     </div>
 @endsection
 

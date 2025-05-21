@@ -733,78 +733,68 @@ UNLOCK TABLES;
 -- COPY DỮ LIỆU TỪ BẢNG SHIPPINGS TRỞ XUỐNG
 -- ====================================================================================
 -- ====================================================================================
--- Table structure for table `brands`
---
-DROP TABLE IF EXISTS `brands`;
-
-/*!40101 SET @saved_cs_client     = @@character_set_client */
-;
-
-/*!40101 SET character_set_client = utf8 */
-;
-
-CREATE TABLE `brands` (
-    `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-    `title` varchar(191) NOT NULL,
-    `slug` varchar(191) NOT NULL,
-    `status` enum('active', 'inactive') NOT NULL DEFAULT 'active',
-    `created_at` timestamp NULL DEFAULT current_timestamp,
-    `updated_at` timestamp NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
-    `delete_at` timestamp NULL DEFAULT NULL,
-    PRIMARY KEY (`id`),
-    UNIQUE KEY `brands_slug_unique` (`slug`)
-) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
-
-/*!40101 SET character_set_client = @saved_cs_client */
-;
-
---
--- Dumping data for table `brands`
---
-LOCK TABLES `brands` WRITE;
-
-/*!40000 ALTER TABLE `brands` DISABLE KEYS */
-;
-
-INSERT INTO
-    `brands` (`title`, `slug`, `status`)
-VALUES
-    (
-        'Adidas',
-        'adidas',
-        'active'
-    ),
-    (
-        'Nike',
-        'nike',
-        'active'
-    ),
-    (
-        'Kappa',
-        'kappa',
-        'active'
-    ),
-    (
-        'Prada',
-        'prada',
-        'active'
-    ),
-    (
-        'Polo',
-        'brand',
-        'active'
-    ),
-    (
-        'Other',
-        'other',
-        'active'
-    );
-
-/*!40000 ALTER TABLE `brands` ENABLE KEYS */
-;
-
-UNLOCK TABLES;
-
+-- -- Table structure for table `brands`
+-- --
+-- DROP TABLE IF EXISTS `brands`;
+-- /*!40101 SET @saved_cs_client     = @@character_set_client */
+-- ;
+-- /*!40101 SET character_set_client = utf8 */
+-- ;
+-- CREATE TABLE `brands` (
+--     `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+--     `title` varchar(191) NOT NULL,
+--     `slug` varchar(191) NOT NULL,
+--     `status` enum('active', 'inactive') NOT NULL DEFAULT 'active',
+--     `created_at` timestamp NULL DEFAULT current_timestamp,
+--     `updated_at` timestamp NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
+--     `delete_at` timestamp NULL DEFAULT NULL,
+--     PRIMARY KEY (`id`),
+--     UNIQUE KEY `brands_slug_unique` (`slug`)
+-- ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+-- /*!40101 SET character_set_client = @saved_cs_client */
+-- ;
+-- --
+-- -- Dumping data for table `brands`
+-- --
+-- LOCK TABLES `brands` WRITE;
+-- /*!40000 ALTER TABLE `brands` DISABLE KEYS */
+-- ;
+-- INSERT INTO
+--     `brands` (`title`, `slug`, `status`)
+-- VALUES
+--     (
+--         'Adidas',
+--         'adidas',
+--         'active'
+--     ),
+--     (
+--         'Nike',
+--         'nike',
+--         'active'
+--     ),
+--     (
+--         'Kappa',
+--         'kappa',
+--         'active'
+--     ),
+--     (
+--         'Prada',
+--         'prada',
+--         'active'
+--     ),
+--     (
+--         'Polo',
+--         'brand',
+--         'active'
+--     ),
+--     (
+--         'Other',
+--         'other',
+--         'active'
+--     );
+-- /*!40000 ALTER TABLE `brands` ENABLE KEYS */
+-- ;
+-- UNLOCK TABLES;
 -- ====================================================================================
 -- ====================================================================================
 -- Table structure for table `shippings`
@@ -1130,16 +1120,16 @@ CREATE TABLE `products` (
     `delete_at` timestamp NULL DEFAULT NULL,
     `cat_id` bigint(20) unsigned DEFAULT NULL,
     `child_cat_id` bigint(20) unsigned DEFAULT NULL,
-    `brand_id` bigint(20) unsigned DEFAULT NULL,
+    -- `brand_id` bigint(20) unsigned DEFAULT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `products_slug_unique` (`slug`),
-    KEY `products_brand_id_foreign` (`brand_id`),
+    -- KEY `products_brand_id_foreign` (`brand_id`),
     KEY `products_cat_id_foreign` (`cat_id`),
     KEY `products_child_cat_id_foreign` (`child_cat_id`),
-    CONSTRAINT `products_brand_id_foreign` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`) ON DELETE
-    SET
-        NULL,
-        CONSTRAINT `products_cat_id_foreign` FOREIGN KEY (`cat_id`) REFERENCES `categories` (`id`) ON DELETE
+    -- CONSTRAINT `products_brand_id_foreign` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`) ON DELETE
+    -- SET
+    --     NULL,
+    CONSTRAINT `products_cat_id_foreign` FOREIGN KEY (`cat_id`) REFERENCES `categories` (`id`) ON DELETE
     SET
         NULL,
         CONSTRAINT `products_child_cat_id_foreign` FOREIGN KEY (`child_cat_id`) REFERENCES `categories` (`id`) ON DELETE
@@ -1173,8 +1163,7 @@ INSERT INTO
         `discount`,
         `is_featured`,
         `cat_id`,
-        `child_cat_id`,
-        `brand_id`
+        `child_cat_id` -- `brand_id`
     )
 VALUES
     (
@@ -1196,7 +1185,6 @@ VALUES
         10.00,
         1,
         1,
-        5,
         5
     );
 
@@ -1561,7 +1549,8 @@ VALUES
         'progress',
         1,
         9
-    ) (
+    ),
+    (
         75.00,
         'delivered',
         5,

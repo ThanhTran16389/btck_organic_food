@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = ['title', 'slug', 'summary', 'description', 'cat_id', 'child_cat_id', 'price', 'brand_id', 'discount', 'status', 'photo', 'size', 'stock', 'is_featured', 'condition'];
+    // protected $fillable = ['title', 'slug', 'summary', 'description', 'cat_id', 'child_cat_id', 'price', 'brand_id', 'discount', 'status', 'photo', 'size', 'stock', 'is_featured', 'condition'];
+    protected $fillable = ['title', 'slug', 'summary', 'description', 'cat_id', 'child_cat_id', 'price', 'discount', 'status', 'photo', 'size', 'stock', 'is_featured', 'condition'];
 
     public function cat_info()
     {
@@ -58,8 +59,8 @@ class Product extends Model
         return $this->hasMany(Wishlist::class)->whereNotNull('cart_id');
     }
 
-    public function brand()
-    {
-        return $this->hasOne(Brand::class,'id','brand_id');
-    }
+    // public function brand()
+    // {
+    //     return $this->hasOne(Brand::class,'id','brand_id');
+    // }
 }

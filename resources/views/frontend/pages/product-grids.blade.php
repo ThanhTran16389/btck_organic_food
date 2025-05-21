@@ -118,7 +118,7 @@
                             </div>
                             <!--/ End Single Widget -->
                             <!-- Single Widget -->
-                            <div class="single-widget category">
+                            {{-- <div class="single-widget category">
                                 <h3 class="title">Brands</h3>
                                 <ul class="categor-list">
                                     @php
@@ -132,7 +132,7 @@
                                         </li>
                                     @endforeach
                                 </ul>
-                            </div>
+                            </div> --}}
                             <!--/ End Single Widget -->
                         </div>
                     </div>
@@ -166,8 +166,8 @@
                                                     Price</option>
                                                 <option value="category" @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'category') selected @endif>
                                                     Category</option>
-                                                <option value="brand" @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'brand') selected @endif>
-                                                    Brand</option>
+                                                {{-- <option value="brand" @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'brand') selected @endif>
+                                                    Brand</option> --}}
                                             </select>
                                         </div>
                                     </div>
