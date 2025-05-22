@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     // protected $fillable = ['title', 'slug', 'summary', 'description', 'cat_id', 'child_cat_id', 'price', 'brand_id', 'discount', 'status', 'photo', 'size', 'stock', 'is_featured', 'condition'];
-    protected $fillable = ['title', 'slug', 'summary', 'description', 'cat_id', 'child_cat_id', 'price', 'discount', 'status', 'photo', 'size', 'stock', 'is_featured', 'condition'];
+    protected $fillable = ['title', 'slug','color', 'summary', 'description','photo','stock', 'size','condition', 'status','price', 'discount', 'is_featured', 'cat_id', 'child_cat_id'];
 
     public function cat_info()
     {

@@ -23,7 +23,7 @@
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Featured</th>
-                                <th>Price</th>
+                                <th>Price</th> 
                                 <th>Discount</th>
                                 <th>Size</th>
                                 <th>Condition</th>

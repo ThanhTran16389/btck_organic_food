@@ -86,49 +86,49 @@ VALUES
         'Organic And Heathy',
         'organic-and-heathy',
         '/storage/photos/1/banner/banner-01.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Organic And Heathy</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy</span></h2>',
         'active'
     ),
     (
         'Organic And Heathy Food',
         'organic-and-heathy-food',
         '/storage/photos/1/banner/banner-02.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Organic And Heathy Food</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy Food</span></h2>',
         'active'
     ),
     (
         'ENJOY WITH HEATHY FOOD',
         'enjoy-with-heathy-food',
         '/storage/photos/1/banner/banner-03.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">ENJOY WITH HEATHY FOOD</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">ENJOY WITH HEATHY FOOD</span></h2>',
         'active'
     ),
     (
         'Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath',
         'natural-organic-heath',
         '/storage/photos/1/banner/banner-04.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath</span></h2>',
         'active'
     ),
     (
         'Eat Heathy, Eat Organic',
         'eat-heathy-eat-organic',
         '/storage/photos/1/banner/banner-05.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Eat Heathy, Eat Organic</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Eat Heathy, Eat Organic</span></h2>',
         'active'
     ),
     (
         'Organic and Heathy Heathy',
         'organic-and-heathy-heathy',
         '/storage/photos/1/banner/banner-06.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(188, 221, 201);\">Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic and Heathy Heathy</span></h2>',
         'active'
     ),
     (
         'Natural Food Vegetarian',
         'natural-food-vegetarian',
         '/storage/photos/1/banner/banner-07.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(128, 244, 170);\">Natural Food Vegetarian</span></h2>',
+        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Natural Food Vegetarian</span></h2>',
         'active'
     );
 
@@ -994,7 +994,7 @@ VALUES
     (
         'Nutritious cereals',
         'nutritious-cereals',
-        '/storage/photos/1/catergories/Nutritious_cereals/',
+        '/storage/photos/1/catergories/nutritious-cereals.jpg',
         1,
         NULL,
         1,
@@ -1003,7 +1003,7 @@ VALUES
     (
         'Pulses',
         'pulses',
-        '/storage/photos/1/categories/mini-banner2.jpg',
+        '/storage/photos/1/categories/pulses.jpg',
         1,
         NULL,
         1,
@@ -1012,7 +1012,7 @@ VALUES
     (
         'Spices and Condiments',
         'spices-and-condiments',
-        '/storage/photos/1/mini-banner3.jpg',
+        '/storage/photos/1/categories/spices-and-condiments.jpg',
         1,
         NULL,
         1,
@@ -1021,7 +1021,7 @@ VALUES
     (
         'Cooking Oils',
         'cooking-oils',
-        '/storage/photos/1/mini-banner4.jpg',
+        '/storage/photos/1/categories/cooking-oils.jpg',
         1,
         NULL,
         1,
@@ -1030,7 +1030,7 @@ VALUES
     (
         'Fruit Pulps',
         'fruit-pulps',
-        '/storage/photos/1/mini-banner5.jpg',
+        '/storage/photos/1/categories/fruit-pulps.jpg',
         1,
         NULL,
         1,
@@ -1039,7 +1039,7 @@ VALUES
     (
         'Agro Products',
         'agro-products',
-        NULL,
+        '/storage/photos/1/categories/agro-products.jpg',
         1,
         NULL,
         1,
@@ -1048,7 +1048,7 @@ VALUES
     (
         'Oils',
         'oils',
-        NULL,
+        '/storage/photos/1/categories/oils.jpg',
         1,
         NULL,
         1,
@@ -1057,7 +1057,7 @@ VALUES
     (
         'Wheat and Wheat Flour',
         'wheat-and-wheat-flour',
-        NULL,
+        '/storage/photos/1/categories/wheat-and-wheat-flour.jpg',
         1,
         NULL,
         1,
@@ -1066,7 +1066,7 @@ VALUES
     (
         'Rice and Rice Products',
         'rice-and-rice-products',
-        NULL,
+        '/storage/photos/1/categories/rice-and-rice-products.jpg',
         1,
         NULL,
         1,
