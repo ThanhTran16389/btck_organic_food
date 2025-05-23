@@ -7,21 +7,24 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     // protected $fillable = ['title', 'slug', 'summary', 'description', 'cat_id', 'child_cat_id', 'price', 'brand_id', 'discount', 'status', 'photo', 'size', 'stock', 'is_featured', 'condition'];
-    protected $fillable = ['title', 'slug','color', 'summary', 'description','photo','stock', 'size','condition', 'status','price', 'discount', 'is_featured', 'cat_id', 'child_cat_id'];
+    protected $fillable = ['title', 'slug', 'summary', 'description','photo','stock', 'size','condition', 'status','price', 'discount', 'is_featured', 'cat_id', 'child_cat_id'];
 
     public function cat_info()
     {
-        return $this->hasOne(Category::class, 'id', 'cat_id');
+        // return $this->hasOne(Category::class, 'id', 'cat_id'); // truy vấn tới bảng Category với khóa ngoại cat_id
+        return $this->belongsTo(Category::class,'cat_id'); // cách viết xuôi chiều từ bảng cha xuống bảng con product thuộc category
     }
 
     public function sub_cat_info()
     {
-        return $this->hasOne(Category::class, 'id', 'child_cat_id');
+        // return $this->hasOne(Category::class, 'id', 'child_cat_id');
+        return $this->belongsTo(Category::class,'child_cat_id');
     }
 
     public static function getAllProduct()
     {
-        return Product::with(['cat_info', 'sub_cat_info'])->orderBy('id', 'desc')->paginate(10);
+        return Product::with(['cat_info', 'sub_cat_info'])->orderBy('id', 'desc')->paginate(10); //tải quan hệ liên kết với hai hàm đã tạo liên kết ở trên
+        // return Product::with(['cat_info', 'sub_cat_info'])->orderBy('id', 'desc')->get();
     }
 
     public function rel_prods()

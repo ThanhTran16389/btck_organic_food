@@ -18,8 +18,11 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::getAllProduct();
+        // foreach ($products as $producte);
+        // dd ($producte->first()->title);
 
         return view('backend.product.index')->with('products', $products);
+        // return view('backend.product.index', compact('products')); //cách truyền dữ liệu khác bằng compact
     }
 
     /**

@@ -23,7 +23,7 @@
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Featured</th>
-                                <th>Price</th> 
+                                <th>Price</th>
                                 <th>Discount</th>
                                 <th>Size</th>
                                 <th>Condition</th>
@@ -36,22 +36,36 @@
                         <tbody>
 
                             @foreach ($products as $product)
-                                @php
+                                {{-- {{ dd($products) }} --}}
+                                {{-- <p>{{ $product->id }} , {{ $product->title }}
+                                </p> --}}
+
+                                {{-- @php
+                                    // dd($products);
                                     $sub_cat_info = DB::table('categories')
                                         ->select('title')
                                         ->where('id', $product->child_cat_id)
                                         ->get();
+
                                     // $brands = DB::table('brands')
                                     //     ->select('title')
                                     //     ->where('id', $product->brand_id)
                                     //     ->get();
-                                @endphp
+
+                                @endphp --}}
+                                {{-- cách viết lấy title mới thay cho cách ở trên --}}
+
                                 <tr>
                                     <td>{{ $product->id }}</td>
                                     <td>{{ $product->title }}</td>
-                                    <td>{{ $product->cat_info['title'] }}
+                                    {{-- <td>{{ $product->cat_info['title'] }}
                                         <sub>
                                             {{ $product->sub_cat_info->title ?? '' }}
+                                        </sub>
+                                    </td> --}}
+                                    <td>{{ optional($product->cat_info)->title ?? '' }}
+                                        <sub>
+                                            {{ optional($product->sub_cat_info)->title ?? '' }}
                                         </sub>
                                     </td>
                                     <td>{{ $product->is_featured == 1 ? 'Yes' : 'No' }}</td>
