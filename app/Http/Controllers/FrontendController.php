@@ -27,12 +27,13 @@ class FrontendController extends Controller
     {
         $featured = Product::where('status', 'active')->where('is_featured', 1)->orderBy('price', 'DESC')->limit(2)->get();
         $posts = Post::where('status', 'active')->orderBy('id', 'DESC')->limit(3)->get();
-        $banners = Banner::where('status', 'active')->limit(3)->orderBy('id', 'DESC')->get();
+        $banners = Banner::where('status', 'active')->limit(7)->orderBy('id', 'DESC')->get(); // giới hạn 7 banner
         $products = Product::where('status', 'active')->orderBy('id', 'DESC')->limit(8)->get();
         // dd($products);
 
-        $category = Category::where('status', 'active')->where('is_parent', 1)->orderBy('title', 'ASC')->get();
-
+        $category = Category::where('status', 'active')->where('is_parent', 1)->orderBy('id', 'ASC')->limit(3)->get();
+        // foreach ($category as $categoryy);
+        // dd ($categoryy->first()->title);
         return view('frontend.index')
             ->with('featured', $featured)
             ->with('posts', $posts)

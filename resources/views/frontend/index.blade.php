@@ -42,9 +42,13 @@
     <section class="small-banner section">
         <div class="container-fluid">
             <div class="row">
-                @php
+                {{-- @php
                     $category_lists = DB::table('categories')->where('status', 'active')->limit(3)->get();
-                @endphp
+                @endphp --}}
+
+                {{-- @php
+                $sortedCategories = $category_lists->sortBy('id');
+                @endphp --}}
                 @if ($category_lists)
                     @foreach ($category_lists as $cat)
                         @if ($cat->is_parent == 1)
@@ -604,7 +608,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                [ Isotope ]*/
+                        [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

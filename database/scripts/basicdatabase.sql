@@ -85,49 +85,49 @@ VALUES
     (
         'Organic And Heathy',
         'organic-and-heathy',
-        '/storage/photos/1/banner/banner-01.jpg',
+        '/storage/photos/1/banner/Banner_01.jpg',
         '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy</span></h2>',
         'active'
     ),
     (
         'Organic And Heathy Food',
         'organic-and-heathy-food',
-        '/storage/photos/1/banner/banner-02.jpg',
+        '/storage/photos/1/banner/Banner_02.jpg',
         '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy Food</span></h2>',
         'active'
     ),
     (
         'ENJOY WITH HEATHY FOOD',
         'enjoy-with-heathy-food',
-        '/storage/photos/1/banner/banner-03.jpg',
+        '/storage/photos/1/banner/Banner_03.jpg',
         '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">ENJOY WITH HEATHY FOOD</span></h2>',
         'active'
     ),
     (
         'Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath',
         'natural-organic-heath',
-        '/storage/photos/1/banner/banner-04.jpg',
+        '/storage/photos/1/banner/Banner_04.jpg',
         '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath</span></h2>',
         'active'
     ),
     (
         'Eat Heathy, Eat Organic',
         'eat-heathy-eat-organic',
-        '/storage/photos/1/banner/banner-05.jpg',
+        '/storage/photos/1/banner/Banner_05.jpg',
         '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Eat Heathy, Eat Organic</span></h2>',
         'active'
     ),
     (
         'Organic and Heathy Heathy',
         'organic-and-heathy-heathy',
-        '/storage/photos/1/banner/banner-06.jpg',
+        '/storage/photos/1/banner/Banner_07.jpg',
         '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic and Heathy Heathy</span></h2>',
         'active'
     ),
     (
         'Natural Food Vegetarian',
         'natural-food-vegetarian',
-        '/storage/photos/1/banner/banner-07.jpg',
+        '/storage/photos/1/banner/Banner_08.jpg',
         '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Natural Food Vegetarian</span></h2>',
         'active'
     );
@@ -967,7 +967,7 @@ CREATE TABLE `categories` (
         CONSTRAINT `categories_parent_id_foreign` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`id`) ON DELETE
     SET
         NULL
-) ENGINE = InnoDB AUTO_INCREMENT = 14 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 /*!40101 SET character_set_client = @saved_cs_client */
 ;
@@ -1003,7 +1003,7 @@ VALUES
     (
         'Pulses',
         'pulses',
-        '/storage/photos/1/categories/pulses.jpg',
+        '/storage/photos/1/catergories/pulses.jpg',
         1,
         NULL,
         1,
@@ -1012,7 +1012,7 @@ VALUES
     (
         'Spices and Condiments',
         'spices-and-condiments',
-        '/storage/photos/1/categories/spices-and-condiments.jpg',
+        '/storage/photos/1/catergories/spices-and-condiments.jpg',
         1,
         NULL,
         1,
@@ -1021,7 +1021,7 @@ VALUES
     (
         'Cooking Oils',
         'cooking-oils',
-        '/storage/photos/1/categories/cooking-oils.jpg',
+        '/storage/photos/1/catergories/cooking-oils.jpg',
         1,
         NULL,
         1,
@@ -1030,7 +1030,7 @@ VALUES
     (
         'Fruit Pulps',
         'fruit-pulps',
-        '/storage/photos/1/categories/fruit-pulps.jpg',
+        '/storage/photos/1/catergories/fruit-pulps.jpg',
         1,
         NULL,
         1,
@@ -1039,7 +1039,7 @@ VALUES
     (
         'Agro Products',
         'agro-products',
-        '/storage/photos/1/categories/agro-products.jpg',
+        '/storage/photos/1/catergories/agro-products.jpg',
         1,
         NULL,
         1,
@@ -1048,7 +1048,7 @@ VALUES
     (
         'Oils',
         'oils',
-        '/storage/photos/1/categories/oils.jpg',
+        '/storage/photos/1/catergories/oils.jpg',
         1,
         NULL,
         1,
@@ -1057,7 +1057,7 @@ VALUES
     (
         'Wheat and Wheat Flour',
         'wheat-and-wheat-flour',
-        '/storage/photos/1/categories/wheat-and-wheat-flour.jpg',
+        '/storage/photos/1/catergories/wheat-and-wheat-flour.jpg',
         1,
         NULL,
         1,
@@ -1066,7 +1066,7 @@ VALUES
     (
         'Rice and Rice Products',
         'rice-and-rice-products',
-        '/storage/photos/1/categories/rice-and-rice-products.jpg',
+        '/storage/photos/1/catergories/rice-and-rice-products.jpg',
         1,
         NULL,
         1,
@@ -1171,7 +1171,7 @@ VALUES
         'antonin-fels',
         '    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi molestias doloribus nam laborum dicta deleniti quo consequuntur voluptate blanditiis quasi voluptas, magnam explicabo excepturi tempore vel iure harum, voluptatem exercitationem?</p>',
         '<ul >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur, sunt eveniet ex a, doloribus aliquid exercitationem ab officia facere repellat magnam saepe aut consequuntur quis, veniam odio doloremque ducimus.</ul>',
-        'storage/app/public/photos/1/products/agro-products/01_antonin-fels.jpg ',
+        '/storage/photos/1/products/agro-products/01_antonin-fels.jpg',
         10,
         '100ml',
         ' hot ',
@@ -1187,7 +1187,7 @@ VALUES
         'hemp-seed',
         '    <p>Apply directly to skin or mix with your favorite moisturizer. For hair, use as a mask or add to conditioner. For nails, massage into cuticles.</p>',
         '<ul >Experience the natural goodness of Organic Hemp Oil, rich in essential fatty acids, vitamins, and antioxidants. This dryy oil deeply moisturizes, softens, and nourishes skin, helping to alleviate dryness. With a balanced ratio of Omega 6, Omega 3, and GLA, it promotes skin suppleness, reduces wrinkles, and rebalances oily skin. </ul>',
-        'storage/app/public/photos/1/products/agro-products/02_hemp-seed.jpg ',
+        '/storage/photos/1/products/agro-products/02_hemp-seed.jpg ',
         10,
         '300ml',
         ' hot ',
@@ -1203,7 +1203,7 @@ VALUES
         'peanut-Oil-grupo-campo',
         '<p>Eucalyptus - Like a combination of wood, mint, and camphor - strong, cleansing, and enticing.</p>',
         '<ul >For aromatherapy use. Please consult manufacturer directions, essential oils book, or other professional reference guide for uses specific to each oil, dilution ratios, and other relevant information.</ul>',
-        'storage/app/public/photos/1/products/cooking-oils/02_peanut-Oil-grupo-campo.jpg ',
+        '/storage/photos/1/products/cooking-oils/02_peanut-Oil-grupo-campo.jpg ',
         10,
         '400ml',
         ' hot ',
@@ -1219,7 +1219,7 @@ VALUES
         'organic-essential-oils',
         '<p>Are you looking for the perfect organic essential oil set for yourself or a friend? Well look no further! Plant Therapy’s Top 6 Organic Set includes our most popular organic essential oils in one set! You will be happy you chose our Top 6 Organic Set! The Top 6 Organic Set contains 10 mL each of Eucalyptus Globulus, Lavender, Lemon, Peppermint, Sweet Orange, and Tea Tree. </p>',
         '<ul >This set includes USDA Certified Organic essential oils. These oils are free from GMOs and the plants grow freely without the aid of synthetic fertilizers and in soil that is clean of prohibited substances, such as harmful pesticides. When you purchase a certified organic product, you are also helping to conserve biodiversity! This helps to ensure our natural landscapes and their ecosystems are maintained and intact for generations to come.</ul>',
-        'storage/app/public/photos/1/products/cooking-oils/03_organic-essential-oils.jpg ',
+        '/storage/photos/1/products/oils/03_organic-essential-oils.jpg ',
         10,
         '200ml',
         ' hot ',
@@ -1235,7 +1235,7 @@ VALUES
         'organic-tamanu-oil',
         '    <p>Tamanu Oil is revered for its outstanding healing, skin-regeneration, skin-repair, anti-inflammatory, and anti-aging benefits. It is particularly well known for treating scars, blemishes, stretch marks, and dark circles. Used in hair-care, it promotes scalp health and controls dandruff.</p>',
         '<ul >Our Tamanu Oil is carefully extracted using cold-pressed extraction method, with no further processing, deodorizing, or decolorizing, to preserve its natural nutrients.</ul>',
-        'storage/app/public/photos/1/products/agro-products/01_antonin-fels.jpg ',
+        '/storage/photos/1/products/agro-products/01_antonin-fels.jpg ',
         10,
         '500ml',
         ' hot ',
@@ -1412,7 +1412,7 @@ CREATE TABLE `post_comments` (
         CONSTRAINT `post_comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE
     SET
         NULL
-) ENGINE = InnoDB AUTO_INCREMENT = 8 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 /*!40101 SET character_set_client = @saved_cs_client */
 ;
@@ -1581,7 +1581,7 @@ CREATE TABLE `carts` (
         NULL,
         CONSTRAINT `carts_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
         CONSTRAINT `carts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 /*!40101 SET character_set_client = @saved_cs_client */
 ;
@@ -1818,7 +1818,7 @@ CREATE TABLE `migrations` (
     `migration` varchar(191) NOT NULL,
     `batch` int(11) NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 23 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
 /*!40101 SET character_set_client = @saved_cs_client */
 ;
@@ -1832,66 +1832,57 @@ LOCK TABLES `migrations` WRITE;
 ;
 
 INSERT INTO
-    `migrations`
+    `migrations` (`migration`, `batch`)
 VALUES
-    (1, '2014_10_12_000000_create_users_table', 1),
+    ('2014_10_12_000000_create_users_table', 1),
     (
-        2,
         '2014_10_12_100000_create_password_resets_table',
         1
     ),
     (
-        3,
         '2019_08_19_000000_create_failed_jobs_table',
         1
     ),
-    (4, '2020_07_10_021010_create_brands_table', 1),
-    (5, '2020_07_10_025334_create_banners_table', 1),
+    ('2020_07_10_021010_create_brands_table', 1),
+    ('2020_07_10_025334_create_banners_table', 1),
     (
-        6,
         '2020_07_10_112147_create_categories_table',
         1
     ),
-    (7, '2020_07_11_063857_create_products_table', 1),
+    ('2020_07_11_063857_create_products_table', 1),
     (
-        8,
         '2020_07_12_073132_create_post_categories_table',
         1
     ),
-    (9, '2020_07_12_073701_create_post_tags_table', 1),
-    (10, '2020_07_12_083638_create_posts_table', 1),
-    (11, '2020_07_13_151329_create_messages_table', 1),
+    ('2020_07_12_073701_create_post_tags_table', 1),
+    ('2020_07_12_083638_create_posts_table', 1),
+    ('2020_07_13_151329_create_messages_table', 1),
     (
-        12,
         '2020_07_14_023748_create_shippings_table',
         1
     ),
-    (13, '2020_07_15_054356_create_orders_table', 1),
-    (14, '2020_07_15_102626_create_carts_table', 1),
+    ('2020_07_15_054356_create_orders_table', 1),
+    ('2020_07_15_102626_create_carts_table', 1),
     (
-        15,
         '2020_07_16_041623_create_notifications_table',
         1
     ),
-    (16, '2020_07_16_053240_create_coupons_table', 1),
+    ('2020_07_16_053240_create_coupons_table', 1),
     (
-        17,
         '2020_07_23_143757_create_wishlists_table',
         1
     ),
     (
-        18,
         '2020_07_24_074930_create_product_reviews_table',
         1
     ),
     (
-        19,
         '2020_07_24_131727_create_post_comments_table',
         1
     ),
-    (20, '2020_08_01_143408_create_settings_table', 1),
-    (21, '2024_08_07_074407_create_sessions_table', 2),
-    (22, '2024_08_07_084359_create_cache_table', 3);
+    ('2020_08_01_143408_create_settings_table', 1),
+    ('2024_08_07_074407_create_sessions_table', 2),
+    ('2024_08_07_084359_create_cache_table', 3);
 
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */
 ;
