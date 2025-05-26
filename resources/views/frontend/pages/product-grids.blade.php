@@ -139,6 +139,7 @@
                     <div class="col-lg-9 col-md-8 col-12">
                         <div class="row">
                             <div class="col-12">
+
                                 <!-- Shop Top -->
                                 <div class="shop-top">
                                     <div class="shop-shorter">
@@ -422,7 +423,7 @@
         .filter_button {
             /* height:20px; */
             text-align: center;
-            background: #F7941D;
+            background: #15E585;
             padding: 8px 16px;
             margin-top: 10px;
             color: white;

@@ -18,7 +18,7 @@
                 @if (count($products) > 0)
                     <table class="table table-bordered table-hover" id="product-dataTable" width="100%" cellspacing="0">
                         <thead>
-                            <tr>
+                            <tr class="active">
                                 <th>#</th>
                                 <th>Title</th>
                                 <th>Category</th>

@@ -86,49 +86,56 @@ VALUES
         'Organic And Heathy',
         'organic-and-heathy',
         '/storage/photos/1/banner/Banner_01.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy</span></h2>',
+        -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy</span></h2>',
+        'Organic And Heathy',
         'active'
     ),
     (
         'Organic And Heathy Food',
         'organic-and-heathy-food',
         '/storage/photos/1/banner/Banner_02.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy Food</span></h2>',
+        -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy Food</span></h2>',
+        'organic-and-heathy-food',
         'active'
     ),
     (
         'ENJOY WITH HEATHY FOOD',
         'enjoy-with-heathy-food',
         '/storage/photos/1/banner/Banner_03.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">ENJOY WITH HEATHY FOOD</span></h2>',
+        -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">ENJOY WITH HEATHY FOOD</span></h2>',
+        'enjoy-with-heathy-food',
         'active'
     ),
     (
         'Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath',
         'natural-organic-heath',
         '/storage/photos/1/banner/Banner_04.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath</span></h2>',
+        -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath</span></h2>',
+        'natural-organic-heath',
         'active'
     ),
     (
         'Eat Heathy, Eat Organic',
         'eat-heathy-eat-organic',
         '/storage/photos/1/banner/Banner_05.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Eat Heathy, Eat Organic</span></h2>',
+        -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Eat Heathy, Eat Organic</span></h2>',
+        'eat-heathy-eat-organic',
         'active'
     ),
     (
         'Organic and Heathy Heathy',
         'organic-and-heathy-heathy',
         '/storage/photos/1/banner/Banner_07.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic and Heathy Heathy</span></h2>',
+        -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic and Heathy Heathy</span></h2>',
+        'organic-and-heathy-heathy',
         'active'
     ),
     (
         'Natural Food Vegetarian',
         'natural-food-vegetarian',
         '/storage/photos/1/banner/Banner_08.jpg',
-        '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Natural Food Vegetarian</span></h2>',
+        -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Natural Food Vegetarian</span></h2>',
+        'natural-food-vegetarian',
         'active'
     );
 

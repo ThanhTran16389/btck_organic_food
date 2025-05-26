@@ -4,7 +4,9 @@
     <!-- Slider Area -->
     @if (count($banners) > 0)
         <section id="Gslider" class="carousel slide" data-ride="carousel">
+            {{-- class="carousel slide" data-ride="carousel" đang áp dụng bootstrap để tạo slide tự động --}}
             <ol class="carousel-indicators">
+                {{-- class="carousel-indicators" tạo cách dấu gạch ngang điều khiển slide --}}
                 @foreach ($banners as $key => $banner)
                     <li data-target="#Gslider" data-slide-to="{{ $key }}" class="{{ $key == 0 ? 'active' : '' }}">
                     </li>
@@ -17,8 +19,10 @@
                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                         <img class="first-slide" src="{{ asset($banner->photo) }}" alt="First slide">
                         <div class="carousel-caption d-none d-md-block text-left">
+                            {{-- d-none d-md-block ẩn trên màn hình điện thoại nhỏ và hiển thị trên màng hình trung và lớn --}}
                             <h1 class="wow fadeInDown">{{ $banner->title }}</h1>
-                            <p>{!! html_entity_decode($banner->description) !!}</p>
+                            {{-- <p>{!! html_entity_decode($banner->description) !!}</p> --}}
+                            <p>{{ $banner->description }}</p>
                             <a class="btn btn-lg ws-btn wow fadeInUpBig" href="{{ route('product-grids') }}"
                                 role="button">Shop Now<i class="far fa-arrow-alt-circle-right"></i></i></a>
                         </div>
@@ -566,10 +570,10 @@
 @push('styles')
     <style>
         /* Banner Sliding */
-        #Gslider .carousel-inner {
-            background: #000000;
-            color: black;
-        }
+        /* #Gslider .carousel-inner {
+                                background: #000000;
+                                color: black;
+                            } */
 
         #Gslider .carousel-inner {
             height: 550px;
@@ -577,11 +581,13 @@
 
         #Gslider .carousel-inner img {
             width: 100% !important;
+            height: 550px !important;
+            object-fit: cover;
             opacity: .8;
         }
 
         #Gslider .carousel-inner .carousel-caption {
-            bottom: 60%;
+            bottom: 30%;
         }
 
         #Gslider .carousel-inner .carousel-caption h1 {
@@ -589,17 +595,22 @@
             font-weight: bold;
             line-height: 100%;
             /* color: #F7941D; */
-            color: #1e1e1e;
+            /* color: #1e1e1e; */
+            color: #3D3D3D;
+            -webkit-text-stroke: 1px #F5F5F5;
+            /* Đường viền màu trắng, dày 1px */
+            -webkit-text-fill-color: #3D3D3D;
+            /* Màu nội dung chữ */
         }
 
         #Gslider .carousel-inner .carousel-caption p {
             font-size: 18px;
-            color: black;
-            margin: 28px 0 28px 0;
+            color: #3D3D3D;
+            margin: 10px 0 20px 0;
         }
 
         #Gslider .carousel-indicators {
-            bottom: 70px;
+            bottom: 10%;
         }
     </style>
 @endpush
@@ -608,7 +619,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                        [ Isotope ]*/
+                                                                                            [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
