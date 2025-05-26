@@ -1333,7 +1333,7 @@ Version:1.0
     border-radius: 0;
     border-left: 1px solid #eee;
     font-size: 15px;
-    color: #333;
+    color: #3D3D3D;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -1372,7 +1372,7 @@ Version:1.0
 }
 
 .header.sticky .header-inner .nav li a {
-    color: #333;
+    color: #3D3D3D;
 }
 
 .header.sticky.v3 .header-inner .nav li a {
@@ -1388,11 +1388,11 @@ Version:1.0
 }
 
 .header.sticky .header-inner .nav li .dropdown li a {
-    color: #333;
+    color: #3D3D3D;
 }
 
 .header.sticky.v2 .header-inner .nav li .dropdown li a {
-    color: #333;
+    color: #3D3D3D;
 }
 
 .header.sticky .header-inner .nav li .dropdown li a:hover {
@@ -1458,7 +1458,7 @@ Version:1.0
     line-height: 50px;
     font-size: 47px;
     font-weight: 700;
-    color: #8C52FF;
+    color: #15E585;
     margin-bottom: 20px;
 }
 
@@ -1466,13 +1466,13 @@ Version:1.0
     font-size: 20px;
     display: block;
     margin-bottom: 12px;
-    color: #333;
+    color: #3D3D3D;
     font-weight: 700;
     line-height: initial;
 }
 
 .hero-slider .hero-text p {
-    color: #333;
+    color: #3D3D3D;
     margin-bottom: 35px;
 }
 
@@ -1482,7 +1482,7 @@ Version:1.0
 
 .hero-slider .hero-text .btn {
     color: #fff;
-    background: #333;
+    background: #3D3D3D;
     padding: 13px 30px;
     line-height: initial;
     border: none;
@@ -1577,7 +1577,7 @@ Version:1.0
 
 .hero-area2 .single-slider .content .button .btn:hover {
     background: #fff;
-    color: #333;
+    color: #3D3D3D;
     border-color: transparent;
 }
 
@@ -1595,7 +1595,7 @@ Version:1.0
     width: 40px;
     line-height: 60px;
     text-align: center;
-    background: #333;
+    background: #3D3D3D;
     color: #fff;
     font-size: 14px;
     position: absolute;
@@ -1650,7 +1650,7 @@ Version:1.0
 }
 
 .hero-area3 .big-content .title span {
-    color: #8C52FF;
+    color: #15E585;
 }
 
 .hero-area3 .big-content .des {}
@@ -1710,8 +1710,8 @@ Version:1.0
 .hero-area3 .small-content .button .btn {
     background: transparent;
     padding: 0;
-    color: #333;
-    border-bottom: 2px solid #333;
+    color: #3D3D3D;
+    border-bottom: 2px solid #3D3D3D;
     font-size: 13px;
 }
 
@@ -1810,7 +1810,7 @@ Version:1.0
 .small-banner {
     padding: 30px 0;
     padding-bottom: 0;
-    background-color: #00BD66;
+    /* background-color: #00BD66; */
     /* margin: 0; */
 }
 
