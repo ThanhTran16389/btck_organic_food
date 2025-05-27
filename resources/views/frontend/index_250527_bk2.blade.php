@@ -46,16 +46,26 @@
     <section class="small-banner section">
         <div class="container-fluid">
             <div class="row">
+                {{-- @php
+                    $category_lists = DB::table('categories')->where('status', 'active')->limit(3)->get();
+                @endphp --}}
+
+                {{-- @php
+                $sortedCategories = $category_lists->sortBy('id');
+                @endphp --}}
                 @if ($category_lists->count() > 0)
-                    <div id="smallBannerSlider" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div id="CategoryCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
                         <ol class="carousel-indicators">
-                            @foreach ($category_lists as $key => $cat)
+                            @foreach ($category_lists->take(3) as $key => $cat)
                                 {{-- take 3 lấy 3 sản phẩm đầu --}}
-                                <li data-target="#smallBannerSlider" data-slide-to="{{ $key }}"
+                                <li data-target="#CategoryCarousel" data-slide-to="{{ $key }}"
                                     class="{{ $key == 0 ? 'active' : '' }}"></li>
                             @endforeach
                         </ol>
-                        <div class="carousel-inner" role="listbox">
+
+                        <div class="carousel-inner">
+
+                            {{-- chunk(3) nhóm 3 hình vào 1 lần trượt --}}
                             @foreach (collect($category_lists)->chunk(3) as $index => $chunk)
                                 <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                                     <div class="row">
@@ -84,14 +94,13 @@
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
                         <!-- Controls -->
-                        <a class="carousel-control-prev" href="#smallBannerSlider" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#CategoryCarousel" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#smallBannerSlider" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#CategoryCarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -119,18 +128,17 @@
                         <div class="nav-main">
                             <!-- Tab Nav -->
                             <ul class="nav nav-tabs filter-tope-group" id="myTab" role="tablist">
-                                {{-- @php
+                                @php
                                     $categories = DB::table('categories')
                                         ->where('status', 'active')
                                         ->where('is_parent', 1)
                                         ->get();
-                                @endphp --}}
-                                @if ($category_lists)
-                                    <button class="btn" style="background:#009450;">
-                                        {{-- <button class="btn" style="background:#009450;"data-filter="*"> --}}
+                                @endphp
+                                @if ($categories)
+                                    <button class="btn" style="background:#009450"data-filter="*">
                                         Recently Added
                                     </button>
-                                    @foreach ($category_lists as $key => $cat)
+                                    @foreach ($categories as $key => $cat)
                                         <button class="btn"
                                             style="background:color:#8F8F8F;"data-filter=".{{ $cat->id }}">
                                             {{ $cat->title }}
@@ -141,13 +149,13 @@
                             <!--/ End Tab Nav -->
                         </div>
                         <div class="tab-content isotope-grid" id="myTabContent">
-                            {{-- @php
+                            @php
                                 $recentlyAddedProducts = DB::table('products')
                                     ->where('status', 'active')
                                     ->orderBy('created_at', 'desc')
                                     ->take(8) // Get the 8 most recently added products
                                     ->get();
-                            @endphp --}}
+                            @endphp
 
                             @foreach ($recentlyAddedProducts as $key => $product)
                                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $product->cat_id }}">
@@ -211,7 +219,9 @@
         </div>
     </div>
     <!-- End Product Area -->
-
+    {{-- @php
+    $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
+@endphp --}}
     <!-- Start Midium Banner  -->
     <section class="midium-banner">
         <div class="container">
@@ -592,11 +602,13 @@
 @endsection
 
 @push('styles')
-    {{-- 2 link này dùng cho styles slick của small banner --}}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <style>
+        /* Banner Sliding */
+        /* #Gslider .carousel-inner {
+                                                                                                                                                    background: #000000;
+                                                                                                                                                    color: black;
+                                                                                                                                                } */
+
         #Gslider .carousel-inner {
             height: 550px;
         }
@@ -637,44 +649,11 @@
     </style>
 @endpush
 
-{{-- @push('script')
-    <!-- Trước </body> dùng điều khiển small banner -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#smallBannerSlider').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: true,
-                dots: true,
-                responsive: [{
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
-@endpush --}}
-
-
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                [ Isotope ]*/
+                                                                                                                                                                                                                [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

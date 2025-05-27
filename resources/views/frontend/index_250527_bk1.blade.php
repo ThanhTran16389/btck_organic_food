@@ -119,18 +119,17 @@
                         <div class="nav-main">
                             <!-- Tab Nav -->
                             <ul class="nav nav-tabs filter-tope-group" id="myTab" role="tablist">
-                                {{-- @php
+                                @php
                                     $categories = DB::table('categories')
                                         ->where('status', 'active')
                                         ->where('is_parent', 1)
                                         ->get();
-                                @endphp --}}
-                                @if ($category_lists)
-                                    <button class="btn" style="background:#009450;">
-                                        {{-- <button class="btn" style="background:#009450;"data-filter="*"> --}}
+                                @endphp
+                                @if ($categories)
+                                    <button class="btn" style="background:#009450"data-filter="*">
                                         Recently Added
                                     </button>
-                                    @foreach ($category_lists as $key => $cat)
+                                    @foreach ($categories as $key => $cat)
                                         <button class="btn"
                                             style="background:color:#8F8F8F;"data-filter=".{{ $cat->id }}">
                                             {{ $cat->title }}
@@ -141,13 +140,13 @@
                             <!--/ End Tab Nav -->
                         </div>
                         <div class="tab-content isotope-grid" id="myTabContent">
-                            {{-- @php
+                            @php
                                 $recentlyAddedProducts = DB::table('products')
                                     ->where('status', 'active')
                                     ->orderBy('created_at', 'desc')
                                     ->take(8) // Get the 8 most recently added products
                                     ->get();
-                            @endphp --}}
+                            @endphp
 
                             @foreach ($recentlyAddedProducts as $key => $product)
                                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $product->cat_id }}">
@@ -211,7 +210,9 @@
         </div>
     </div>
     <!-- End Product Area -->
-
+    {{-- @php
+    $featured=DB::table('products')->where('is_featured',1)->where('status','active')->orderBy('id','DESC')->limit(1)->get();
+@endphp --}}
     <!-- Start Midium Banner  -->
     <section class="midium-banner">
         <div class="container">
@@ -637,7 +638,7 @@
     </style>
 @endpush
 
-{{-- @push('script')
+@push('script')
     <!-- Trước </body> dùng điều khiển small banner -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -667,14 +668,14 @@
             });
         });
     </script>
-@endpush --}}
+@endpush
 
 
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

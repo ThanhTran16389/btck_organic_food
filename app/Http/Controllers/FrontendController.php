@@ -29,9 +29,11 @@ class FrontendController extends Controller
         $posts = Post::where('status', 'active')->orderBy('id', 'DESC')->limit(3)->get();
         $banners = Banner::where('status', 'active')->limit(7)->orderBy('id', 'DESC')->get(); // giới hạn 7 banner
         $products = Product::where('status', 'active')->orderBy('id', 'DESC')->limit(8)->get();
+        $recentlyAddedProducts = Product::where('status', 'active')->orderBy('created_at', 'desc')->limit(8)->get();
         // dd($products);
 
-        $category = Category::where('status', 'active')->where('is_parent', 1)->orderBy('id', 'ASC')->limit(3)->get();
+        $category = Category::where('status', 'active')->where('is_parent', 1)->orderBy('id', 'ASC')->get();
+        // $category = Category::where('status', 'active')->where('is_parent', 1)->orderBy('id', 'ASC')->limit(3)->get();
         // foreach ($category as $categoryy);
         // dd ($categoryy->first()->title);
         return view('frontend.index')
@@ -39,6 +41,7 @@ class FrontendController extends Controller
             ->with('posts', $posts)
             ->with('banners', $banners)
             ->with('product_lists', $products)
+            ->with('recentlyAddedProducts', $recentlyAddedProducts)
             ->with('category_lists', $category);
     }
 

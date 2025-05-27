@@ -1082,7 +1082,7 @@ VALUES
     (
         'Others',
         'others',
-        NULL,
+        '/storage/photos/1/catergories/others.jpg',
         1,
         NULL,
         1,
@@ -1281,7 +1281,7 @@ CREATE TABLE `posts` (
     `quote` text DEFAULT NULL,
     `photo` varchar(191) DEFAULT NULL,
     `tags` varchar(191) DEFAULT NULL,
-    `status` enum('active', ' inactive ') NOT NULL DEFAULT ' active ',
+    `status` enum('active', 'inactive') NOT NULL DEFAULT 'active',
     `added_by` bigint(20) unsigned DEFAULT NULL,
     `post_cat_id` bigint(20) unsigned DEFAULT NULL,
     `post_tag_id` bigint(20) unsigned DEFAULT NULL,

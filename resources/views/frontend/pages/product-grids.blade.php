@@ -236,8 +236,6 @@
                                 <h4 class="text-warning" style="margin:100px auto;">There are no products.</h4>
                             @endif
 
-
-
                         </div>
                         <div class="row">
                             <div class="col-md-12 justify-content-center d-flex">
@@ -252,8 +250,6 @@
     </form>
 
     <!--/ End Product Style 1  -->
-
-
 
     <!-- Modal -->
     @if ($products)
