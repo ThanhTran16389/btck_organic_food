@@ -248,7 +248,7 @@ Version:1.0
 }
 .header.v3 .navbar-expand-lg .navbar-collapse{
 	display:block !important;
-	background:#333;
+	background:#1eb220;
 }
 .header .nav li a i {
 	margin-left: 6px;
@@ -2390,7 +2390,9 @@ Version:1.0
 .shop.single .product-des .product-buy {
 	margin-top: 40px;
 }
-.shop.single .product-des .product-buy{}
+.shop.single .product-des .product-buy{
+	
+}
 .shop.single .product-des .color {
 	display: inline-block;
 	margin-right: 50px;
