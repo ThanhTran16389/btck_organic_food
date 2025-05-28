@@ -2,7 +2,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>&copy; {{ date('Y') }} Developed By Luan Le.</span>
+            <span>&copy; {{ date('Y') }} Developed By Group2.</span>
         </div>
     </div>
 </footer>

@@ -9,6 +9,7 @@
                     <div class="top-left">
                         <ul class="list-main">
                             @php
+                                // gọi trực tiếp từ bảng dữ liệu trong database
                                 $settings = DB::table('settings')->get();
 
                             @endphp

@@ -102,7 +102,6 @@
     </section>
     <!-- End Small Banner -->
 
-
     <!-- Start Product Area -->
     <div class="product-area section">
         <div class="container">
@@ -227,7 +226,8 @@
                                 <img src="{{ asset($photo[0]) }}" alt="{{ asset($photo[0]) }}">
                                 <div class="content">
                                     <p>{{ $data->cat_info['title'] }}</p>
-                                    <h3>{{ $data->title }} <br>Up to<span> {{ $data->discount }}%</span></h3>
+                                    <h3>{{ $data->title }} <br>Up to<span class="showdiscount">
+                                            {{ $data->discount }}%</span></h3>
                                     <a href="{{ route('product-detail', $data->slug) }}">Shop Now</a>
                                 </div>
                             </div>
@@ -319,13 +319,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        @php
+                        {{-- @php
                             $product_lists = DB::table('products')
                                 ->where('status', 'active')
                                 ->orderBy('id', 'DESC')
                                 ->limit(6)
                                 ->get();
-                        @endphp
+                        @endphp --}}
                         @foreach ($product_lists as $product)
                             <div class="col-md-4">
                                 <!-- Start Single List  -->
@@ -674,7 +674,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

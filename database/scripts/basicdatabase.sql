@@ -196,12 +196,12 @@ INSERT INTO
     )
 VALUES
     (
-        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspiciatis unde sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspiciatis unde omnis iste natus error sit voluptatem Excepteu\r\n\r\n',
-        'Welcome to Ecommerce Laravel Website, your premier destination for products. Discover a curated collection of product types designed to elevate your needs or lifestyle. Dive into a world of quality, style, innovation where every purchase guarantees satisfaction.',
-        '/storage/photos/1/logo.png',
-        '/storage/photos/1/setting/blog3.jpg',
-        '115B/88 Test Address, Test',
-        '0971248450',
+        'Certified organic food products, chemical free, suitable for health conscious consumers.',
+        'Organic, natural, safe food.',
+        '/storage/photos/1/setting/logo2.jpg',
+        '/storage/photos/1/setting/trolley2.jpg',
+        '250/99 Test Address, Test',
+        '+84 999.999.999',
         'test_setting@gmail.com'
     );
 

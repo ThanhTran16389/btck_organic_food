@@ -274,7 +274,7 @@ Version:1.0
 /* Topbar */
 .topbar {
     background-color: #fff;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid #8F8F8F;
     padding: 15px 0;
 }
 
@@ -298,7 +298,7 @@ Version:1.0
 
 .header.v3 .navbar-expand-lg .navbar-collapse {
     display: block !important;
-    background: #333;
+    background: #3D3D3D;
 }
 
 .header .nav li a i {
@@ -401,7 +401,7 @@ Version:1.0
 
 .header .nav li .dropdown.sub-dropdown li a {
     padding: 8px 15px;
-    color: #666;
+    color: #8F8F8F;
     display: block;
     font-weight: 400;
     text-transform: capitalize;
@@ -414,7 +414,7 @@ Version:1.0
 
 .header .nav li .dropdown li .dropdown.sub-dropdown li a:hover {
     color: #fff;
-    background: #8C52FF;
+    background: #15E585;
 }
 
 .header .nav li .dropdown.sub-dropdown li:last-child a {
@@ -448,7 +448,7 @@ Version:1.0
 }
 
 .header.shop .topbar .login a {
-    color: #8C52FF;
+    color: #15E585;
 }
 
 /* Topbar Left Nav */
@@ -458,11 +458,12 @@ Version:1.0
     padding-left: 0;
 }
 
+/* vị trí số điện thoại và email */
 .header.shop .top-left .list-main li i {
     display: inline-block;
     margin-right: 4px;
     font-size: 15px;
-    color: #8C52FF;
+    color: #009450;
     position: relative;
     top: 3px;
 }
@@ -471,20 +472,22 @@ Version:1.0
     float: right;
 }
 
+/* Xem lại màu đỏ của số điện thoại và email ở đầu trang */
 .header.shop .list-main li {
     display: inline-block;
-    color: #333;
+    color: #dc3545;
     font-size: 13px;
     font-weight: 500;
     border-right: 1px solid #f0f0f0;
     padding: 0px 13px;
 }
 
+/* Vị trí login/logout */
 .header.shop .list-main li i {
     display: inline-block;
     margin-right: 4px;
     font-size: 15px;
-    color: #8C52FF;
+    color: #009450;
     position: relative;
     top: 1px;
 }
@@ -495,11 +498,11 @@ Version:1.0
 }
 
 .header.shop .list-main li a {
-    color: #333;
+    color: #3D3D3D;
 }
 
 .header.shop .list-main li a:hover {
-    color: #8C52FF;
+    color: #15E585;
 }
 
 .header.shop .nav li {
@@ -683,7 +686,7 @@ Version:1.0
 
 .header .shopping-item .total span {
     text-transform: uppercase;
-    color: #222;
+    color: #3D3D3D;
     font-size: 13px;
     font-weight: 600;
     float: left;
@@ -735,7 +738,7 @@ Version:1.0
 }
 
 .header.shop .right-nav li a {
-    color: #333;
+    color: #3D3D3D;
 }
 
 .header.shop .logo {
@@ -791,7 +794,7 @@ Version:1.0
 }
 
 .header.shop .nice-select::after {
-    border-color: #666;
+    border-color: #8D8D8D;
     right: 20px;
 }
 
@@ -804,7 +807,7 @@ Version:1.0
 }
 
 .header.shop .nice-select .list li {
-    color: #666;
+    color: #8D8D8D;
     border-radius: 0px;
     font-size: 14px;
     font-weight: 400;
@@ -824,7 +827,7 @@ Version:1.0
 .header.shop .search-bar input {
     height: 48px;
     background: transparent;
-    color: #666;
+    color: #8D8D8D;
     border-radius: 0;
     border: none;
     font-size: 14px;
@@ -894,7 +897,7 @@ Version:1.0
 }
 
 .header.shop .topbar p {
-    color: #333;
+    color: #3D3D3D;
 }
 
 .header.shop .all-category {
@@ -945,7 +948,7 @@ Version:1.0
 .header.shop .main-category li a {
     font-size: 14px;
     font-weight: 600;
-    color: #333;
+    color: #3D3D3D;
     padding: 13px 25px 13px 25px;
     display: block;
     text-transform: uppercase;
@@ -1054,7 +1057,7 @@ Version:1.0
 }
 
 .header.shop .main-category li .mega-menu .single-menu .title-link:hover {
-    background: #333;
+    background: #3D3D3D;
     color: #fff;
 }
 
@@ -1113,7 +1116,7 @@ Version:1.0
 }
 
 .header.shop.v2 .nav li a {
-    color: #333;
+    color: #3D3D3D;
 }
 
 .header.shop .nav li a {
@@ -1145,7 +1148,7 @@ Version:1.0
 }
 
 .header.shop.v2 .nav li.active a {
-    color: #333 !important;
+    color: #3D3D3D !important;
     background: transparent !important;
 }
 
@@ -1162,7 +1165,7 @@ Version:1.0
 }
 
 .header.shop.v2 .nav li.active .dropdown li a {
-    color: #333 !important;
+    color: #3D3D3D !important;
 }
 
 .header.shop.v2 .nav li.active .dropdown li a:hover {
@@ -1179,14 +1182,14 @@ Version:1.0
 }
 
 .header.shop .nav li .dropdown li a {
-    color: #333;
+    color: #3D3D3D;
     padding: 8px 15px;
     font-weight: 400;
     background: #fff;
 }
 
 .header.shop.v2 .nav li .dropdown li a {
-    color: #333;
+    color: #3D3D3D;
     background: #fff;
 }
 
@@ -1226,7 +1229,7 @@ Version:1.0
 }
 
 .header.shop .right-bar .sinlge-bar .single-icon {
-    color: #333;
+    color: #3D3D3D;
     font-size: 20px;
     position: relative;
 }
@@ -1316,7 +1319,7 @@ Version:1.0
     border-radius: 3px;
     border: none;
     background: #fff;
-    color: #333;
+    color: #3D3D3D;
     border-radius: 0;
 }
 
@@ -1697,7 +1700,7 @@ Version:1.0
 }
 
 .hero-area3 .small-content .title span {
-    color: #8C52FF;
+    color: #15E585;
 }
 
 .hero-area3 .small-content .des {}
@@ -1748,7 +1751,7 @@ Version:1.0
 }
 
 .hero-area4 .big-content .title span {
-    color: #8C52FF;
+    color: #15E585;
 }
 
 .hero-area4 .big-content .des {}
@@ -1817,6 +1820,26 @@ Version:1.0
     padding-bottom: 0;
     /* background-color: #00BD66; */
     /* margin: 0; */
+}
+
+.small-banner .row {
+    margin: 0 auto;
+    background-color: #EAFFF5;
+    border: 2px #009450;
+    /* background-image: url(//btck_organic_food/storage/app/public/photos/1/banner/Banner_13.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: top center; */
+}
+
+.small-banner .row .carousel {
+    margin: 0 auto;
+}
+
+.small-banner .row .carousel-inner {
+    margin: 0 auto;
 }
 
 .small-banner .single-banner {
@@ -1901,11 +1924,15 @@ Version:1.0
 
 .midium-banner .single-banner {
     position: relative;
+    overflow: hidden;
+    height: 350px;
+    width: 100%;
 }
 
 .midium-banner .single-banner img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -1915,25 +1942,30 @@ Version:1.0
     padding-left: 50px;
     position: absolute;
     left: 0;
-    top: 50%;
+    bottom: 30px;
     transform: translateY(-50%);
 }
 
 .midium-banner .single-banner h3 {
-    font-size: 27px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
     text-transform: uppercase;
-    color: #333;
+    -webkit-text-stroke: 1px #F5F5F5;
+    /* Đường viền màu trắng, dày 1px */
+    /* -webkit-text-fill-color: #3D3D3D; */
+    /* Màu nội dung chữ */
+    /* color: #3D3D3D; */
     line-height: 30px;
 }
 
-.midium-banner .single-banner h3 span {
-    color: #8C52FF;
+.midium-banner .single-banner .showdiscount {
+    color: #dc3545;
+    font-size: 32px;
 }
 
 .midium-banner .single-banner p {
     font-size: 13px;
-    color: #8C52FF;
+    color: #3D3D3D;
     font-weight: 500;
     margin-bottom: 5px;
     text-transform: uppercase;
@@ -1947,14 +1979,14 @@ Version:1.0
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: .375rem .75rem;
+    padding: 8px 20px;
     font-size: 13px;
-    border-radius: .25rem;
+    border-radius: 5px;
     background: #009450;
     color: #fff !important;
-    padding: 10px 27px;
-    border-radius: 30px;
-    margin-top: 25px;
+    /* padding: 10px 27px;
+    border-radius: 30px; */
+    margin-top: 8px;
     text-transform: uppercase;
 }
 
@@ -2048,14 +2080,14 @@ Version:1.0
 }
 
 .product-area .nav-tabs li a {
-    color: #333;
+    color: #3D3D3D;
     text-transform: uppercase;
     display: inline-block;
     position: relative;
     margin-right: 5px;
     font-weight: 500;
     background: #fff;
-    color: #333;
+    color: #3D3D3D;
     padding: 3px 14px;
     border-radius: 3px;
     font-size: 13px;
@@ -3391,6 +3423,9 @@ Version:1.0
 
 .shop-home-list .single-list .list-image {
     position: relative;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
 .shop-home-list .single-list .list-image.overlay:before {
@@ -3445,7 +3480,7 @@ Version:1.0
     padding-right: 0px;
 }
 
-.shop-home-list .single-list img {
+.shop-home-list .single-list .list-image img {
     width: 100%;
     height: 100%;
 }
