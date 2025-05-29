@@ -1080,6 +1080,24 @@ VALUES
         'active'
     ),
     (
+        'Meats',
+        'meats',
+        '/storage/photos/1/catergories/meat-1.jpg',
+        1,
+        NULL,
+        1,
+        'active'
+    ),
+    (
+        'Milks',
+        'milks',
+        '/storage/photos/1/catergories/milk-1.jpg',
+        1,
+        NULL,
+        1,
+        'active'
+    ),
+    (
         'Others',
         'others',
         '/storage/photos/1/catergories/others.jpg',

@@ -48,13 +48,13 @@
             <div class="row">
                 @if ($category_lists->count() > 0)
                     <div id="smallBannerSlider" class="carousel slide" data-ride="carousel" data-interval="3000">
-                        <ol class="carousel-indicators">
-                            @foreach ($category_lists as $key => $cat)
-                                {{-- take 3 lấy 3 sản phẩm đầu --}}
-                                <li data-target="#smallBannerSlider" data-slide-to="{{ $key }}"
+                        {{-- <ol class="carousel-indicators">
+                            @foreach ($category_lists as $key => $cat) --}}
+                        {{-- take 3 lấy 3 sản phẩm đầu --}}
+                        {{-- <li data-target="#smallBannerSlider" data-slide-to="{{ $key }}"
                                     class="{{ $key == 0 ? 'active' : '' }}"></li>
                             @endforeach
-                        </ol>
+                        </ol> --}}
                         <div class="carousel-inner" role="listbox">
                             @foreach (collect($category_lists)->chunk(3) as $index => $chunk)
                                 <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
@@ -674,7 +674,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
