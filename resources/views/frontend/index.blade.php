@@ -108,7 +108,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>New Items</h2>
+                        <h2>New Products</h2>
                     </div>
                 </div>
             </div>
@@ -674,7 +674,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

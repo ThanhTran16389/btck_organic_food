@@ -4215,6 +4215,7 @@ Version:1.0
 .shop-list .list-content .product-price {}
 
 .shop-list .list-content .product-price span {
+    color #dc3545;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 3px;
@@ -4259,7 +4260,7 @@ Version:1.0
     height: 42px;
     line-height: 15px;
     color: #3D3D3D;
-    background: transparent;
+    background: #E0E0E0;
     border: 1px solid #cecece;
     font-size: 13px;
     border-radius: 30px;
