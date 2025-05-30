@@ -247,7 +247,6 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        {{-- <h2>Hot Item</h2> --}}
                         <h2>Best Selling Products</h2>
                     </div>
                 </div>
@@ -386,8 +385,7 @@
                                     <p class="date">{{ $post->created_at->format('d M , Y. D') }}</p>
                                     <a href="{{ route('blog.detail', $post->slug) }}"
                                         class="title">{{ $post->title }}</a>
-                                    <a href="{{ route('blog.detail', $post->slug) }}" class="more-btn">Continue
-                                        Reading</a>
+                                    <a href="{{ route('blog.detail', $post->slug) }}" class="more-btn">Read More</a>
                                 </div>
                             </div>
                             <!-- End Single Blog  -->
@@ -676,7 +674,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

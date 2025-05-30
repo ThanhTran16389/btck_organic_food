@@ -4796,6 +4796,9 @@ Version:1.0
 }
 
 .shop-blog .shop-single-blog {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     text-align: center;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -4809,10 +4812,11 @@ Version:1.0
 .shop-blog .shop-single-blog img {
     height: 100%;
     width: 100%;
+    /* object-fit: cover; */
 }
 
 .shop-blog .shop-single-blog .content {
-    padding: 40px;
+    padding: 0 16px;
 }
 
 .shop-blog .shop-single-blog .content .title {
@@ -4835,7 +4839,10 @@ Version:1.0
 .shop-blog .shop-single-blog .content .more-btn {
     font-size: 14px;
     font-weight: 400;
-    color: #3D3D3D;
+    color: #F5F5F5;
+    background-color: #009450;
+    padding: 8px 20px;
+    border-radius: 5px;
     margin-top: 10px;
     display: block;
 }
@@ -5720,7 +5727,8 @@ Version:1.0
 	20. Start Footer CSS
 ===============================*/
 .footer {
-    background: #3D3D3D;
+    /* background: #3D3D3D; */
+    background: #8F8F8F;
 }
 
 .footer .about {

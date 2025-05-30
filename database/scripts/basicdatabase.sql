@@ -1999,15 +1999,13 @@ INSERT INTO
     )
 VALUES
     (
-        '
-        Where
-            can I get some ? ',
-        '
-        where
-            - can - i - get - some ',
-        ' < h2 style = \ "margin-right: 0px; margin-bottom: 10px; margin-left: 0px; line-height: 24px; font-size: 24px; padding: 0px; font-family: DauphinPlain;\">Why do we use it?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p><h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; line-height: 24px; font-size: 24px; padding: 0px; font-family: DauphinPlain;\">Why do we use it?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>',
+        'Organic Lentils',
+        'organic-lentils',
+        '<p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">Tradin Organic supplies a wide variety of organic lentils, including; brown lentils, red lentils, green lentils, yellow lentils, French lentils, and beluga lentils. Some of them we offer in split, football, water polished, and oil polished. Our lentils originate from locations such as Canada, Italy and Turkey, and can be used simply for retail or as ingredients for ready-made meals, soups and sauces. Besides, we can also mesh our red lentils and supply a flour. Lentils are a popular and low-calorie source of proteins.
+        <br/>
+        Click on the following links if you want to find out more about our Brown, Green, Red, Beluga, French and Yellow organic lentils.</p>',
         '<h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-family: DauphinPlain; font-size: 24px; line-height: 24px;\"><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">It is a long established fact that a reader</span><br></h2>',
-        '/storage/photos/1/Blog/blog2.jpg',
+        '/storage/photos/1/posts/organic-lentils.jpg',
         'Enjoy',
         'active',
         2,
@@ -2015,11 +2013,11 @@ VALUES
         1
     ),
     (
-        'The standard Lorem Ipsum passage, used since the 1500s',
-        'the-standard-lorem-ipsum-passage-used-since-the-1500s',
-        '<h3 style=\"margin: 15px 0px; padding: 0px; font-weight: 700; font-size: 14px; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">1914 translation by H. Rackham</h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">\"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?\"</p><h3 style=\"margin: 15px 0px; padding: 0px; font-weight: 700; font-size: 14px; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">Section 1.10.33 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC</h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">\"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\"</p><h3 style=\"margin: 15px 0px; padding: 0px; font-weight: 700; font-size: 14px; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">1914 translation by H. Rackham</h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">\"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\"</p>',
+        'Organic Chickpeas',
+        'organic-chickpeas',
+        '<h3 style=\"margin: 15px 0px; padding: 0px; font-weight: 700; font-size: 14px; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">1914 translation by H. Rackham</h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">Our organic chickpeas are sourced from Turkey and Italy. Like most pulses, chickpeas are rich in fibers and proteins. Chickpeas are an important ingredient in humus and falafels. Our organic chickpeas are also used as an ingredient in sauces, soups, instant meals and spreads, but can also be used simply for retail packing. Our chickpeas are available in different sizes, such as 7, 8, 9 mm and halves. Our chickpeas can also be meshed into flour and supplied.</p>',
         '<p><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit,</span><br></p>',
-        '/storage/photos/1/Blog/blog3.jpg',
+        '/storage/photos/1/posts/organic-chickpeas.jpg',
         'Like',
         'active',
         3,
@@ -2027,11 +2025,13 @@ VALUES
         1
     ),
     (
-        'The standard Lorem Ipsum passage,',
-        'the-standard-lorem-ipsum-passage',
+        'Organic Beans',
+        'organic-beans',
+        '<p><span style=font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;>Tradin Organic supplies organic red kidney beans, white kidney beans, navy beans, black turtle beans, mung beans, and adzuki beans from China, Ethiopia, and Kyrgyzstan. In addition to the organic kidney beans from our sourcing project in China, we can also supply organic kidney beans from other origins. Our kidney beans can be used for dry retail packing or for canning. Our kidney beans are an excellent ingredient in ready-made meals, salads, soups and other dishes.
+        <br/>
+        Click on the following links for more information on our Red,  Black Turtle, Navy, Mung Red, Mung Green, Adzuki beans.</span><br></p>',
         '<p><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br></p>',
-        '<p><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br></p>',
-        '/storage/photos/1/Blog/blog2.jpg',
+        '/storage/photos/1/posts/organic-beans.jpg',
         'Enjoy',
         'active',
         2,
@@ -2039,12 +2039,26 @@ VALUES
         1
     ),
     (
-        'Lorem Ipsum is simply',
-        'lorem-ipsum-is-simply',
-        '<p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and</p><h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-family: DauphinPlain; font-size: 24px; line-height: 24px;\">What is Lorem Ipsum?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and</p>',
-        '<p><strong style=\"margin: 0px; padding: 0px; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">Lorem Ipsum</strong><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">&nbsp;is simply dummy text of the printing and typesetting industry.</span><br></p>',
-        '/storage/photos/1/Blog/blog3.jpg',
-        'Enjoy,2020',
+        'Ingredients and uses of herbal teas',
+        'ingredients-and-uses-of-herbal-teas',
+        '<p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\"><strong style=\"margin: 0px; padding: 0px;\">Herbal tea has long been a favorite drink of many middle-aged and elderly people, even young people working in offices. Some people drink tea as a hobby because of its flavor, but few people realize that herbal tea also has many special health benefits such as preventing cancer, diabetes, cardiovascular disease, reducing anxiety, and insomnia. Lets find out with Quan Tra what herbal tea is made of and what benefits it brings.
+        <br/>What is herbal tea?
+<br/>
+        Herbal Tea is a beverage that uses ingredients from natural sources such as leaves, stems, roots, seeds, flowers, etc. For example, some commonly used ingredients are: roses, dried mint leaves, rosemary, chrysanthemum, licorice, cinnamon, etc. Each type can be used separately or combined together, or combined with traditional tea leaves (Camellia sinensis tea plant) to create new flavors. The ingredients are usually kept fresh or dried. Use by mixing with hot water or boiling to drink. Herbal tea is one of the most popular methods in the tea blends industry (blended tea or mixed tea)
+        <br/>
+        Herbal tea is increasingly popular because it contains antioxidants, reduces pain, stress and many other nutrients that help improve health. Besides, this type of tea does not contain caffeine, so people can rest assured to use it without worrying about insomnia.</p>',
+        '<p>Effects of herbal tea
+        <br/>
+        Currently, there are many types of herbal tea on the market with many different effects and features. In general, most of these teas have the following main uses.
+        Support weight loss and fat loss treatment
+        <br/>
+        Herbal tea is rich in vitamins and minerals but contains very few calories. Therefore, this is one of the drinks that is good for burning fat and losing weight effectively.
+        <br/>
+        Many overweight and obese women choose herbal teas as their daily drink to lose weight and maintain their figure. Unlike other weight loss methods, drinking herbal tea does not require you to fast, avoiding sudden nutritional deficiencies in the body.
+        <br/>
+        Experts recommend that the use of herbal tea for weight loss should be combined with physical exercise and a reasonable diet.</p>',
+        '/storage/photos/1/posts/herbal-teas-1.jpg',
+        'Enjoy-2022',
         'active',
         2,
         5,
