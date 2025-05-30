@@ -161,7 +161,7 @@
                                                 <img class="hover-img" src="{{ asset($photos[0]) }}"
                                                     alt="{{ asset($photos[0]) }}">
                                                 @if ($product->stock <= 0)
-                                                    <span class="out-of-stock">Sold Out</span>
+                                                    <span class="out-of-stock">Out Of Stock</span>
                                                 @elseif($product->condition == 'new')
                                                     <span class="new">New</span>
                                                 @elseif($product->condition == 'hot')
@@ -191,6 +191,7 @@
                                                     href="{{ route('product-detail', $product->slug) }}">{{ $product->title }}</a>
                                             </h3>
                                             @php
+                                                // tính giá giảm sau discount
                                                 $after_discount =
                                                     $product->price - ($product->price * $product->discount) / 100;
                                             @endphp
@@ -246,7 +247,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Hot Item</h2>
+                        {{-- <h2>Hot Item</h2> --}}
+                        <h2>Best Selling Products</h2>
                     </div>
                 </div>
             </div>
@@ -674,7 +676,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
