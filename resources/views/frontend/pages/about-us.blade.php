@@ -30,7 +30,7 @@
                         @php
                             $settings = DB::table('settings')->get();
                         @endphp
-                        <h3>Welcome To <span>Ecommerce Laravel</span></h3>
+                        <h3>Welcome To <span>Star Organic farm</span></h3>
                         <p>
                             @foreach ($settings as $data)
                                 {{ $data->description }}
