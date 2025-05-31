@@ -27,9 +27,9 @@
             <div class="row">
                 <div class="col-lg-6 col-12">
                     <div class="about-content">
-                        @php
+                        {{-- @php
                             $settings = DB::table('settings')->get();
-                        @endphp
+                        @endphp --}}
                         <h3>Welcome To <span>Star Organic farm</span></h3>
                         <p>
                             @foreach ($settings as $data)

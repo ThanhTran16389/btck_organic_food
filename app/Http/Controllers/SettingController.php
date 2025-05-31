@@ -7,12 +7,12 @@
 
 // class SettingController extends Controller
 // {
-//     public function Setting()
+//     public function Settings()
 //     {
 //         // lấy toàn bộ dữ liệu bảng settings
-//         $setting = Setting::all();
+//         $settings = Setting::all();
 //         // dd($settings);
 //         return view('frontend.layouts.header')
-//             ->with('settings', $setting);
+//             ->with('settings', $settings);
 //     }
 // }

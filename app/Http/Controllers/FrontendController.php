@@ -9,6 +9,7 @@ use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\PostTag;
 use App\Models\Product;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -47,7 +48,8 @@ class FrontendController extends Controller
 
     public function aboutUs()
     {
-        return view('frontend.pages.about-us');
+        $settings = Setting::all();
+        return view('frontend.pages.about-us') ->with('settings', $settings);
     }
 
     public function contact()

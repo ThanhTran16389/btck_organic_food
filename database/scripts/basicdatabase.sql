@@ -196,7 +196,9 @@ INSERT INTO
     )
 VALUES
     (
-        'Certified organic food products, chemical free, suitable for health conscious consumers.',
+        'Star Organic farm is commenced in the year 1988. Company is involved in trading and manufacturing a wide range of Organic Products and spices to the consumers all around the global market. Company has wide variety of collection of products lies of
+Nutritious cereals, Pulses, Spices and Condiments, Cooking Oils, Fruit Pulps, Agro Products, Oils, Wheat and Wheat Flour, Rice and Rice products and so on.
+',
         'Organic, natural, safe food.',
         '/storage/photos/1/setting/logo2.jpg',
         '/storage/photos/1/setting/trolley2.jpg',
