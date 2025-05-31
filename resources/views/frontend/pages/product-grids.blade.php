@@ -87,6 +87,7 @@
 
                             </div>
                             <!--/ End Shop By Price -->
+
                             <!-- Single Widget -->
                             <div class="single-widget recent-post">
                                 <h3 class="title">Recently Added</h3>
@@ -96,9 +97,10 @@
                                     @php
                                         $photo = explode(',', $product->photo);
                                     @endphp
+
                                     <div class="single-post first">
                                         <div class="image">
-                                            <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}">
+                                            <img src="{{ asset($photo[0]) }}" alt="{{ $product->photo }}">
                                         </div>
                                         <div class="content">
                                             <h5><a

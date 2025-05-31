@@ -96,7 +96,7 @@
                                 <!-- Single Post -->
                                 <div class="single-post">
                                     <div class="image">
-                                        <img src="{{ $post->photo }}" alt="{{ $post->photo }}">
+                                        <img src="{{ asset($post->photo) }}" alt="{{ asset($post->photo) }}">
                                     </div>
                                     <div class="content">
                                         <h5><a href="#">{{ $post->title }}</a></h5>

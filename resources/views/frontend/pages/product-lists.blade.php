@@ -115,7 +115,7 @@
                                     @endphp
                                     <div class="single-post first">
                                         <div class="image">
-                                            <img src="{{ $photo[0] }}" alt="{{ $photo[0] }}">
+                                            <img src="{{ asset($photo[0]) }}" alt="{{ asset($photo[0]) }}">
                                         </div>
                                         <div class="content">
                                             <h5><a
@@ -296,11 +296,12 @@
                                             @php
                                                 $photo = explode(',', $product->photo);
                                             @endphp
-                                            @foreach ($photo as $data)
-                                                <div class="single-slider">
-                                                    <img src="{{ $data }}" alt="{{ $data }}">
-                                                </div>
-                                            @endforeach
+                                            {{-- @foreach ($photo as $data) --}}
+                                            <div class="single-slider">
+                                                <img src="{{ asset($photo[0]) }}" alt="{{ $product->photo }}">
+                                                {{-- <img src="{{ asset($data) }}" alt="{{ asset($data) }}"> --}}
+                                            </div>
+                                            {{-- @endforeach --}}
                                         </div>
                                     </div>
                                     <!-- End Product slider -->
