@@ -54,7 +54,8 @@ class FrontendController extends Controller
 
     public function contact()
     {
-        return view('frontend.pages.contact');
+        $settings = Setting::all();
+        return view('frontend.pages.contact')->with('settings', $settings);
     }
 
     public function productDetail($slug)
