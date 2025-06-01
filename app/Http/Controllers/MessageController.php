@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Events\MessageSent;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class MessageController extends Controller
 {
@@ -40,6 +41,7 @@ class MessageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -52,18 +54,34 @@ class MessageController extends Controller
             'phone' => 'numeric|required',
         ]);
 
-        $message = Message::create($request->all());
-        $data = [];
-        $data['url'] = route('message.show', $message->id);
-        $data['date'] = $message->created_at->format('F d, Y h:i A');
-        $data['name'] = $message->name;
-        $data['email'] = $message->email;
-        $data['phone'] = $message->phone;
-        $data['message'] = $message->message;
-        $data['subject'] = $message->subject;
-        $data['photo'] = Auth()->user()->photo;
+
+        $message = Message::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+            'subject' => $request->subject,
+            'phone' => $request->phone,
+        ]);
+
+        $data = [
+            'subject' => $request->subject,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'date' => now()->toDateTimeString(),
+            'user_message' => $request->message,
+            'url' => route('admin.messages.index')
+        ];
+
+        // Gửi mail về email admin
+        Mail::send('emails.contact', $data, function ($m) use ($data) {
+            $m->to('dinhvan141195@gmail.com')
+              ->subject('New Contact: ' . $data['subject'])
+              ->replyTo($data['email']);
+        });
+
         event(new MessageSent($data));
-        exit();
+        return response()->json(['success' => true, 'message' => 'Message sent successfully']);
     }
 
     /**

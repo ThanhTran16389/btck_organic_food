@@ -4,21 +4,21 @@ namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class MessageSent implements ShouldBroadcast
+class MessageSent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
+
+    public $message;
 
     /**
      * Create a new event instance.
      *
-     * @return void
+     * @param array $message
      */
-    public $message;
-
     public function __construct($message)
     {
         $this->message = $message;
@@ -32,5 +32,13 @@ class MessageSent implements ShouldBroadcast
     public function broadcastOn()
     {
         return new Channel('message');
+    }
+
+    /**
+     * Tên sự kiện sẽ được client lắng nghe
+     */
+    public function broadcastAs()
+    {
+        return 'message.sent';
     }
 }

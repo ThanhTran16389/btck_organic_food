@@ -11,6 +11,11 @@ class CartController extends Controller
 {
     protected $product = null;
 
+    public function index()
+{
+    return view('frontend.pages.cart');
+}
+
     public function __construct(Product $product)
     {
         $this->product = $product;
@@ -146,6 +151,7 @@ class CartController extends Controller
                 } else {
                     $error[] = 'Cart Invalid!';
                 }
+
             }
 
             return back()->with($error)->with('success', $success);
@@ -232,27 +238,41 @@ class CartController extends Controller
     //     return redirect()->back()->with('success','Successfully remove item');
     // }
 
-    public function checkout(Request $request)
-    {
-        // $cart=session('cart');
-        // $cart_index=\Str::random(10);
-        // $sub_total=0;
-        // foreach($cart as $cart_item){
-        //     $sub_total+=$cart_item['amount'];
-        //     $data=array(
-        //         'cart_id'=>$cart_index,
-        //         'user_id'=>$request->user()->id,
-        //         'product_id'=>$cart_item['id'],
-        //         'quantity'=>$cart_item['quantity'],
-        //         'amount'=>$cart_item['amount'],
-        //         'status'=>'new',
-        //         'price'=>$cart_item['price'],
-        //     );
+    // public function checkout(Request $request)
+    // {
+    //     // $cart=session('cart');
+    //     // $cart_index=\Str::random(10);
+    //     // $sub_total=0;
+    //     // foreach($cart as $cart_item){
+    //     //     $sub_total+=$cart_item['amount'];
+    //     //     $data=array(
+    //     //         'cart_id'=>$cart_index,
+    //     //         'user_id'=>$request->user()->id,
+    //     //         'product_id'=>$cart_item['id'],
+    //     //         'quantity'=>$cart_item['quantity'],
+    //     //         'amount'=>$cart_item['amount'],
+    //     //         'status'=>'new',
+    //     //         'price'=>$cart_item['price'],
+    //     //     );
 
-        //     $cart=new Cart();
-        //     $cart->fill($data);
-        //     $cart->save();
-        // }
-        return view('frontend.pages.checkout');
-    }
+    //     //     $cart=new Cart();
+    //     //     $cart->fill($data);
+    //     //     $cart->save();
+    //     // }
+    //     return view('frontend.pages.checkout');
+    // }
+    public function checkout(Request $request)
+{
+    // Lấy giỏ hàng của user hiện tại (các bản ghi chưa tạo đơn)
+    $userId = $request->user()->id;
+    $cartItems = Cart::with('product') // eager load product để lấy thông tin sản phẩm
+        ->where('user_id', $userId)
+        ->whereNull('order_id')
+        ->get();
+
+    // Tính tổng tiền
+    $totalPrice = $cartItems->sum('amount');
+
+    return view('frontend.pages.checkout', compact('cartItems', 'totalPrice'));
+}
 }

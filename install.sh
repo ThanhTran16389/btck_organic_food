@@ -15,7 +15,7 @@ fi
 composer i
 
 # Xóa file composer.lock nếu có
-if [ -f composer.lock ]; then
+if [ -f package-lock.json ]; then
     rm package-lock.json
 fi
 

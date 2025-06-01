@@ -9,7 +9,10 @@ use Illuminate\Http\Request;
 class WishlistController extends Controller
 {
     protected $product = null;
-
+    public function index()
+{
+    return view('frontend.pages.wishlist');
+}
     public function __construct(Product $product)
     {
         $this->product = $product;

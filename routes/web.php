@@ -26,6 +26,7 @@ use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\UserMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,9 @@ Route::get('/home', [FrontendController::class, 'index']);
 Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('about-us');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::post('/contact/message', [MessageController::class, 'store'])->name('contact.store');
+Route::get('/admin/messages', [MessageController::class, 'index'])->name('admin.messages.index');
+
+
 Route::get('product-detail/{slug}', [FrontendController::class, 'productDetail'])->name('product-detail');
 Route::post('/product/search', [FrontendController::class, 'productSearch'])->name('product.search');
 Route::get('/product-cat/{slug}', [FrontendController::class, 'productCat'])->name('product-cat');
@@ -70,19 +74,20 @@ Route::post('/add-to-cart', [CartController::class, 'singleAddToCart'])->name('s
 Route::get('cart-delete/{id}', [CartController::class, 'cartDelete'])->name('cart-delete');
 Route::post('cart-update', [CartController::class, 'cartUpdate'])->name('cart.update');
 
-Route::get('/cart', function () {
-    return view('frontend.pages.cart');
-})->name('cart');
+Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('user');
+
 // Wishlist
-Route::get('/wishlist', function () {
-    return view('frontend.pages.wishlist');
-})->name('wishlist');
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist');
 Route::get('/wishlist/{slug}', [WishlistController::class, 'wishlist'])->name('add-to-wishlist')->middleware('user');
-Route::get('wishlist-delete/{id}', [WishlistController::class, 'wishlistDelete'])->name('wishlist-delete');
-Route::post('cart/order', [OrderController::class, '@store'])->name('cart.order');
-Route::get('order/pdf/{id}', [OrderController::class, '@pdf'])->name('order.pdf');
-Route::get('/income', [OrderController::class, '@incomeChart'])->name('product.order.income');
+Route::get('wishlist-delete/{id}', [WishlistController::class, 'wishlistDelete'])->name('wishlist-delete')->middleware('user');
+Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
+Route::get('order/pdf/{id}', [OrderController::class, 'pdf'])->name('order.pdf');
+Route::get('/thank-you', function () {
+    return view('frontend.pages.thank-you');
+})->name('thank.you');
+
+Route::get('/income', [OrderController::class, 'incomeChart'])->name('product.order.income');
 // Route::get('/user/chart','AdminController@userPieChart')->name('user.piechart');
 Route::get('/product-grids', [FrontendController::class, 'productGrids'])->name('product-grids');
 Route::get('/product-lists', [FrontendController::class, 'productLists'])->name('product-lists');
@@ -144,7 +149,7 @@ Route::middleware([Authenticate::class, AdminMiddleware::class])
         // Product
         Route::resource('/product', ProductController::class);
         // Ajax for sub category
-        Route::post('/category/{id}/child', [CategoryController::class, 'getChildByParent']);
+        Route::post('/category/{id}/child', [CategoryController::class, 'getChildByParent'])->name('category.getchild');
         // POST category
         Route::resource('/post-category', PostCategoryController::class);
         // Post tag
