@@ -89,13 +89,12 @@
                             @php
                                 $data = explode(',', $item->size);
                             @endphp
-                            <option value="S" @if (in_array('S', $data)) selected @endif>Small</option>
-                            <option value="M" @if (in_array('M', $data)) selected @endif>Medium</option>
-                            <option value="L" @if (in_array('L', $data)) selected @endif>Large</option>
-                            <option value="XL" @if (in_array('XL', $data)) selected @endif>Extra Large</option>
-                            <option value="2XL" @if (in_array('2XL', $data)) selected @endif>Double Extra Large
-                            </option>
-                            <option value="FS" @if (in_array('FS', $data)) selected @endif>Free Size</option>
+                            <option value="100ml" @if (in_array('100ml', $data)) selected @endif>100ml</option>
+                            <option value="200ml" @if (in_array('200ml', $data)) selected @endif>200ml</option>
+                            <option value="300ml" @if (in_array('300ml', $data)) selected @endif>300ml</option>
+                            <option value="400ml" @if (in_array('400ml', $data)) selected @endif>400ml</option>
+                            <option value="500ml" @if (in_array('500ml', $data)) selected @endif>500ml</option>
+                            <option value="600ml" @if (in_array('600ml', $data)) selected @endif>600ml</option>
                         @endforeach
                     </select>
                 </div>

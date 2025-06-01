@@ -159,7 +159,7 @@
                                 <div class="shop-top">
                                     <div class="shop-shorter">
                                         <div class="single-shorter">
-                                            <label>Show :</label>
+                                            <label>Show Product:</label>
                                             <select class="show" name="show" onchange="this.form.submit();">
                                                 <option value="">Default</option>
                                                 <option value="9" @if (!empty($_GET['show']) && $_GET['show'] == '9') selected @endif>09
@@ -173,7 +173,7 @@
                                             </select>
                                         </div>
                                         <div class="single-shorter">
-                                            <label>Sort By :</label>
+                                            <label>Sort By:</label>
                                             <select class='sortBy' name='sortBy' onchange="this.form.submit();">
                                                 <option value="">Default</option>
                                                 <option value="title" @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'title') selected @endif>
@@ -182,6 +182,11 @@
                                                     Price</option>
                                                 <option value="category" @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'category') selected @endif>
                                                     Category</option>
+                                                <option value="condition"
+                                                    @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'condition') selected @endif>
+                                                    Condition</option>
+                                                <option value="discount" @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'discount') selected @endif>
+                                                    Discount</option>
                                                 {{-- <option value="brand" @if (!empty($_GET['sortBy']) && $_GET['sortBy'] == 'brand') selected @endif>
                                                     Brand</option> --}}
                                             </select>
