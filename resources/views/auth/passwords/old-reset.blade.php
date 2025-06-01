@@ -35,21 +35,21 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
+                    <form class="form" method="POST" action="{{ route('password.email') }}">
                         @csrf
                         <div class="form-group">
                             <label for="email">Your Email<span>*</span></label>
                             <input id="email" type="email"
-                                class="form-control @error('email') is-invalid @enderror"
+                                class="@error('email') is-invalid @enderror"
                                 name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email')
                                 <span class="text-danger mt-1 d-block">{{ $message }}</span>
                             @enderror
                         </div>
 
-                        <div class="form-group d-flex justify-content-between align-items-center mt-4">
-                            <button type="submit" class="btn btn-primary">Send Reset Link</button>
-                            <a href="{{ route('login.form') }}" class="btn btn-secondary">Login</a>
+                        <div class="form-group button-group">
+                            <button type="submit" class="btn">Send Reset Link</button>
+                            <a href="{{ route('login.form') }}" class="btn btn-google">Login</a>
                         </div>
                     </form>
 
@@ -85,42 +85,63 @@
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
     }
 
-    .shop.login .form input[type="email"] {
+    .shop.login .form input[type="email"],
+    .shop.login .form input[type="password"] {
         border-radius: 50px;
         padding: 12px 20px;
         border: 1px solid #ccc;
         transition: border 0.3s ease;
+        width: 100%;
+        height: 48px;
     }
 
-    .shop.login .form input[type="email"]:focus {
+    .shop.login .form input:focus {
         border-color: #4caf50;
         box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
     }
 
-    .btn-primary {
+    .shop.login .form label {
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .shop.login .form .btn {
         background: linear-gradient(45deg, #4caf50, #8bc34a);
         color: white;
-        padding: 10px 25px;
+        padding: 12px 25px;
         border: none;
         border-radius: 50px;
-        transition: background 0.3s ease;
+        transition: all 0.3s ease;
+        text-align: center;
+        white-space: nowrap;
+        display: inline-block;
     }
 
-    .btn-primary:hover {
+    .shop.login .form .btn:hover {
         background: linear-gradient(45deg, #43a047, #7cb342);
-    }
-
-    .btn-secondary {
-        background: #ff9800;
         color: white;
-        padding: 10px 25px;
-        border: none;
-        border-radius: 50px;
-        transition: background 0.3s ease;
     }
 
-    .btn-secondary:hover {
-        background: #fb8c00;
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .button-group .btn {
+        flex: 1;
+    }
+
+    .btn-google {
+        background: #ea4335;
+        color: white;
+    }
+
+    .btn-google:hover {
+        background: rgb(243, 26, 26) !important;
+        color: white;
     }
 
     .fade-in {
