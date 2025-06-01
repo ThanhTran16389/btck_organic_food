@@ -8,8 +8,10 @@ DB_USERNAME=$(grep 'DB_USERNAME=' .env | cut -d'=' -f2)
 DB_PASSWORD=$(grep 'DB_PASSWORD=' .env | cut -d'=' -f2)
 DB_NAME=$(grep 'DB_DATABASE=' .env | cut -d'=' -f2)
 
+MYSQL_CMD="C:\xampp\mysql\bin\mysql.exe"
+
 # Tạo database
-mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USERNAME" -p"$DB_PASSWORD" -e "CREATE DATABASE IF NOT EXISTS $DB_NAME;"
+"$MYSQL_CMD" -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USERNAME" -p"$DB_PASSWORD" -e "CREATE DATABASE IF NOT EXISTS $DB_NAME;"
 
 # Chạy lệnh MySQL để thực hiện script
-mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USERNAME" -p"$DB_PASSWORD" "$DB_NAME" < database/scripts/basicdatabase.sql
+"$MYSQL_CMD" -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USERNAME" -p"$DB_PASSWORD" "$DB_NAME" < database/scripts/basicdatabase.sql
