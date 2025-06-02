@@ -2472,7 +2472,8 @@ CREATE TABLE `failed_jobs` (
     `queue` text NOT NULL,
     `payload` longtext NOT NULL,
     `exception` longtext NOT NULL,
-    `failed_at` timestamp NOT NULL DEFAULT current_timestamp(),
+    -- `failed_at` timestamp NOT NULL DEFAULT current_timestamp(),
+    `failed_at` timestamp NOT NULL DEFAULT current_timestamp,
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 
@@ -2488,6 +2489,111 @@ LOCK TABLES `failed_jobs` WRITE;
 ;
 
 /*!40000 ALTER TABLE `failed_jobs` ENABLE KEYS */
+;
+
+UNLOCK TABLES;
+
+-- ====================================================================================
+-- ====================================================================================
+--
+-- Table structure for table `jobs`
+--
+DROP TABLE IF EXISTS `jobs`;
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */
+;
+
+/*!40101 SET character_set_client = utf8 */
+;
+
+CREATE TABLE `jobs` (
+    -- viết theo migration
+    `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `queue` VARCHAR(255) NOT NULL,
+    `payload` LONGTEXT NOT NULL,
+    `attempts` TINYINT UNSIGNED NOT NULL,
+    `reserved_at` INT UNSIGNED DEFAULT NULL,
+    `available_at` INT UNSIGNED NOT NULL,
+    `created_at` INT UNSIGNED NOT NULL,
+    -- cách viết khác
+    -- `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+    -- `queue` text NOT NULL,
+    -- `payload` longtext NOT NULL,
+    -- `attempts` tinyint(3) unsigned NOT NULL,
+    -- `reserved_at` timestamp NULL DEFAULT NULL,
+    -- `available_at` timestamp NULL DEFAULT NULL,
+    -- -- `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+    -- `created_at` timestamp NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    KEY `jobs_queue_index` (`queue`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+/*!40101 SET character_set_client = @saved_cs_client */
+;
+
+--
+-- Dumping data for table `jobs`
+--
+LOCK TABLES `jobs` WRITE;
+
+/*!40000 ALTER TABLE `jobs` DISABLE KEYS */
+;
+
+/*!40000 ALTER TABLE `jobs` ENABLE KEYS */
+;
+
+UNLOCK TABLES;
+
+-- ====================================================================================
+-- ====================================================================================
+-- job_batches
+--
+-- Table structure for table `job_batches`
+--
+DROP TABLE IF EXISTS `job_batches`;
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */
+;
+
+/*!40101 SET character_set_client = utf8 */
+;
+
+CREATE TABLE `job_batches` (
+    `id` VARCHAR(255) NOT NULL,
+    `name` VARCHAR(255) NOT NULL,
+    `total_jobs` INT NOT NULL,
+    `pending_jobs` INT NOT NULL,
+    `failed_jobs` INT NOT NULL,
+    `failed_job_ids` LONGTEXT NOT NULL,
+    `options` MEDIUMTEXT DEFAULT NULL,
+    `cancelled_at` INT DEFAULT NULL,
+    `created_at` INT NOT NULL,
+    `finished_at` INT DEFAULT NULL,
+    -- `id` varchar(255) NOT NULL,
+    -- `name` text NOT NULL,
+    -- `total_jobs` int(11) NOT NULL,
+    -- `pending_jobs` int(11) NOT NULL,
+    -- `failed_jobs` int(11) NOT NULL,
+    -- `failed_job_ids` longtext NOT NULL,
+    -- `options` mediumtext NULL,
+    -- `cancelled_at` timestamp NOT NULL DEFAULT current_timestamp,
+    -- `finished_at` timestamp NOT NULL DEFAULT current_timestamp,
+    -- `created_at` timestamp NOT NULL DEFAULT current_timestamp,
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+
+/*!40101 SET character_set_client = @saved_cs_client */
+;
+
+--
+-- Dumping data for table `job_batches`
+--
+LOCK TABLES `job_batches` WRITE;
+
+/*!40000 ALTER TABLE `job_batches` DISABLE KEYS */
+;
+
+/*!40000 ALTER TABLE `job_batches` ENABLE KEYS */
 ;
 
 UNLOCK TABLES;

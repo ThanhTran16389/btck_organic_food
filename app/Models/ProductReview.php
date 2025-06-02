@@ -11,7 +11,8 @@ class ProductReview extends Model
 
     public function user_info()
     {
-        return $this->hasOne(User::class, 'id', 'user_id');
+        // return $this->hasOne(User::class, 'id', 'user_id');
+        return $this->belongsTo(User::class, 'user_id','id' );
     }
 
     public static function getAllReview()

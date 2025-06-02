@@ -164,7 +164,7 @@
 @else
     <span class="badge badge-danger">{{ $product_detail->stock }}</span>
     @endif
-        </p> -->
+                                                </p> -->
                                     <p class="availability"> Stock:
                                         @if ($product_detail->stock > 0)
                                             @if ($product_detail->stock < 5)
@@ -225,7 +225,7 @@
                                                         </div>
                                                         <h4>Your Rating <span class="text-danger">*</span></h4>
                                                         <div class="review-inner">
-                                                            <!-- Form -->
+                                                            <!-- Form Review của người dùng -->
                                                             @auth
                                                                 <form class="form" method="post"
                                                                     action="{{ route('product.review.store', $product_detail->slug) }}">
@@ -281,6 +281,7 @@
                                                                         <div class="col-lg-12 col-12">
                                                                             <div class="form-group">
                                                                                 <label>Write a review</label>
+                                                                                {{-- <p>{{ $review_product }}</p> --}}
                                                                                 <textarea name="review" rows="6" placeholder=""></textarea>
                                                                             </div>
                                                                         </div>
@@ -303,16 +304,12 @@
                                                                 <!--/ End Form -->
                                                             @endauth
                                                         </div>
-                                                    </div>
 
+                                                    </div>
+                                                    {{-- Phần hiển thị thông tin review của người dùng --}}
                                                     <div class="ratting-main">
                                                         <div class="avg-ratting">
-                                                            {{-- @php
-																			$rate=0;
-																			foreach($product_detail->rate as $key=>$rate){
-																				$rate +=$rate
-																			}
-																		@endphp --}}
+
                                                             <h4>{{ ceil($product_detail->getReview->avg('rate')) }}
                                                                 <span>(Overall)</span>
                                                             </h4>

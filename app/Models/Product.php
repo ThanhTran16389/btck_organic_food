@@ -39,6 +39,7 @@ class Product extends Model
 
     public static function getProductBySlug($slug)
     {
+        // with sẽ lấy dữ liệu liên kết từ 3 hàm đã tạo ở trên
         return Product::with(['cat_info', 'rel_prods', 'getReview'])->where('slug', $slug)->first();
     }
 

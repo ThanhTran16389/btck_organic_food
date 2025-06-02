@@ -10,11 +10,7 @@ use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $products = Product::getAllProduct();
@@ -25,11 +21,6 @@ class ProductController extends Controller
         // return view('backend.product.index', compact('products')); //cách truyền dữ liệu khác bằng compact
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         // $brand = Brand::get();
@@ -39,11 +30,6 @@ class ProductController extends Controller
         // return view('backend.product.create')->with('categories', $category)->with('brands', $brand);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->validate($request, [

@@ -11,11 +11,6 @@ use Illuminate\Support\Facades\Notification;
 
 class ProductReviewController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $reviews = ProductReview::getAllReview();
@@ -23,18 +18,13 @@ class ProductReviewController extends Controller
         return view('backend.review.index')->with('reviews', $reviews);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create() {}
+    public function create()
+        {
+            //
+        // $review_product = ProductReview::get();
+        // return view('frontend.pages.product_detail')->with('review_product', $review_product);
+    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -48,7 +38,8 @@ class ProductReviewController extends Controller
         $data['status'] = 'active';
         $status = ProductReview::create($data);
 
-        $user = User::where('role', 'admin')->get();
+        $user = User::all();
+        // $user = User::where('role', 'admin')->get();
         $details = [
             'title' => 'New Product Rating!',
             'actionURL' => route('product-detail', $product_info->slug),
@@ -61,26 +52,15 @@ class ProductReviewController extends Controller
             request()->session()->flash('error', 'Something went wrong! Please try again!!');
         }
 
+        // return redirect()->back()->flash('success', 'Your review has been submitted!');
         return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $review = ProductReview::find($id);
@@ -88,12 +68,6 @@ class ProductReviewController extends Controller
         return view('backend.review.edit')->with('review', $review);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $review = ProductReview::find($id);
@@ -122,12 +96,6 @@ class ProductReviewController extends Controller
         return redirect()->route('review.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $review = ProductReview::find($id);
