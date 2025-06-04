@@ -168,12 +168,6 @@ class OrderController extends Controller
         return view('backend.order.show')->with('order', $order);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $order = Order::find($id);
@@ -181,12 +175,6 @@ class OrderController extends Controller
         return view('backend.order.edit')->with('order', $order);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $order = Order::find($id);
@@ -211,12 +199,6 @@ class OrderController extends Controller
         return redirect()->route('order.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $order = Order::find($id);

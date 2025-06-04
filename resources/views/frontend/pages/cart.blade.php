@@ -141,7 +141,6 @@
                                                     </option>
                                                 @endforeach
                                             </select>
-                                            {{-- <input name="code" placeholder="Enter Valid Coupon"> --}}
                                             <button class="btn">Apply Coupon</button>
                                         </form>
                                     </div>

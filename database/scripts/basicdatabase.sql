@@ -888,25 +888,25 @@ VALUES
         '2025-08-14 04:22:17'
     ),
     (
-        'T-ShirtA1',
+        'ship-bill-1',
         30.00,
         'active',
         '2025-08-14 04:22:41'
     ),
     (
-        'T-ShirtA2',
+        'ship-bill-2',
         30.00,
         'active',
         '2025-08-15 06:54:04'
     ),
     (
-        'Address B',
+        'ship-bill-3',
         45.00,
         'active',
         '2025-08-17 20:50:48'
     ),
     (
-        'Address C',
+        'Address B',
         50.00,
         'active',
         '2025-11-22 16:55:50'
