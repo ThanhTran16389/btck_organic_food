@@ -5869,3 +5869,82 @@ Version:1.0
 /*=============================
 	End Footer CSS
 ===============================*/
+
+/*=============================
+	21. Start chat zalo-call-messenger face
+===============================*/
+.floating-support {
+    position: fixed;
+    z-index: 5;
+    right: 20px;
+    bottom: 50px;
+    font-size: 0;
+    width: 45px;
+}
+
+.floating-support-item {
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    display: flex;
+    -webkit-box-pack: start;
+
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    align-content: center;
+    white-space: nowrap;
+    background: #fff;
+    line-height: 1;
+    transition: 0.3s;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+
+.floating-support-item img {
+    width: 32px;
+    height: 32px;
+    ;
+}
+
+.floating-support-item-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    align-content: center;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.floating-support-item-content {
+    opacity: 0;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.floating-support-item-content p {
+    font-size: 14px;
+    color: #3D3D3D;
+    margin: 0;
+}
+
+.floating-support-item-content b {
+    font-weight: 700;
+}
+
+.floating-support-item-content span {
+    margin-top: 5px;
+    display: block;
+    color: #8D8D8D;
+    font-size: 12px;
+}
+
+
+/*=============================
+	End chat zalo-call-messenger face
+===============================*/
