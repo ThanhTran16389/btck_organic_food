@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Ecommerce Laravel || Reset Password')
+@section('title', 'Star Organic || Reset Password')
 
 @section('main-content')
 

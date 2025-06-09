@@ -210,3 +210,10 @@ Route::middleware(UserMiddleware::class)->prefix('user')->group(function () {
 Route::middleware(Authenticate::class)->prefix('laravel-filemanager')->group(function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+// route Chat Bot AI
+
+Route::get('/chatbot', function () {
+    return view('chatbot');
+});
+
