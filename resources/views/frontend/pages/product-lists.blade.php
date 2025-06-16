@@ -259,7 +259,9 @@
                                                     </div>
                                                     <p class="des pt-2">{!! html_entity_decode($product->summary) !!}</p>
                                                     {{-- <a href="javascript:void(0)" class="btn cart" --}}
-                                                    <a href="{{ route('checkout') }}" class="btn cart"
+                                                    {{-- kiểm tra lại đường dẫn ở đây --}}
+                                                    {{-- <a href="{{ route('checkout-single-product') }}" class="btn cart" --}}
+                                                    <a href="{{ route('buy-now', $product->slug) }}" class="btn cart"
                                                         data-id="{{ $product->id }}">Buy Now!</a>
                                                 </div>
                                             </div>

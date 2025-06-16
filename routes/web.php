@@ -77,7 +77,10 @@ Route::post('cart-update', [CartController::class, 'cartUpdate'])->name('cart.up
 Route::get('/cart', function () {
     return view('frontend.pages.cart');
 })->name('cart');
+Route::get('/buy-now/{slug}', [CartController::class, 'buyNow'])->name('buy-now');
 Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('user');
+// kiểm tra lại view này
+// Route::get('/checkout-single-product', [CartController::class, 'checkoutSingle'])->name('checkout-single-product')->middleware('user');
 // Wishlist
 Route::get('/wishlist', function () {
     return view('frontend.pages.wishlist');

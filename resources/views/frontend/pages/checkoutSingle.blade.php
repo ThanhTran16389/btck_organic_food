@@ -366,11 +366,15 @@
                         <div class="order-details">
                             <!-- Order Widget -->
                             <div class="single-widget">
-                                <h2>CART TOTAL</h2>
+                                <h2>SINGLE PRODUCT</h2>
                                 <div class="content">
                                     <ul>
-                                        <li class="order_subtotal" data-price="{{ Helper::totalCartPrice() }}">Cart
-                                            Subtotal<span>${{ number_format(Helper::totalCartPrice(), 2) }}</span></li>
+                                        @php
+                                            $after_discount =
+                                                $product->price - ($product->price * $product->discount) / 100;
+                                        @endphp
+                                        <li class="order_subtotal" data-price="{{ $after_discount }}">Single
+                                            Product<span>${{ number_format($after_discount, 2) }}</span></li>
                                         <li class="shipping">
                                             Shipping Cost
                                             @if (count(Helper::shipping()) > 0 && Helper::cartCount() > 0)

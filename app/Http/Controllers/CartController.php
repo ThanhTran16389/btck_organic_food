@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
@@ -254,5 +255,49 @@ class CartController extends Controller
         //     $cart->save();
         // }
         return view('frontend.pages.checkout');
+    }
+//  hàm buy now này sẽ tương tự hàm add to cart
+public function buyNow(Request $request)
+{
+    // Tìm sản phẩm theo slug
+    if (empty($request->slug)) {
+            request()->session()->flash('error', 'Invalid Products');
+
+            return back();
+        }
+        $product = Product::where('slug', $request->slug)->first();
+        // Nếu không tìm thấy sản phẩm
+        if (empty($product)) {
+            request()->session()->flash('error', 'Invalid Products');
+
+            return back();
+        }
+// Thêm sản phẩm vào giỏ hàng như hàm addToCart
+        $already_cart = Cart::where('user_id', auth()->user()->id)->where('order_id', null)->where('product_id', $product->id)->first();
+        // Cập nhật số lượng nếu đã có trong giỏ
+        if ($already_cart) {
+            $already_cart->quantity = $already_cart->quantity + 1;
+            $already_cart->amount = $product->price + $already_cart->amount;
+            if ($already_cart->product->stock < $already_cart->quantity || $already_cart->product->stock <= 0) {
+                return back()->with('error', 'Stock not sufficient!.');
+            }
+            $already_cart->save();
+        } else {
+        // Thêm sản phẩm mới
+            $cart = new Cart;
+            $cart->user_id = auth()->user()->id;
+            $cart->product_id = $product->id;
+            $cart->price = ($product->price - ($product->price * $product->discount) / 100);
+            $cart->quantity = 1;
+            $cart->amount = $cart->price * $cart->quantity;
+            if ($cart->product->stock < $cart->quantity || $cart->product->stock <= 0) {
+                return back()->with('error', 'Stock not sufficient!.');
+            }
+            $cart->save();
+            $wishlist = Wishlist::where('user_id', auth()->user()->id)->where('cart_id', null)->update(['cart_id' => $cart->id]);
+        }
+        request()->session()->flash('success', 'Product has been added to cart');
+
+        return redirect()->route('cart');
     }
 }
