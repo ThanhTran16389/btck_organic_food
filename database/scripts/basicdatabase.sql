@@ -778,10 +778,6 @@ UNLOCK TABLES;
 
 -- ====================================================================================
 -- ====================================================================================
--- COPY DỮ LIỆU TỪ BẢNG SHIPPINGS TRỞ XUỐNG
--- COPY DỮ LIỆU TỪ BẢNG SHIPPINGS TRỞ XUỐNG
--- ====================================================================================
--- ====================================================================================
 -- -- Table structure for table `brands`
 -- --
 -- DROP TABLE IF EXISTS `brands`;
@@ -882,31 +878,31 @@ INSERT INTO
     `shippings` (`type`, `price`, `status`, `created_at`)
 VALUES
     (
-        'Address A',
-        20.00,
+        'Less than 5km',
+        5.00,
         'active',
         '2025-08-14 04:22:17'
     ),
     (
-        'ship-bill-1',
-        30.00,
+        'Less than 20km',
+        10.00,
         'active',
         '2025-08-14 04:22:41'
     ),
     (
-        'ship-bill-2',
-        30.00,
+        'Less than 50km',
+        20.00,
         'active',
         '2025-08-15 06:54:04'
     ),
     (
-        'ship-bill-3',
-        45.00,
+        'Less than 200km',
+        30.00,
         'active',
         '2025-08-17 20:50:48'
     ),
     (
-        'Address B',
+        'Over 200km',
         50.00,
         'active',
         '2025-11-22 16:55:50'
@@ -940,7 +936,9 @@ CREATE TABLE `orders` (
     `pay_method` enum('cod', 'paypal', 'cardpay') NOT NULL DEFAULT 'cod',
     `pay_status` enum('paid', 'unpaid') NOT NULL DEFAULT 'unpaid',
     `status` enum('new', 'process', 'delivered', 'cancel') NOT NULL DEFAULT 'new',
-    `name` varchar(191) NOT NULL,
+    -- `name` varchar(191) NOT NULL,
+    `first_name` varchar(191) NOT NULL,
+    `last_name` varchar(191) NOT NULL,
     `email` varchar(191) NOT NULL,
     `phone` varchar(191) NOT NULL,
     `country` varchar(191) NOT NULL,

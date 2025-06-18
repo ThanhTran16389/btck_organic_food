@@ -414,11 +414,12 @@
                                 <div class="content">
                                     <div class="checkbox">
                                         {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
-                                        <form-group>
-                                            <input name="payment_method" type="radio" value="cod" required> <label>
+                                        <div>
+                                            <input name="pay_method" type="radio" value="cod" required> <label>
                                                 Cash On Delivery</label><br>
-                                            <!-- <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label><br> -->
-                                            <input name="payment_method" type="radio" value="cardpay" required> <label>
+                                            <input name="pay_method" type="radio" value="paypal"> <label>
+                                                PayPal</label><br>
+                                            <input name="pay_method" type="radio" value="cardpay" required> <label>
                                                 Card Payment</label><br>
 
                                             <!-- Credit Card Details -->
@@ -437,7 +438,7 @@
                                                 <label for="cvv">CVV:</label>
                                                 <input type="text" id="cvv" name="cvv" maxlength="3"><br>
                                             </div>
-                                        </form-group>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -623,7 +624,7 @@
 
     <script>
         $(document).ready(function() {
-            $('input[name="payment_method"]').change(function() {
+            $('input[name="pay_method"]').change(function() {
                 if ($(this).val() === 'cardpay') {
                     $('#creditCardDetails').show();
                 } else {

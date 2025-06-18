@@ -27,21 +27,11 @@ class OrderController extends Controller
         return view('backend.order.index')->with('orders', $orders);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -52,6 +42,7 @@ class OrderController extends Controller
             'coupon' => 'nullable|numeric',
             'phone' => 'numeric|required',
             'post_code' => 'string|nullable',
+            // 'pay_method' => 'required|in:cod,paypal,cardpay',
             'email' => 'string|required',
         ]);
 
@@ -111,24 +102,16 @@ class OrderController extends Controller
                 $order_data['total_amount'] = Helper::totalCartPrice();
             }
         }
-        // $order_data['status']="new";
-        // if(request('payment_method')=='paypal'){
-        //     $order_data['payment_method']='paypal';
-        //     $order_data['payment_status']='paid';
-        // }
-        // else{
-        //     $order_data['payment_method']='cod';
-        //     $order_data['payment_status']='Unpaid';
-        // }
-        if (request('payment_method') == 'paypal') {
-            $order_data['payment_method'] = 'paypal';
-            $order_data['payment_status'] = 'paid';
-        } elseif (request('payment_method') == 'cardpay') {
-            $order_data['payment_method'] = 'cardpay';
-            $order_data['payment_status'] = 'paid';
+        // Payment method
+        if (request('pay_method') == 'paypal') {
+            $order_data['pay_method'] = 'paypal';
+            $order_data['pay_status'] = 'paid';
+        } elseif (request('pay_method') == 'cardpay') {
+            $order_data['pay_method'] = 'cardpay';
+            $order_data['pay_status'] = 'paid';
         } else {
-            $order_data['payment_method'] = 'cod';
-            $order_data['payment_status'] = 'Unpaid';
+            $order_data['pay_method'] = 'cod';
+            $order_data['pay_status'] = 'Unpaid';
         }
         $order->fill($order_data);
         $status = $order->save();
@@ -142,7 +125,7 @@ class OrderController extends Controller
             'fas' => 'fa-file-alt',
         ];
         Notification::send($users, new StatusNotification($details));
-        if (request('payment_method') == 'paypal') {
+        if (request('pay_method') == 'paypal') {
             return redirect()->route('payment')->with(['id' => $order->id]);
         } else {
             session()->forget('cart');
@@ -155,12 +138,6 @@ class OrderController extends Controller
         return redirect()->route('home');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $order = Order::find($id);
