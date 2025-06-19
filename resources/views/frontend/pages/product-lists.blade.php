@@ -304,12 +304,9 @@
                                             @php
                                                 $photo = explode(',', $product->photo);
                                             @endphp
-                                            {{-- @foreach ($photo as $data) --}}
                                             <div class="single-slider">
-                                                <img src="{{ asset($photo[0]) }}" alt="{{ $product->photo }}">
-                                                {{-- <img src="{{ asset($data) }}" alt="{{ asset($data) }}"> --}}
+                                                <img src="{{ asset($photo[0]) }}" alt="{{ asset($photo[0]) }}">
                                             </div>
-                                            {{-- @endforeach --}}
                                         </div>
                                     </div>
                                     <!-- End Product slider -->
