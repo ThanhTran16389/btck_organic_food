@@ -1171,6 +1171,8 @@ object {
 
 .modal-dialog .quickview-slider-active img {
     display: inline-block;
+    height: fit-content;
+    width: 90%;
 }
 
 .modal-dialog {
@@ -1267,7 +1269,7 @@ object {
 .modal-dialog .modal-content .modal-header .close:hover {
     color: #fff;
     border-color: transparent;
-    background: #8C52FF;
+    background: #15E585;
 }
 
 .modal-dialog .modal-content .modal-body {
@@ -1443,7 +1445,7 @@ object {
 }
 
 .quickview-content .nice-select .list li:hover {
-    background: #8C52FF;
+    background: #15E585;
     color: #fff;
 }
 
@@ -1815,7 +1817,7 @@ object {
 
 .modal .owl-carousel .owl-nav div:hover {
     color: #fff;
-    background: #8C52FF;
+    background: #15E585;
 }
 
 .modal .owl-carousel .owl-controls .owl-nav .owl-prev {
@@ -1891,7 +1893,7 @@ object {
     text-transform: capitalize;
     margin-right: 5px;
     border-radius: 0px;
-    background: #333;
+    background: #009450;
     color: #fff;
     display: inline-block;
     font-weight: 500;
@@ -1899,7 +1901,7 @@ object {
 
 .quickview-content .add-to-cart .btn:hover {
     color: #fff;
-    background: #8C52FF;
+    background: #15E585;
 }
 
 .quickview-content .add-to-cart .btn.min {

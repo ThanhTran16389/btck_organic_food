@@ -277,11 +277,15 @@
                                             @php
                                                 $photo = explode(',', $product->photo);
                                             @endphp
-                                            @foreach ($photo as $data)
+                                            <div class="single-slider">
+                                                <img src="{{ asset($photo[0]) }}" alt="{{ asset($photo[0]) }}">
+                                            </div>
+
+                                            {{-- @foreach ($photo as $data)
                                                 <div class="single-slider">
                                                     <img src="{{ $data }}" alt="{{ $data }}">
                                                 </div>
-                                            @endforeach
+                                            @endforeach --}}
                                         </div>
                                     </div>
                                     <!-- End Product slider -->

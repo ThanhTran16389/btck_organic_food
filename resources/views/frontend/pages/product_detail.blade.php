@@ -164,7 +164,7 @@
 @else
     <span class="badge badge-danger">{{ $product_detail->stock }}</span>
     @endif
-                                                </p> -->
+                                                                </p> -->
                                     <p class="availability"> Stock:
                                         @if ($product_detail->stock > 0)
                                             @if ($product_detail->stock < 5)
@@ -450,18 +450,13 @@
                             <!-- Product Slider -->
                             <div class="product-gallery">
                                 <div class="quickview-slider-active">
+                                    @php
+                                        $photo = explode(',', $product->photo);
+                                    @endphp
                                     <div class="single-slider">
-                                        <img src="images/modal1.png" alt="#">
+                                        <img src="{{ asset($photo[0]) }}" alt="{{ asset($photo[0]) }}">
                                     </div>
-                                    <div class="single-slider">
-                                        <img src="images/modal2.png" alt="#">
-                                    </div>
-                                    <div class="single-slider">
-                                        <img src="images/modal3.png" alt="#">
-                                    </div>
-                                    <div class="single-slider">
-                                        <img src="images/modal4.png" alt="#">
-                                    </div>
+
                                 </div>
                             </div>
                             <!-- End Product slider -->
