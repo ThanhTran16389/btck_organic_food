@@ -8,12 +8,12 @@
             <span>(7h30 - 18h00)</span>
         </div>
     </a>
-    <a href="tel:099.999.9999" class="floating-support-item" target="_blank">
+    <a href="tel:+84 123 666 8888" class="floating-support-item" target="_blank">
         <div class="floating-support-item-icon">
             <img src="{{ asset('storage/photos/1/icon/call.webp') }}" alt="call">
         </div>
         <div class="floating-support-item-content">
-            <p><b>+84 999.999.999</b></p>
+            <p><b>+84 123 666 8888</b></p>
             <span>(7h30 - 18h00)</span>
         </div>
     </a>

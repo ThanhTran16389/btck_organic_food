@@ -87,7 +87,7 @@ VALUES
         'organic-and-heathy',
         '/storage/photos/1/banner/Banner_01.jpg',
         -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy</span></h2>',
-        'Organic And Heathy',
+        'Description: Organic And Heathy',
         'active'
     ),
     (
@@ -95,23 +95,23 @@ VALUES
         'organic-and-heathy-food',
         '/storage/photos/1/banner/Banner_02.jpg',
         -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic And Heathy Food</span></h2>',
-        'organic-and-heathy-food',
+        'Description: Organic And Heathy Food',
         'active'
     ),
     (
-        'ENJOY WITH HEATHY FOOD',
+        'Enjoy With Healthy Food',
         'enjoy-with-heathy-food',
         '/storage/photos/1/banner/Banner_03.jpg',
         -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">ENJOY WITH HEATHY FOOD</span></h2>',
-        'enjoy-with-heathy-food',
+        'Description: Enjoy With Healthy Food',
         'active'
     ),
     (
         'Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath',
-        'natural-organic-heath',
+        'pure-green-organic-vegetables',
         '/storage/photos/1/banner/Banner_04.jpg',
         -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Pure Green Organic Vegetables, Rich In Vitamins, Good For Heath</span></h2>',
-        'natural-organic-heath',
+        'Description: Pure Green Organic Vegetables',
         'active'
     ),
     (
@@ -119,7 +119,7 @@ VALUES
         'eat-heathy-eat-organic',
         '/storage/photos/1/banner/Banner_05.jpg',
         -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Eat Heathy, Eat Organic</span></h2>',
-        'eat-heathy-eat-organic',
+        'Description: Eat Heathy, Eat Organic',
         'active'
     ),
     (
@@ -127,7 +127,7 @@ VALUES
         'organic-and-heathy-heathy',
         '/storage/photos/1/banner/Banner_07.jpg',
         -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Organic and Heathy Heathy</span></h2>',
-        'organic-and-heathy-heathy',
+        'Description: Organic and Heathy Heathy',
         'active'
     ),
     (
@@ -135,7 +135,7 @@ VALUES
         'natural-food-vegetarian',
         '/storage/photos/1/banner/Banner_08.jpg',
         -- '<h2><span style=\"font-weight: bold; color: rgb(8, 87, 28);\">Natural Food Vegetarian</span></h2>',
-        'natural-food-vegetarian',
+        'Description: Natural Food Vegetarian',
         'active'
     );
 
@@ -199,12 +199,12 @@ VALUES
         'Star Organic farm is commenced in the year 1988. Company is involved in trading and manufacturing a wide range of Organic Products and spices to the consumers all around the global market. Company has wide variety of collection of products lies of
 Nutritious cereals, Pulses, Spices and Condiments, Cooking Oils, Fruit Pulps, Agro Products, Oils, Wheat and Wheat Flour, Rice and Rice products and so on.
 ',
-        'Organic, natural, safe food.',
+        'Organic - Natural - Safe Food.',
         '/storage/photos/1/setting/logo2.jpg',
         '/storage/photos/1/setting/trolley2.jpg',
-        '250/99 Test Address, Test',
-        '+84 999.999.999',
-        'test_setting@gmail.com'
+        '99 Nguyen Thi Minh Khai, Distric 1, HCM City',
+        '+84 123 666 8888',
+        'star_organic_food@gmail.com'
     );
 
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */
@@ -778,6 +778,10 @@ UNLOCK TABLES;
 
 -- ====================================================================================
 -- ====================================================================================
+-- COPY DỮ LIỆU TỪ BẢNG SHIPPINGS TRỞ XUỐNG
+-- COPY DỮ LIỆU TỪ BẢNG SHIPPINGS TRỞ XUỐNG
+-- ====================================================================================
+-- ====================================================================================
 -- -- Table structure for table `brands`
 -- --
 -- DROP TABLE IF EXISTS `brands`;
@@ -878,34 +882,34 @@ INSERT INTO
     `shippings` (`type`, `price`, `status`, `created_at`)
 VALUES
     (
-        'Less than 5km',
-        5.00,
+        'Address A',
+        20.00,
         'active',
         '2025-08-14 04:22:17'
     ),
     (
-        'Less than 20km',
-        10.00,
+        'Address B',
+        50.00,
+        'active',
+        '2025-11-22 16:55:50'
+    ),
+    (
+        'Ship 10kg',
+        20.00,
         'active',
         '2025-08-14 04:22:41'
     ),
     (
-        'Less than 50km',
-        20.00,
+        'Ship 20kg',
+        30.00,
         'active',
         '2025-08-15 06:54:04'
     ),
     (
-        'Less than 200km',
-        30.00,
+        'Ship 30kg',
+        45.00,
         'active',
         '2025-08-17 20:50:48'
-    ),
-    (
-        'Over 200km',
-        50.00,
-        'active',
-        '2025-11-22 16:55:50'
     );
 
 /*!40000 ALTER TABLE `shippings` ENABLE KEYS */
@@ -936,9 +940,7 @@ CREATE TABLE `orders` (
     `pay_method` enum('cod', 'paypal', 'cardpay') NOT NULL DEFAULT 'cod',
     `pay_status` enum('paid', 'unpaid') NOT NULL DEFAULT 'unpaid',
     `status` enum('new', 'process', 'delivered', 'cancel') NOT NULL DEFAULT 'new',
-    -- `name` varchar(191) NOT NULL,
-    `first_name` varchar(191) NOT NULL,
-    `last_name` varchar(191) NOT NULL,
+    `name` varchar(191) NOT NULL,
     `email` varchar(191) NOT NULL,
     `phone` varchar(191) NOT NULL,
     `country` varchar(191) NOT NULL,
@@ -1355,7 +1357,7 @@ INSERT INTO
 VALUES
     -- agro products cat_id=6 herbaltea id18 driedfuit id19 fuit wine id20
     (
-        '01_antonin-fels',
+        'Antonin Fels',
         'antonin-fels',
         '<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi molestias doloribus nam laborum dicta deleniti quo consequuntur voluptate blanditiis quasi voluptas, magnam explicabo excepturi tempore vel iure harum, voluptatem exercitationem?</p>',
         '<ul >Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa pariatur, sunt eveniet ex a, doloribus aliquid exercitationem ab officia facere repellat magnam saepe aut consequuntur quis, veniam odio doloremque ducimus.</ul>',
@@ -1371,7 +1373,7 @@ VALUES
         NULL
     ),
     (
-        '02_hemp-seed',
+        'Hemp Sed',
         'hemp-seed',
         '<p>Apply directly to skin or mix with your favorite moisturizer. For hair, use as a mask or add to conditioner. For nails, massage into cuticles.</p>',
         '<ul >Experience the natural goodness of Organic Hemp Oil, rich in essential fatty acids, vitamins, and antioxidants. This dryy oil deeply moisturizes, softens, and nourishes skin, helping to alleviate dryness. With a balanced ratio of Omega 6, Omega 3, and GLA, it promotes skin suppleness, reduces wrinkles, and rebalances oily skin. </ul>',
@@ -1387,7 +1389,7 @@ VALUES
         19
     ),
     (
-        '03_hemp-seed2',
+        'Hemp Seed 2',
         'hemp-seed2',
         '<p>Apply directly to skin or mix with your favorite moisturizer. For hair, use as a mask or add to conditioner. For nails, massage into cuticles.</p>',
         '<ul >Experience the natural goodness of Organic Hemp Oil, rich in essential fatty acids, vitamins, and antioxidants. This dryy oil deeply moisturizes, softens, and nourishes skin, helping to alleviate dryness. With a balanced ratio of Omega 6, Omega 3, and GLA, it promotes skin suppleness, reduces wrinkles, and rebalances oily skin. </ul>',
@@ -1403,7 +1405,7 @@ VALUES
         19
     ),
     (
-        '04_fluff',
+        'Fluff',
         'fluff',
         '<p>Apply directly to skin or mix with your favorite moisturizer. For hair, use as a mask or add to conditioner. For nails, massage into cuticles.</p>',
         '<ul >Experience the natural goodness of Organic Hemp Oil, rich in essential fatty acids, vitamins, and antioxidants. This dryy oil deeply moisturizes, softens, and nourishes skin, helping to alleviate dryness. With a balanced ratio of Omega 6, Omega 3, and GLA, it promotes skin suppleness, reduces wrinkles, and rebalances oily skin. </ul>',
@@ -1419,8 +1421,8 @@ VALUES
         NULL
     ),
     (
-        '05_tinhdaubacha',
-        'tinhdaubacha',
+        'Peppermint essential oil',
+        'peppermint-essential-oil',
         '<p>Apply directly to skin or mix with your favorite moisturizer. For hair, use as a mask or add to conditioner. For nails, massage into cuticles.</p>',
         '<ul >Experience the natural goodness of Organic Hemp Oil, rich in essential fatty acids, vitamins, and antioxidants. This dryy oil deeply moisturizes, softens, and nourishes skin, helping to alleviate dryness. With a balanced ratio of Omega 6, Omega 3, and GLA, it promotes skin suppleness, reduces wrinkles, and rebalances oily skin. </ul>',
         '/storage/photos/1/products/agro-products/05_tinhdaubacha.jpg',
@@ -1500,7 +1502,7 @@ VALUES
         NULL
     ),
     (
-        '02_peanut-Oil-grupo-campo',
+        'Peanut Oil Grupo Campo',
         'peanut-Oil-grupo-campo',
         '<p>Eucalyptus - Like a combination of wood, mint, and camphor - strong, cleansing, and enticing.</p>',
         '<ul >For aromatherapy use. Please consult manufacturer directions, essential oils book, or other professional reference guide for uses specific to each oil, dilution ratios, and other relevant information.</ul>',
@@ -1697,7 +1699,7 @@ VALUES
     (
         'Fish Type 1',
         'fish-1',
-        '<p>Our Organic Pork Chops have rave reviews from our customers who love their tender, juicy texture and delicious flavor.</p>',
+        '<p>Our Organic Fish Chops have rave reviews from our customers who love their tender, juicy texture and delicious flavor.</p>',
         '<ul >Achieve a delectable, natural, sweet, and nutty flavor by pan-searing and then oven-roasting these chops. Whether you prefer to grill, bake, or pan-sear these chops, ensure they reach an internal temperature of 145°F for an irresistible result.</ul>',
         '/storage/photos/1/products/meats/fish-1.jpg',
         10,
@@ -1777,8 +1779,8 @@ VALUES
         NULL
     ),
     (
-        '05_healthiest-cereals',
-        '05_healthiest-cereals',
+        'Healthiest-cereals',
+        'healthiest-cereals',
         '<p>Breakfast cereal is a category of food, including food products, made from processed cereal grains, that are eaten as part of breakfast or as a snack food, primarily in Western societies.</p>',
         '<ul >This is a list of breakfast cereals. Many cereals are trademarked brands of large companies, such as Kellanova, WK Kellogg Co, General Mills, Malt-O-Meal, Nestlé, Quaker Oats and Post Consumer Brands, but similar equivalent products are often sold by other manufacturers and as store brands.</ul>',
         '/storage/photos/1/products/nutritious-cereals/05_healthiest-cereals.jpg',
@@ -1793,7 +1795,7 @@ VALUES
         NULL
     ),
     (
-        '07_cereals',
+        'Cereals',
         '07_cereals',
         '<p>Breakfast cereal is a category of food, including food products, made from processed cereal grains, that are eaten as part of breakfast or as a snack food, primarily in Western societies.</p>',
         '<ul >This is a list of breakfast cereals. Many cereals are trademarked brands of large companies, such as Kellanova, WK Kellogg Co, General Mills, Malt-O-Meal, Nestlé, Quaker Oats and Post Consumer Brands, but similar equivalent products are often sold by other manufacturers and as store brands.</ul>',
@@ -1826,7 +1828,7 @@ VALUES
         NULL
     ),
     (
-        '03_organic-essential-oils',
+        'Organic Essential Oils',
         'organic-essential-oils',
         '<p>Are you looking for the perfect organic essential oil set for yourself or a friend? Well look no further! Plant Therapy s Top 6 Organic Set includes our most popular organic essential oils in one set! You will be happy you chose our Top 6 Organic Set! The Top 6 Organic Set contains 10 mL each of Eucalyptus Globulus, Lavender, Lemon, Peppermint, Sweet Orange, and Tea Tree. </p>',
         '<ul >This set includes USDA Certified Organic essential oils. These oils are free from GMOs and the plants grow freely without the aid of synthetic fertilizers and in soil that is clean of prohibited substances, such as harmful pesticides. When you purchase a certified organic product, you are also helping to conserve biodiversity! This helps to ensure our natural landscapes and their ecosystems are maintained and intact for generations to come.</ul>',
@@ -1875,7 +1877,7 @@ VALUES
         14
     ),
     (
-        '03_black-matpe',
+        'Black Matpe',
         '03_black-matpe',
         '<p>Moong is at the very core of the Saatvik diet. This pulse is known for its nourishing properties and its use as a fasting food favoured by yogis.</p>',
         '<ul >Our kidney beans can be used for dry retail packing or for canning. Our kidney beans are an excellent ingredient in ready-made meals, salads, soups and other dishes</ul>',
@@ -1891,8 +1893,8 @@ VALUES
         17
     ),
     (
-        '05_red-lentils-split',
-        '05_red-lentils-split',
+        'Red Lentils Split',
+        'red-lentils-split',
         '<p>Moong is at the very core of the Saatvik diet. This pulse is known for its nourishing properties and its use as a fasting food favoured by yogis.</p>',
         '<ul >Our kidney beans can be used for dry retail packing or for canning. Our kidney beans are an excellent ingredient in ready-made meals, salads, soups and other dishes</ul>',
         '/storage/photos/1/products/pulses/05_red-lentils-split.jpg ',
@@ -1907,8 +1909,8 @@ VALUES
         16
     ),
     (
-        '06_bengal-gram-dal',
-        '06_bengal-gram-dal',
+        'Bengal Gram Dal',
+        'bengal-gram-dal',
         '<p>Moong is at the very core of the Saatvik diet. This pulse is known for its nourishing properties and its use as a fasting food favoured by yogis.</p>',
         '<ul >Our kidney beans can be used for dry retail packing or for canning. Our kidney beans are an excellent ingredient in ready-made meals, salads, soups and other dishes</ul>',
         '/storage/photos/1/products/pulses/06_bengal-gram-dal.jpg ',
@@ -2001,68 +2003,67 @@ VALUES
     (
         'Organic Lentils',
         'organic-lentils',
-        '<p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">Tradin Organic supplies a wide variety of organic lentils, including; brown lentils, red lentils, green lentils, yellow lentils, French lentils, and beluga lentils. Some of them we offer in split, football, water polished, and oil polished. Our lentils originate from locations such as Canada, Italy and Turkey, and can be used simply for retail or as ingredients for ready-made meals, soups and sauces. Besides, we can also mesh our red lentils and supply a flour. Lentils are a popular and low-calorie source of proteins.
-        <br/>
-        Click on the following links if you want to find out more about our Brown, Green, Red, Beluga, French and Yellow organic lentils.</p>',
-        '<h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-family: DauphinPlain; font-size: 24px; line-height: 24px;\"><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">It is a long established fact that a reader</span><br></h2>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        Tradin Organic supplies a wide variety of organic lentils, including brown, red, green, yellow, French, and beluga lentils.
+        These are available in split, polished, or flour form. Lentils are a low-calorie, high-protein food, sourced from Canada, Italy, and Turkey.
+    </p>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        Lentils: a protein-rich, low-calorie organic ingredient used in soups, meals, and flour production.
+    </p>',
         '/storage/photos/1/posts/organic-lentils.jpg',
         'Enjoy',
         'active',
-        2,
         1,
+        2,
         1
     ),
     (
         'Organic Chickpeas',
         'organic-chickpeas',
-        '<h3 style=\"margin: 15px 0px; padding: 0px; font-weight: 700; font-size: 14px; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">1914 translation by H. Rackham</h3><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\">Our organic chickpeas are sourced from Turkey and Italy. Like most pulses, chickpeas are rich in fibers and proteins. Chickpeas are an important ingredient in humus and falafels. Our organic chickpeas are also used as an ingredient in sauces, soups, instant meals and spreads, but can also be used simply for retail packing. Our chickpeas are available in different sizes, such as 7, 8, 9 mm and halves. Our chickpeas can also be meshed into flour and supplied.</p>',
-        '<p><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit,</span><br></p>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        Our chickpeas from Turkey and Italy are rich in fiber and protein. Commonly used in hummus and falafel, they are also ideal for soups, sauces, spreads, and can be milled into flour.
+    </p>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        Chickpeas: nutritious, versatile, and great for hummus, soups, and flour.
+    </p>',
         '/storage/photos/1/posts/organic-chickpeas.jpg',
         'Like',
         'active',
-        3,
+        2,
         3,
         1
     ),
     (
         'Organic Beans',
         'organic-beans',
-        '<p><span style=font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;>Tradin Organic supplies organic red kidney beans, white kidney beans, navy beans, black turtle beans, mung beans, and adzuki beans from China, Ethiopia, and Kyrgyzstan. In addition to the organic kidney beans from our sourcing project in China, we can also supply organic kidney beans from other origins. Our kidney beans can be used for dry retail packing or for canning. Our kidney beans are an excellent ingredient in ready-made meals, salads, soups and other dishes.
-        <br/>
-        Click on the following links for more information on our Red,  Black Turtle, Navy, Mung Red, Mung Green, Adzuki beans.</span><br></p>',
-        '<p><span style=\"font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px; text-align: justify;\">\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br></p>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        We offer organic red and white kidney beans, navy, black turtle, mung, and adzuki beans. Ideal for ready meals, salads, soups, or retail packaging. Sourced globally, including from China and Ethiopia.
+    </p>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        Beans: a key organic protein source, excellent in salads, meals, and soups.
+    </p>',
         '/storage/photos/1/posts/organic-beans.jpg',
         'Enjoy',
         'active',
+        1,
         2,
-        4,
-        1
+        4
     ),
     (
-        'Ingredients and uses of herbal teas',
+        'Ingredients and Uses of Herbal Teas',
         'ingredients-and-uses-of-herbal-teas',
-        '<p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 14px;\"><strong style=\"margin: 0px; padding: 0px;\">Herbal tea has long been a favorite drink of many middle-aged and elderly people, even young people working in offices. Some people drink tea as a hobby because of its flavor, but few people realize that herbal tea also has many special health benefits such as preventing cancer, diabetes, cardiovascular disease, reducing anxiety, and insomnia. Lets find out with Quan Tra what herbal tea is made of and what benefits it brings.
-        <br/>What is herbal tea?
-<br/>
-        Herbal Tea is a beverage that uses ingredients from natural sources such as leaves, stems, roots, seeds, flowers, etc. For example, some commonly used ingredients are: roses, dried mint leaves, rosemary, chrysanthemum, licorice, cinnamon, etc. Each type can be used separately or combined together, or combined with traditional tea leaves (Camellia sinensis tea plant) to create new flavors. The ingredients are usually kept fresh or dried. Use by mixing with hot water or boiling to drink. Herbal tea is one of the most popular methods in the tea blends industry (blended tea or mixed tea)
-        <br/>
-        Herbal tea is increasingly popular because it contains antioxidants, reduces pain, stress and many other nutrients that help improve health. Besides, this type of tea does not contain caffeine, so people can rest assured to use it without worrying about insomnia.</p>',
-        '<p>Effects of herbal tea
-        <br/>
-        Currently, there are many types of herbal tea on the market with many different effects and features. In general, most of these teas have the following main uses.
-        Support weight loss and fat loss treatment
-        <br/>
-        Herbal tea is rich in vitamins and minerals but contains very few calories. Therefore, this is one of the drinks that is good for burning fat and losing weight effectively.
-        <br/>
-        Many overweight and obese women choose herbal teas as their daily drink to lose weight and maintain their figure. Unlike other weight loss methods, drinking herbal tea does not require you to fast, avoiding sudden nutritional deficiencies in the body.
-        <br/>
-        Experts recommend that the use of herbal tea for weight loss should be combined with physical exercise and a reasonable diet.</p>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        Herbal teas help in weight loss, relaxation, and immunity. Made from natural ingredients like flowers and herbs, they are caffeine-free and rich in antioxidants. Popular among all ages.
+    </p>',
+        '<p style="text-align: justify; font-family: Open Sans, Arial, sans-serif; font-size: 14px;">
+        Herbal tea: healthy, calming, and packed with natural benefits.
+    </p>',
         '/storage/photos/1/posts/herbal-teas-1.jpg',
         'Enjoy-2022',
         'active',
         2,
-        5,
-        1
+        2,
+        5
     );
 
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */

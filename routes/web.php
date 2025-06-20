@@ -27,6 +27,7 @@ use App\Http\Middleware\UserMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -88,9 +89,8 @@ Route::get('/wishlist', function () {
 Route::get('/wishlist/{slug}', [WishlistController::class, 'wishlist'])->name('add-to-wishlist')->middleware('user');
 Route::get('wishlist-delete/{id}', [WishlistController::class, 'wishlistDelete'])->name('wishlist-delete');
 Route::post('cart/order', [OrderController::class, 'store'])->name('cart.order');
-// Route::post('cart/order', [OrderController::class, '@store'])->name('cart.order');
-
 Route::get('order/pdf/{id}', [OrderController::class, '@pdf'])->name('order.pdf');
+Route::get('/order-success', [OrderController::class, 'success'])->name('order.success');
 Route::get('/income', [OrderController::class, '@incomeChart'])->name('product.order.income');
 // Route::get('/user/chart','AdminController@userPieChart')->name('user.piechart');
 Route::get('/product-grids', [FrontendController::class, 'productGrids'])->name('product-grids');
@@ -215,10 +215,3 @@ Route::middleware(UserMiddleware::class)->prefix('user')->group(function () {
 Route::middleware(Authenticate::class)->prefix('laravel-filemanager')->group(function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
-
-// route Chat Bot AI
-
-Route::get('/chatbot', function () {
-    return view('chatbot');
-});
-

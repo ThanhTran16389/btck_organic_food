@@ -24,7 +24,6 @@
                                 <th>Qty.</th>
                                 <th>Charge</th>
                                 <th>Total</th>
-                                <th>PayMethod</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -48,9 +47,6 @@
                                         @endforeach
                                     </td>
                                     <td>${{ number_format($order->total_amount, 2) }}</td>
-
-                                    <td>{{ $order->pay_method }}</td>
-
                                     <td>
                                         @if ($order->status == 'new')
                                             <span class="badge badge-primary">NEW</span>

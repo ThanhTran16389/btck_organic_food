@@ -1171,9 +1171,6 @@ object {
 
 .modal-dialog .quickview-slider-active img {
     display: inline-block;
-    height: fit-content;
-    width: 90%;
-    margin: 0 auto;
 }
 
 .modal-dialog {
@@ -1250,7 +1247,7 @@ object {
     text-shadow: none;
     font-size: 11px;
     background: transparent;
-    color: #009450;
+    color: #737373;
     border-radius: 100%;
     border: 1px solid #eee;
     -webkit-transition: all 0.4s ease;
@@ -1270,7 +1267,7 @@ object {
 .modal-dialog .modal-content .modal-header .close:hover {
     color: #fff;
     border-color: transparent;
-    background: #15E585;
+    background: #8C52FF;
 }
 
 .modal-dialog .modal-content .modal-body {
@@ -1894,7 +1891,7 @@ object {
     text-transform: capitalize;
     margin-right: 5px;
     border-radius: 0px;
-    background: #009450;
+    background: #333;
     color: #fff;
     display: inline-block;
     font-weight: 500;
@@ -1902,7 +1899,7 @@ object {
 
 .quickview-content .add-to-cart .btn:hover {
     color: #fff;
-    background: #15E585;
+    background: #8C52FF;
 }
 
 .quickview-content .add-to-cart .btn.min {

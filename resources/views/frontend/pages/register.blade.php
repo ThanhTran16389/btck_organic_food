@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title','Star Organic || Register Page')
+@section('title','Ecommerce Laravel || Register Page')
 
 @section('main-content')
 <!-- Breadcrumbs -->

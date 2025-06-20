@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 
-@section('title', 'Star Organic || Login Page')
+@section('title', 'Ecommerce Laravel || Login Page')
 
 @section('main-content')
 <!-- Breadcrumbs -->
@@ -41,14 +41,9 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="form-group position-relative">
+                                <div class="form-group">
                                     <label>Your Password<span>*</span></label>
-                                    <div class="password-wrapper">
-                                        <input type="password" name="password" id="password" required>
-                                        <span class="toggle-password" onclick="togglePassword()">
-                                            <i class="fas fa-eye" id="eye-icon"></i>
-                                        </span>
-                                    </div>
+                                    <input type="password" name="password" required>
                                     @error('password')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -82,8 +77,6 @@
 @endsection
 
 @push('styles')
-<!-- Font Awesome for eye icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 <style>
     body {
         background: url('{{ asset('images/bglogin.jpg') }}') no-repeat center center fixed;
@@ -179,45 +172,5 @@
             transform: translateY(0);
         }
     }
-
-    .password-wrapper {
-        position: relative;
-    }
-
-    .password-wrapper input {
-        padding-right: 45px;
-        font-family: inherit;
-        letter-spacing: 0.03em;
-    }
-
-    .toggle-password {
-        position: absolute;
-        top: 50%;
-        right: 15px;
-        transform: translateY(-50%);
-        cursor: pointer;
-        color: #666;
-        font-size: 18px;
-    }
-
-    .toggle-password:hover {
-        color: #000;
-    }
-
 </style>
-@endpush
-
-@push('scripts')
-<script>
-    function togglePassword() {
-        const passwordInput = document.getElementById('password');
-        const eyeIcon = document.getElementById('eye-icon');
-
-        const isPassword = passwordInput.type === 'password';
-        passwordInput.type = isPassword ? 'text' : 'password';
-
-        eyeIcon.classList.toggle('fa-eye');
-        eyeIcon.classList.toggle('fa-eye-slash');
-    }
-</script>
 @endpush

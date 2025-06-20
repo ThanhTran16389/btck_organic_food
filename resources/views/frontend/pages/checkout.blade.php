@@ -2,6 +2,8 @@
 
 @section('title', 'Checkout page')
 
+@include('frontend.pages.order-success')
+
 @section('main-content')
 
     <!-- Breadcrumbs -->
@@ -47,7 +49,7 @@
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <div class="form-group">
                                         <label>Last Name<span>*</span></label>
-                                        <input type="text" name="last_name" placeholder="" value="{{ old('lat_name') }}"
+                                        <input type="text" name="last_name" placeholder="" value="{{ old('last_name') }}"
                                             required>
                                         @error('last_name')
                                             <span class='text-danger'>{{ $message }}</span>
@@ -414,12 +416,11 @@
                                 <div class="content">
                                     <div class="checkbox">
                                         {{-- <label class="checkbox-inline" for="1"><input name="updates" id="1" type="checkbox"> Check Payments</label> --}}
-                                        <div>
-                                            <input name="pay_method" type="radio" value="cod" required> <label>
+                                        <form-group>
+                                            <input name="payment_method" type="radio" value="cod" required> <label>
                                                 Cash On Delivery</label><br>
-                                            <input name="pay_method" type="radio" value="paypal"> <label>
-                                                PayPal</label><br>
-                                            <input name="pay_method" type="radio" value="cardpay" required> <label>
+                                            <!-- <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label><br> -->
+                                            <input name="payment_method" type="radio" value="cardpay" required> <label>
                                                 Card Payment</label><br>
 
                                             <!-- Credit Card Details -->
@@ -438,7 +439,7 @@
                                                 <label for="cvv">CVV:</label>
                                                 <input type="text" id="cvv" name="cvv" maxlength="3"><br>
                                             </div>
-                                        </div>
+                                        </form-group>
                                     </div>
                                 </div>
 
@@ -624,7 +625,7 @@
 
     <script>
         $(document).ready(function() {
-            $('input[name="pay_method"]').change(function() {
+            $('input[name="payment_method"]').change(function() {
                 if ($(this).val() === 'cardpay') {
                     $('#creditCardDetails').show();
                 } else {

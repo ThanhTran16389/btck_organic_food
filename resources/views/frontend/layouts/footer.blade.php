@@ -8,7 +8,7 @@
                     <!-- Single Widget -->
                     <div class="single-footer about">
                         <div class="logo">
-                            <a href="index.html"><img src="{{ asset('backend/img/avatar.jpg') }}" alt="#"></a>
+                            <a href="index.html"><img src="{{ asset('backend/img/avatar.png') }}" alt="#"></a>
                         </div>
                         @php
                             $settings = DB::table('settings')->get();
@@ -18,7 +18,7 @@
                                 {{ $data->short_des }}
                             @endforeach
                         </p>
-                        <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">
+                        <p class="call">Call Us 24/7<span><a href="tel:123456789">
                                     @foreach ($settings as $data)
                                         {{ $data->phone }}
                                     @endforeach
@@ -32,7 +32,7 @@
                         <h4>Information</h4>
                         <ul>
                             <li><a href="{{ route('about-us') }}">About Us</a></li>
-                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">FaQ</a></li>
                             <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="{{ route('contact') }}">Contact Us</a></li>
                             <li><a href="#">Help</a></li>
@@ -57,7 +57,7 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <!-- Single Widget -->
                     <div class="single-footer social">
-                        <h4>Get In Tuch</h4>
+                        <h4>Get In Touch</h4>
                         <!-- Single Widget -->
                         <div class="contact">
                             <ul>

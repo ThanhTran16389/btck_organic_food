@@ -16,3 +16,6 @@ mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USERNAME" -p"$DB_PASSWORD" -e "CREATE 
 
 # Chạy lệnh MySQL để thực hiện script
 mysql -h "$DB_HOST" -P "$DB_PORT" -u "$DB_USERNAME" -p"$DB_PASSWORD" "$DB_NAME" < database/scripts/basicdatabase.sql
+
+
+php artisan migrate --path=database/migrations/2025_06_19_084907_add_payment_fields_to_orders_table.php

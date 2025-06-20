@@ -81,7 +81,7 @@ VALUES
         '2020-08-14 01:47:38',
         '2023-11-22 17:15:21'
     ),
-(
+    (
         2,
         'Staycation Essentials: Create Your Haven!',
         'lorem-ipsum',
@@ -91,7 +91,7 @@ VALUES
         '2020-08-14 01:50:23',
         '2023-11-22 17:23:12'
     ),
-(
+    (
         4,
         'Exclusive Online Offers',
         'banner',
@@ -151,7 +151,7 @@ VALUES
         '2020-08-14 04:23:00',
         '2020-08-14 04:23:00'
     ),
-(
+    (
         2,
         'Nike',
         'nike',
@@ -159,7 +159,7 @@ VALUES
         '2020-08-14 04:23:08',
         '2020-08-14 04:23:08'
     ),
-(
+    (
         3,
         'Kappa',
         'kappa',
@@ -167,7 +167,7 @@ VALUES
         '2020-08-14 04:23:48',
         '2020-08-14 04:23:48'
     ),
-(
+    (
         4,
         'Prada',
         'prada',
@@ -175,7 +175,7 @@ VALUES
         '2020-08-14 04:24:08',
         '2020-08-14 04:24:08'
     ),
-(
+    (
         6,
         'Brand',
         'brand',
@@ -183,7 +183,7 @@ VALUES
         '2020-08-17 20:50:31',
         '2020-08-17 20:50:31'
     ),
-(
+    (
         7,
         'Other',
         'other',
@@ -230,13 +230,13 @@ INSERT INTO
     `cache`
 VALUES
     ('customer@mail.com|::1', 'i:2;', 1723964839),
-(
+    (
         'customer@mail.com|::1:timer',
         'i:1723964839;',
         1723964839
     ),
-('ong5@gmail.com|::1', 'i:1;', 1723964424),
-(
+    ('ong5@gmail.com|::1', 'i:1;', 1723964424),
+    (
         'ong5@gmail.com|::1:timer',
         'i:1723964424;',
         1723964424
@@ -408,7 +408,7 @@ VALUES
         '2020-08-14 04:26:15',
         '2022-11-27 12:15:13'
     ),
-(
+    (
         2,
         'Women\'s Fashion',
         'womens-fashion',
@@ -421,7 +421,7 @@ VALUES
         '2020-08-14 04:26:40',
         '2022-11-27 12:15:32'
     ),
-(
+    (
         3,
         'Kid\'s',
         'kids',
@@ -434,7 +434,7 @@ VALUES
         '2020-08-14 04:27:10',
         '2022-11-27 12:15:49'
     ),
-(
+    (
         4,
         'T-shirt\'s',
         't-shirts',
@@ -447,7 +447,7 @@ VALUES
         '2020-08-14 04:32:14',
         '2020-08-14 04:32:14'
     ),
-(
+    (
         5,
         'Jeans pants',
         'jeans-pants',
@@ -460,7 +460,7 @@ VALUES
         '2020-08-14 04:32:49',
         '2020-08-14 04:32:49'
     ),
-(
+    (
         6,
         'Sweater & Jackets',
         'sweater-jackets',
@@ -473,7 +473,7 @@ VALUES
         '2020-08-14 04:33:37',
         '2020-08-14 04:33:37'
     ),
-(
+    (
         7,
         'Rain Coats & Trenches',
         'rain-coats-trenches',
@@ -486,7 +486,7 @@ VALUES
         '2020-08-14 04:34:04',
         '2020-08-14 04:34:04'
     ),
-(
+    (
         8,
         'Dress',
         'dress',
@@ -499,7 +499,7 @@ VALUES
         '2023-11-26 14:59:14',
         '2023-11-26 14:59:14'
     ),
-(
+    (
         9,
         'Hoodies and Sweatshirts',
         'hoodies-and-sweatshirts',
@@ -512,7 +512,7 @@ VALUES
         '2023-11-26 15:04:36',
         '2023-11-26 15:04:36'
     ),
-(
+    (
         10,
         'Tops and Tshirt',
         'tops-and-tshirt',
@@ -525,7 +525,7 @@ VALUES
         '2023-11-26 15:04:52',
         '2023-11-26 15:04:52'
     ),
-(
+    (
         11,
         'Pants',
         'pants',
@@ -538,7 +538,7 @@ VALUES
         '2023-11-26 15:05:14',
         '2023-11-26 15:05:14'
     ),
-(
+    (
         12,
         'Shoes',
         'shoes',
@@ -551,7 +551,7 @@ VALUES
         '2023-11-28 21:19:07',
         '2023-11-28 21:19:07'
     ),
-(
+    (
         13,
         'Cardigans',
         'cardigans',
@@ -616,8 +616,16 @@ VALUES
         NULL,
         '2023-11-27 18:40:23'
     ),
-(2, '111111', 'percent', 10.00, 'active', NULL, NULL),
-(
+    (
+        2,
+        '111111',
+        'percent',
+        10.00,
+        'active',
+        NULL,
+        NULL
+    ),
+    (
         6,
         'CODEASTRO10',
         'percent',
@@ -743,47 +751,63 @@ INSERT INTO
     `migrations`
 VALUES
     (1, '2014_10_12_000000_create_users_table', 1),
-(
+    (
         2,
         '2014_10_12_100000_create_password_resets_table',
         1
     ),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2020_07_10_021010_create_brands_table', 1),
-(5, '2020_07_10_025334_create_banners_table', 1),
-(6, '2020_07_10_112147_create_categories_table', 1),
-(7, '2020_07_11_063857_create_products_table', 1),
-(
+    (
+        3,
+        '2019_08_19_000000_create_failed_jobs_table',
+        1
+    ),
+    (4, '2020_07_10_021010_create_brands_table', 1),
+    (5, '2020_07_10_025334_create_banners_table', 1),
+    (
+        6,
+        '2020_07_10_112147_create_categories_table',
+        1
+    ),
+    (7, '2020_07_11_063857_create_products_table', 1),
+    (
         8,
         '2020_07_12_073132_create_post_categories_table',
         1
     ),
-(9, '2020_07_12_073701_create_post_tags_table', 1),
-(10, '2020_07_12_083638_create_posts_table', 1),
-(11, '2020_07_13_151329_create_messages_table', 1),
-(12, '2020_07_14_023748_create_shippings_table', 1),
-(13, '2020_07_15_054356_create_orders_table', 1),
-(14, '2020_07_15_102626_create_carts_table', 1),
-(
+    (9, '2020_07_12_073701_create_post_tags_table', 1),
+    (10, '2020_07_12_083638_create_posts_table', 1),
+    (11, '2020_07_13_151329_create_messages_table', 1),
+    (
+        12,
+        '2020_07_14_023748_create_shippings_table',
+        1
+    ),
+    (13, '2020_07_15_054356_create_orders_table', 1),
+    (14, '2020_07_15_102626_create_carts_table', 1),
+    (
         15,
         '2020_07_16_041623_create_notifications_table',
         1
     ),
-(16, '2020_07_16_053240_create_coupons_table', 1),
-(17, '2020_07_23_143757_create_wishlists_table', 1),
-(
+    (16, '2020_07_16_053240_create_coupons_table', 1),
+    (
+        17,
+        '2020_07_23_143757_create_wishlists_table',
+        1
+    ),
+    (
         18,
         '2020_07_24_074930_create_product_reviews_table',
         1
     ),
-(
+    (
         19,
         '2020_07_24_131727_create_post_comments_table',
         1
     ),
-(20, '2020_08_01_143408_create_settings_table', 1),
-(21, '2024_08_07_074407_create_sessions_table', 2),
-(22, '2024_08_07_084359_create_cache_table', 3);
+    (20, '2020_08_01_143408_create_settings_table', 1),
+    (21, '2024_08_07_074407_create_sessions_table', 2),
+    (22, '2024_08_07_084359_create_cache_table', 3);
 
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */
 ;
@@ -838,7 +862,7 @@ VALUES
         '2023-11-27 12:58:24',
         '2023-11-27 12:58:24'
     ),
-(
+    (
         '15fbc0e9-44e4-403f-8fbf-aa45667bee46',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -848,7 +872,7 @@ VALUES
         '2023-11-28 21:58:53',
         '2023-11-28 21:58:53'
     ),
-(
+    (
         '18365bcb-3478-43f4-8f86-d3b84bf06557',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -858,7 +882,7 @@ VALUES
         '2023-11-26 16:48:51',
         '2023-11-26 16:48:51'
     ),
-(
+    (
         '1a8549ef-109a-4e2d-8c2b-7b55baa7287a',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -868,7 +892,7 @@ VALUES
         '2023-11-28 22:01:51',
         '2023-11-28 22:01:51'
     ),
-(
+    (
         '2145a8e3-687d-444a-8873-b3b2fb77a342',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -878,7 +902,7 @@ VALUES
         '2020-08-15 07:31:21',
         '2020-08-15 07:31:21'
     ),
-(
+    (
         '2689e352-a41a-4d13-989c-0e48aa2cf15c',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -888,7 +912,7 @@ VALUES
         '2023-11-27 13:37:49',
         '2023-11-27 13:37:49'
     ),
-(
+    (
         '32eafa9c-f8e7-4228-b59a-edb6da181c93',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -898,7 +922,7 @@ VALUES
         '2023-11-27 13:31:22',
         '2023-11-27 13:31:22'
     ),
-(
+    (
         '3a65729c-5dce-422c-82bb-67fe66b553b4',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -908,7 +932,7 @@ VALUES
         '2023-11-27 15:20:07',
         '2023-11-27 15:20:07'
     ),
-(
+    (
         '3af39f84-cab4-4152-9202-d448435c67de',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -918,7 +942,7 @@ VALUES
         '2020-08-15 07:54:52',
         '2020-08-15 07:54:52'
     ),
-(
+    (
         '3ef12213-1e36-42be-935d-19ce6505dade',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -928,7 +952,7 @@ VALUES
         '2023-11-29 15:19:31',
         '2023-11-29 15:19:31'
     ),
-(
+    (
         '40bff82e-3992-4cc5-8662-0eb3d88a814c',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -938,7 +962,7 @@ VALUES
         '2023-11-22 16:57:58',
         '2023-11-22 16:57:58'
     ),
-(
+    (
         '4a0afdb0-71ad-4ce6-bc70-c92ef491a525',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -948,7 +972,7 @@ VALUES
         '2020-08-17 21:13:51',
         '2020-08-17 21:13:51'
     ),
-(
+    (
         '4e3cf8f7-bb81-4d22-98b2-70ef6aeafb2d',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -958,7 +982,7 @@ VALUES
         '2023-11-27 16:54:13',
         '2023-11-27 16:54:13'
     ),
-(
+    (
         '540ca3e9-0ff9-4e2e-9db3-6b5abc823422',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -968,7 +992,7 @@ VALUES
         '2020-08-14 07:12:28',
         '2020-08-15 07:30:44'
     ),
-(
+    (
         '572a5a95-970f-4a70-9ae1-ee3b77875b9b',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -978,7 +1002,7 @@ VALUES
         '2023-11-28 21:54:20',
         '2023-11-28 21:54:20'
     ),
-(
+    (
         '57ce035a-35fe-4d76-a320-5f5e6a54ce1e',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -988,7 +1012,7 @@ VALUES
         '2023-11-28 22:28:29',
         '2023-11-28 22:28:29'
     ),
-(
+    (
         '5da09dd1-3ffc-43b0-aba2-a4260ba4cc76',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -998,7 +1022,7 @@ VALUES
         '2020-08-15 07:51:02',
         '2020-08-15 07:51:02'
     ),
-(
+    (
         '5e91e603-024e-45c5-b22f-36931fef0d90',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1008,7 +1032,7 @@ VALUES
         '2020-08-15 07:44:07',
         '2020-08-15 07:44:07'
     ),
-(
+    (
         '67574a9e-d626-42d6-8f05-ebbf214bef20',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1018,7 +1042,7 @@ VALUES
         '2023-11-27 13:25:44',
         '2023-11-27 13:25:44'
     ),
-(
+    (
         '67fe672c-7384-4ded-b609-d2261671f7ec',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1028,7 +1052,7 @@ VALUES
         '2023-11-27 13:17:47',
         '2023-11-27 13:17:47'
     ),
-(
+    (
         '6cec98cf-bf3e-4e7b-b9a1-0ff9ce8f0a5e',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1038,7 +1062,7 @@ VALUES
         '2023-11-28 15:01:35',
         '2023-11-28 15:01:35'
     ),
-(
+    (
         '73a3b51a-416a-4e7d-8ca2-53b216d9ad8e',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1048,7 +1072,7 @@ VALUES
         '2020-08-14 07:11:03',
         '2020-08-14 07:11:03'
     ),
-(
+    (
         '7be7d736-a6fb-4988-87e5-5ad39f933731',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1058,7 +1082,7 @@ VALUES
         '2023-11-28 22:00:23',
         '2023-11-28 22:00:23'
     ),
-(
+    (
         '8605db5d-1462-496e-8b5f-8b923d88912c',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1068,7 +1092,7 @@ VALUES
         '2020-08-14 07:20:44',
         '2020-08-14 07:20:44'
     ),
-(
+    (
         '8a76c3b0-1f7d-4767-97f7-0da561f0948d',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1078,7 +1102,7 @@ VALUES
         '2023-11-28 21:50:28',
         '2023-11-28 21:50:28'
     ),
-(
+    (
         '9b1ab868-89d3-4a72-8b9b-5667c4b3fc71',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1088,7 +1112,7 @@ VALUES
         '2023-11-28 14:50:44',
         '2023-11-28 14:50:44'
     ),
-(
+    (
         '9f7dd99f-85f0-4525-91f2-9c30a6f3db7f',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1098,7 +1122,7 @@ VALUES
         '2023-11-28 22:04:35',
         '2023-11-28 22:04:35'
     ),
-(
+    (
         'a6ec5643-748c-4128-92e2-9a9f293f53b5',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1108,7 +1132,7 @@ VALUES
         '2020-08-17 21:17:03',
         '2020-08-17 21:17:03'
     ),
-(
+    (
         'ac00a3f2-683b-455a-965f-80774e4f6367',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1118,7 +1142,7 @@ VALUES
         '2023-11-27 13:19:45',
         '2023-11-27 13:19:45'
     ),
-(
+    (
         'b08b5a74-76b9-4ed2-a753-c41472ef004b',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1128,7 +1152,7 @@ VALUES
         '2023-11-27 17:55:16',
         '2023-11-27 17:55:16'
     ),
-(
+    (
         'b186a883-42f2-4a05-8fc5-f0d3e10309ff',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1138,7 +1162,7 @@ VALUES
         '2020-08-14 22:14:55',
         '2020-08-15 04:17:24'
     ),
-(
+    (
         'ba9ac0a5-a8c3-4fb3-92bc-08d0fafbff6a',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1148,7 +1172,7 @@ VALUES
         '2023-11-27 16:48:05',
         '2023-11-27 16:48:05'
     ),
-(
+    (
         'd2fd7c33-b0fe-47d6-8bc6-f377d404080d',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1158,7 +1182,7 @@ VALUES
         '2020-08-14 07:08:50',
         '2020-08-14 07:08:50'
     ),
-(
+    (
         'd8e1f84b-a9f2-4c12-bfde-156c4045003c',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1168,7 +1192,7 @@ VALUES
         '2023-11-28 21:49:05',
         '2023-11-28 21:49:05'
     ),
-(
+    (
         'dfefca63-1751-47f0-88d7-72e25c9404d0',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1178,7 +1202,7 @@ VALUES
         '2023-11-27 13:32:59',
         '2023-11-27 13:32:59'
     ),
-(
+    (
         'dff78b90-85c8-42ee-a5b1-de8ad0b21be4',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1188,7 +1212,7 @@ VALUES
         '2020-08-15 06:40:54',
         '2020-08-15 06:40:54'
     ),
-(
+    (
         'e16827cb-89d7-473b-86d2-119070479970',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1198,7 +1222,7 @@ VALUES
         '2023-11-26 16:39:34',
         '2023-11-26 16:39:34'
     ),
-(
+    (
         'e28b0a73-4819-4016-b915-0e525d4148f5',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1208,7 +1232,7 @@ VALUES
         '2020-08-17 21:08:16',
         '2020-08-17 21:08:16'
     ),
-(
+    (
         'e5faa63a-6cd0-4d4c-8ce3-4fa26b44d1de',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1218,7 +1242,7 @@ VALUES
         '2023-11-27 13:22:49',
         '2023-11-27 13:22:49'
     ),
-(
+    (
         'e9f89140-4ad2-4fbb-a8b6-2a7285609671',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1228,7 +1252,7 @@ VALUES
         '2023-11-27 12:55:31',
         '2023-11-27 12:55:31'
     ),
-(
+    (
         'f90ca287-1221-417f-9210-249f3e70533a',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1238,7 +1262,7 @@ VALUES
         '2023-11-29 15:20:32',
         '2023-11-29 15:20:32'
     ),
-(
+    (
         'ffd9fb5c-c436-4ac0-96ce-35e8f3e51877',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1248,7 +1272,7 @@ VALUES
         '2023-11-27 13:28:06',
         '2023-11-27 13:28:06'
     ),
-(
+    (
         'ffffa177-c54e-4dfe-ba43-27c466ff1f4b',
         'App\\Notifications\\StatusNotification',
         'App\\User',
@@ -1403,7 +1427,7 @@ VALUES
         '2020-08-14 01:51:03',
         '2020-08-14 01:51:39'
     ),
-(
+    (
         2,
         'Electronics',
         'richard',
@@ -1411,7 +1435,7 @@ VALUES
         '2020-08-14 01:51:22',
         '2020-08-14 01:52:00'
     ),
-(
+    (
         3,
         'Cloths',
         'cloths',
@@ -1419,7 +1443,7 @@ VALUES
         '2020-08-14 01:52:22',
         '2020-08-14 01:52:22'
     ),
-(
+    (
         4,
         'enjoy',
         'enjoy',
@@ -1427,7 +1451,7 @@ VALUES
         '2020-08-14 03:16:10',
         '2020-08-14 03:16:10'
     ),
-(
+    (
         5,
         'Post Category',
         'post-category',
@@ -1498,7 +1522,7 @@ VALUES
         '2020-08-14 07:08:42',
         '2020-08-15 06:59:58'
     ),
-(
+    (
         2,
         NULL,
         2,
@@ -1509,7 +1533,7 @@ VALUES
         '2020-08-14 07:11:03',
         '2020-08-14 07:11:03'
     ),
-(
+    (
         3,
         2,
         2,
@@ -1520,7 +1544,7 @@ VALUES
         '2020-08-14 07:12:27',
         '2020-08-14 07:12:27'
     ),
-(
+    (
         4,
         1,
         2,
@@ -1531,7 +1555,7 @@ VALUES
         '2020-08-15 07:31:19',
         '2020-08-15 07:31:19'
     ),
-(
+    (
         5,
         NULL,
         5,
@@ -1542,7 +1566,7 @@ VALUES
         '2020-08-15 07:51:01',
         '2020-08-15 07:51:01'
     ),
-(
+    (
         6,
         2,
         3,
@@ -1553,7 +1577,7 @@ VALUES
         '2020-08-17 21:13:29',
         '2020-08-17 21:13:29'
     ),
-(
+    (
         7,
         2,
         3,
@@ -1614,7 +1638,7 @@ VALUES
         '2020-08-14 01:53:52',
         '2020-08-14 01:53:52'
     ),
-(
+    (
         2,
         '2020',
         '2020',
@@ -1622,7 +1646,7 @@ VALUES
         '2020-08-14 01:54:09',
         '2020-08-14 01:54:09'
     ),
-(
+    (
         4,
         'Tag',
         'tag',
@@ -1708,7 +1732,7 @@ VALUES
         '2020-08-14 01:58:52',
         '2020-08-14 07:08:14'
     ),
-(
+    (
         3,
         'The standard Lorem Ipsum passage, used since the 1500s',
         'the-standard-lorem-ipsum-passage-used-since-the-1500s',
@@ -1724,7 +1748,7 @@ VALUES
         '2020-08-14 02:59:33',
         '2020-08-14 04:29:44'
     ),
-(
+    (
         5,
         'The standard Lorem Ipsum passage,',
         'the-standard-lorem-ipsum-passage',
@@ -1740,7 +1764,7 @@ VALUES
         '2020-08-15 06:58:45',
         '2023-11-27 12:49:44'
     ),
-(
+    (
         6,
         'Lorem Ipsum is simply',
         'lorem-ipsum-is-simply',
@@ -1991,9 +2015,9 @@ VALUES
         'Welcome to Ecommerce Laravel Website, your premier destination for products. Discover a curated collection of product types designed to elevate your needs or lifestyle. Dive into a world of quality, style, innovation where every purchase guarantees satisfaction.',
         '/storage/photos/1/logo.png',
         '/storage/photos/1/blog3.jpg',
-        '115B/88 Test Address, Test',
-        '+1000000001',
-        'shop.com',
+        '99 Nguyen Thi Minh Khai, Distric 1, HCM City',
+        '+84 123 666 8888',
+        'starorganicfarm.com',
         NULL,
         '2023-11-22 17:36:59'
     );
@@ -2046,7 +2070,7 @@ VALUES
         '2020-08-14 04:22:17',
         '2023-11-22 16:55:42'
     ),
-(
+    (
         2,
         'Address B',
         25.00,
@@ -2054,7 +2078,7 @@ VALUES
         '2020-08-14 04:22:41',
         '2023-11-22 16:55:50'
     ),
-(
+    (
         3,
         'Address C',
         30.00,
@@ -2062,7 +2086,7 @@ VALUES
         '2020-08-15 06:54:04',
         '2023-11-22 16:55:59'
     ),
-(
+    (
         4,
         'Address D',
         35.00,
@@ -2134,7 +2158,7 @@ VALUES
         NULL,
         '2024-08-07 23:50:58'
     ),
-(
+    (
         2,
         'Customer A',
         'customer@mail.com',

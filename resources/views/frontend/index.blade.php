@@ -464,16 +464,11 @@
                                             @php
                                                 $photo = explode(',', $product->photo);
                                             @endphp
-                                            <div class="single-slider">
-                                                <img class="default-img" src="{{ asset($photo[0]) }}"
-                                                    alt="{{ asset($photo[0]) }}">
-                                            </div>
-
-                                            {{-- @foreach ($photo as $data)
+                                            @foreach ($photo as $data)
                                                 <div class="single-slider">
-                                                    <img src="{{ asset($data) }}" alt="{{ asset($data) }}">
+                                                    <img src="{{ $data }}" alt="{{ $data }}">
                                                 </div>
-                                            @endforeach --}}
+                                            @endforeach
                                         </div>
                                     </div>
                                     <!-- End Product slider -->
@@ -484,7 +479,11 @@
                                         <div class="quickview-ratting-review">
                                             <div class="quickview-ratting-wrap">
                                                 <div class="quickview-ratting">
-
+                                                    {{-- <i class="yellow fa fa-star"></i>
+                                                    <i class="yellow fa fa-star"></i>
+                                                    <i class="yellow fa fa-star"></i>
+                                                    <i class="yellow fa fa-star"></i>
+                                                    <i class="fa fa-star"></i> --}}
                                                     @php
                                                         $rate = DB::table('product_reviews')
                                                             ->where('product_id', $product->id)
@@ -638,12 +637,44 @@
     </style>
 @endpush
 
+{{-- @push('script')
+    <!-- Trước </body> dùng điều khiển small banner -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#smallBannerSlider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: true,
+                dots: true,
+                responsive: [{
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+@endpush --}}
+
 
 @push('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 

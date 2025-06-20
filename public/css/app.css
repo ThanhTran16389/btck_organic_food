@@ -6304,14 +6304,14 @@ a.close.disabled {
 }
 
 .modal-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 1rem 1rem;
-  border-bottom: 1px solid #dee2e6;
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+  }
 
 .modal-header .close {
   padding: 1rem 1rem;
@@ -10928,3 +10928,14 @@ a.text-dark:focus {
   }
 }
 
+
+.modal-dialog.custom-modal-width {
+    max-width: 500px !important;
+    width: 100% !important;
+    margin: 1.75rem auto !important;
+}
+
+.modal-content {
+    padding: 20px !important;
+    text-align: center;
+}

@@ -11,6 +11,8 @@ chmod -R 775 bootstrap/cache
 # Xóa cấu hình cũ
 # rm -rf public/storage
 
+
+
 # @see: https://unisharp.github.io/laravel-filemanager/installation
 php artisan vendor:publish --provider="Intervention\Image\Laravel\ServiceProvider"
 
