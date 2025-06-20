@@ -14,58 +14,58 @@
 **Step 1: install sub-package and config source**
 
 ```shell
-cài đặt các gói composer
-chạy file install.sh bằng lệnh
+install composer package
+install all files: install.sh by command line
 sh install.sh
 ```
 
 | Use admin in window or `sodo` in Mac
 
-**Bước 2: Tạo cơ sở dữ liệu mẫu**
-Trong file .env thiết lập kết nối dữ liệu với DB và đặt tên cơ sở dữ liệu là btck_ogranic_store
-chạy file database.sh bằng dòng lệnh bên dưới
+**Step 2: Create basic database | Bước 2: Tạo cơ sở dữ liệu mẫu**
+setting in .env connect with DB with the database name:btck_organic_food
+run file database.sh by command as bellow:
 
 ```shell
 sh database.sh
 ```
 
-| Dùng quyền admin trên window hoặc bổ sung `sudo` trên Mac
+| Use admin in window or `sodo` in Mac
 
-Trường hợp gặp lỗi `mysql command not found` thì tạo database bằng tay và import toàn bộ databasee trong thư file: `database\scripts\basicdatabase.sql`
+Incase database can't run, the program return with title `mysql command not found` then create the database by manual: import alls database in file: `database\scripts\basicdatabase.sql`
 
-**Bước 3: Cấu hình lại file `.env`**
+**Step 3: setting file `.env`**
 
--   Thay đổi cấu hình kết nối database
--   Thay đổi `APP_URL` bằng `APP_URL` trên máy tính của bạn, nếu không config chính xác chỗ này sẽ gây ra lỗi ở các link tài nguyên, đặc biệt là link image.
+-   Change the setting connect to database
+-   review and Change `APP_URL` by `APP_URL` this will effect to link and resource.
 
-Ví dụ : `http://localhost/aptech-laravel-ecommerce-demo/public`.
+Example image link: `http://localhost/aptech-laravel-ecommerce-demo/public`.
 
-Bạn vào link truy cập của mình như một ứng dụng PHP bình thường và sử dụng mật khẩu để truy cập
+**Home** (use the link: `...public/`)
 
-**Home** (Sử dụng đường dẫn `...public/`)
-
-**Admin Login Details** (Sử dụng đường dẫn `...public/login`)
+**Admin Login Details** (use the link: `...public/login`)
 
 ```shell
+the curent basic database testing with Email and Password is the same.
 Email : admin@gmail.com
 Password: admin@gmail.com
 ```
 
-**Customer Login Details** (Sử dụng đường dẫn `...public/user/login`)
+**Customer Login Details** (use the link: `...public/user/login`)
 
 ```shell
+the curent basic database testing with Email and Password is the same.
 Email : customer@mail.com
 Password: customer@mail.com
 ```
 
-**Bước 5 Đổi lại `php.validate.executablePath` trong file `.vscode/settings.json `cho phù hợp với máy**
+**Step 5: Change `php.validate.executablePath` in file `.vscode/settings.json `to suitable with your computer**
 
-Ví dụ: `"php.validate.executablePath": "D:/Soft/xampp/php/php.exe", `
+Example: `"php.validate.executablePath": "D:/Soft/xampp/php/php.exe",`
 
-**Bước 6: Cấu hình cho các extension hỗ trợ**
-Theo dõi: [Link](https://ourcodeworld.com/articles/read/349/how-to-install-and-enable-the-imagick-extension-in-xampp-for-windows)
+**Step 6: Setting support package and extension**
+Follow: [Link](https://ourcodeworld.com/articles/read/349/how-to-install-and-enable-the-imagick-extension-in-xampp-for-windows)
 
-Nếu dùng window thì tải các bản cài đặt dll và thêm config cho file `php.ini` như sau (sửa lại được dẫn xampp):
+With window then use: dll and add config for file `php.ini` as below (revise the link to xampp):
 
 ```ini
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -77,30 +77,24 @@ extension=php_imagick.dll
 upload_tmp_dir = C:\xampp\temp
 ```
 
-**Bước 7: Cấu hình cho package**
-Cài 2 gói : `unisharp/laravel-filemanager` và `intervention/image-laravel`vào composer.json. 2 gói này hỗ trợ quản lý file hình ảnh. Đọc tài liệu trực tiếp tại: [Laravel File Manager](https://unisharp.github.io/laravel-filemanager) và [Intervention Image](https://github.com/Intervention/image)
+**Step 7: install file manager package**
+Two package: `unisharp/laravel-filemanager` and `intervention/image-laravel`install in composer.json. This package will support to manage image and resource: [Laravel File Manager](https://unisharp.github.io/laravel-filemanager) và [Intervention Image](https://github.com/Intervention/image)
 
-Trong phần này bạn chỉ cần chạy lệnh:
+install command line as bellow:
 
 ```shell
 sh laravel-filemanager.sh
 ```
 
-Sau khi cài đặt xong bạn thử vào một màn hình bất kỳ có tính năng chọn hình ảnh để upload. Ví dụ: `.../public/admin/banner/creates`
-
-> Nếu muốn tìm hiểu thêm về cách sử dụng các gói này bạn có thể chủ động tạo các project demo và thao tác thử theo hướng dẫn của trang chủ.
-
-> Lưu ý nếu gặp một số lỗi sau thì đây sẽ là cách xử lý dành cho bạn
-
-> Lỗi `Failed to open stream: Permission denied` do không có quyền truy cập các file trong `storage` hoặc `public`.
+After installation is complete, try going to any screen that has the feature to select images to upload. Example: `.../public/admin/banner/creates`
 
 ```shell
-// Chạy lại các lệnh phân quyền và run lại config:
+// Rerun the authorization commands and rerun the config:
 chmod -R gu+w storage
 chmod -R guo+w storage
 php artisan cache:clear
 
-// Nếu các lệnh trên chưa phân quyền hết thì hãy dùng tiếp các lệnh sau:
+// If the above commands have not been fully authorized, please continue using the following commands:
 php artisan cache:clear
 composer dump-autoload
 sudo chmod -R 777 storage/*
@@ -108,10 +102,10 @@ sudo chmod -R 777 storage/logs/*
 sudo chmod -R 775 bootstrap/cache
 php artisan config:cache
 
-// Sau khi thực hiện có thể khởi động lại Apache
+// After doing this you can restart Apache:
 ```
 
-GHI CHÚ CHO PHẦN COMMIT:
+<!-- GHI CHÚ CHO PHẦN COMMIT:
 Cách đặt tên file commit: yyyy+MM+dd_Tênfile cần commit_Version1,2,3,4..nn
 ví dụ:
-20250518_Readme_v1
+20250518_Readme_v1 -->
