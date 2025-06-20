@@ -161,7 +161,7 @@
                                         <div class="single-shorter">
                                             <label>Show Product:</label>
                                             <select class="show" name="show" onchange="this.form.submit();">
-                                                <option value="">Default</option>
+                                                <option value="">All</option>
                                                 <option value="9" @if (!empty($_GET['show']) && $_GET['show'] == '9') selected @endif>09
                                                 </option>
                                                 <option value="15" @if (!empty($_GET['show']) && $_GET['show'] == '15') selected @endif>15
