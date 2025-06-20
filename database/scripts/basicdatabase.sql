@@ -501,33 +501,33 @@ INSERT INTO
     `post_categories` (`title`, `slug`, `status`)
 VALUES
     (
-        'Travel',
-        'travel',
+        'Health Benefits',
+        'health-benefits',
         'active'
     ),
     (
-        'Electronics',
-        'electronics',
+        'Organic Recipes',
+        'organic-recipes',
         'active'
     ),
     (
-        'Cloths',
-        'cloths',
+        'Sustainable Living',
+        'sustainable-living',
         'active'
     ),
     (
-        'Enjoy',
-        'enjoy',
+        'Farmer Stories',
+        'farmer-stories',
         'active'
     ),
     (
-        'Sports',
-        'sports',
+        'Organic Farming Tips',
+        'organic-farming-tips',
         'active'
     ),
     (
-        'Go peach',
-        'go-peach',
+        'Market & Shopping',
+        'market-shopping',
         'active'
     );
 
