@@ -132,7 +132,9 @@
                                     @foreach ($category_lists as $key => $cat)
                                         <button class="btn"
                                             style="background:color:#8F8F8F;"data-filter=".{{ $cat->id }}">
-                                            {{ $cat->title }}
+
+                                            <a href="{{ route('product-cat', $cat->slug) }}">{{ $cat->title }}</a>
+
                                         </button>
                                     @endforeach
                                 @endif
@@ -674,7 +676,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
