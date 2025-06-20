@@ -377,7 +377,7 @@
                                             Shipping Cost
                                             @if (count(Helper::shipping()) > 0 && Helper::cartCount() > 0)
                                                 <select name="shipping" class="nice-select" required>
-                                                    <option value="">Select your address</option>
+                                                    <option value="">Select Shipping</option>
                                                     @foreach (Helper::shipping() as $shipping)
                                                         <option value="{{ $shipping->id }}" class="shippingOption"
                                                             data-price="{{ $shipping->price }}">{{ $shipping->type }}:
@@ -419,7 +419,8 @@
                                         <form-group>
                                             <input name="payment_method" type="radio" value="cod" required> <label>
                                                 Cash On Delivery</label><br>
-                                            <!-- <input name="payment_method"  type="radio" value="paypal"> <label> PayPal</label><br> -->
+                                            <input name="payment_method" type="radio" value="paypal">
+                                            <label>PayPal</label><br>
                                             <input name="payment_method" type="radio" value="cardpay" required> <label>
                                                 Card Payment</label><br>
 

@@ -152,15 +152,15 @@ class OrderController extends Controller
         //     $order_data['payment_method']='cod';
         //     $order_data['payment_status']='Unpaid';
         // }
-        if (request('payment_method') == 'paypal') {
-            $order_data['payment_method'] = 'paypal';
-            $order_data['payment_status'] = 'paid';
-        } elseif (request('payment_method') == 'cardpay') {
-            $order_data['payment_method'] = 'cardpay';
-            $order_data['payment_status'] = 'paid';
+        if (request('pay_method') == 'paypal') {
+            $order_data['pay_method'] = 'paypal';
+            $order_data['pay_status'] = 'paid';
+        } elseif (request('pay_method') == 'cardpay') {
+            $order_data['pay_method'] = 'cardpay';
+            $order_data['pay_status'] = 'paid';
         } else {
-            $order_data['payment_method'] = 'cod';
-            $order_data['payment_status'] = 'Unpaid';
+            $order_data['pay_method'] = 'cod';
+            $order_data['pay_status'] = 'Unpaid';
         }
         $order->fill($order_data);
         $order->save();
