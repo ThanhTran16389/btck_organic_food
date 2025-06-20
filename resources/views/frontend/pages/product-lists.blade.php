@@ -258,9 +258,7 @@
                                                         {{-- <p>{!! html_entity_decode($product->summary) !!}</p> --}}
                                                     </div>
                                                     <p class="des pt-2">{!! html_entity_decode($product->summary) !!}</p>
-                                                    {{-- <a href="javascript:void(0)" class="btn cart" --}}
-                                                    {{-- kiểm tra lại đường dẫn ở đây --}}
-                                                    {{-- <a href="{{ route('checkout-single-product') }}" class="btn cart" --}}
+
                                                     <a href="{{ route('buy-now', $product->slug) }}" class="btn cart"
                                                         data-id="{{ $product->id }}">Buy Now!</a>
                                                 </div>
@@ -304,12 +302,12 @@
                                             @php
                                                 $photo = explode(',', $product->photo);
                                             @endphp
-                                            {{-- @foreach ($photo as $data) --}}
-                                            <div class="single-slider">
-                                                <img src="{{ asset($photo[0]) }}" alt="{{ $product->photo }}">
-                                                {{-- <img src="{{ asset($data) }}" alt="{{ asset($data) }}"> --}}
-                                            </div>
-                                            {{-- @endforeach --}}
+                                            @foreach ($photo as $data)
+                                                <div class="single-slider">
+                                                    {{-- <img src="{{ asset($photo[0]) }}" alt="{{ $product->photo }}"> --}}
+                                                    <img src="{{ asset($data) }}" alt="{{ asset($data) }}">
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <!-- End Product slider -->

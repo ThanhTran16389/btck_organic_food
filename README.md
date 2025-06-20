@@ -9,9 +9,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-### Hướng dẫn cài đặt
+### Guideline Install | Hướng dẫn cài đặt
 
-**Bước 1: Cài đặt các gói phụ thuộc và config source**
+**Step 1: install sub-package and config source**
 
 ```shell
 cài đặt các gói composer
@@ -19,7 +19,7 @@ chạy file install.sh bằng lệnh
 sh install.sh
 ```
 
-| Dùng quyền admin trên window hoặc bổ sung `sudo` trên Mac
+| Use admin in window or `sodo` in Mac
 
 **Bước 2: Tạo cơ sở dữ liệu mẫu**
 Trong file .env thiết lập kết nối dữ liệu với DB và đặt tên cơ sở dữ liệu là btck_ogranic_store

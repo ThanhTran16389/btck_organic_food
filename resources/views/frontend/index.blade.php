@@ -466,7 +466,7 @@
                                             @endphp
                                             @foreach ($photo as $data)
                                                 <div class="single-slider">
-                                                    <img src="{{ $data }}" alt="{{ $data }}">
+                                                    <img src="{{ asset($data) }}" alt="{{ asset($data) }}">
                                                 </div>
                                             @endforeach
                                         </div>
@@ -674,7 +674,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
         /*==================================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [ Isotope ]*/
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [ Isotope ]*/
         var $topeContainer = $('.isotope-grid');
         var $filter = $('.filter-tope-group');
 
