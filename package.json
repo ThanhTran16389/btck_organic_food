@@ -1,0 +1,25 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "laravel-echo": "1.19.0",
+        "pusher-js": "8.4.0"
+    },
+    "devDependencies": {
+        "axios": "1.8.2",
+        "bootstrap": "5.3.5",
+        "jquery": "3.7.1",
+        "laravel-vite-plugin": "1.2.0",
+        "sass": "1.87.0",
+        "sass-loader": "16.0.5",
+        "vite": "5.4.19"
+    },
+    "engines": {
+        "npm": ">=10.0.0",
+        "node": ">=20.16.0"
+    }
+}
