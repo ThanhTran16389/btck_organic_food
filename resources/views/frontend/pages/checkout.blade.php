@@ -419,8 +419,8 @@
                                         <form-group>
                                             <input name="payment_method" type="radio" value="cod" required> <label>
                                                 Cash On Delivery</label><br>
-                                            <input name="payment_method" type="radio" value="paypal">
-                                            <label>PayPal</label><br>
+                                            {{-- <input name="payment_method" type="radio" value="paypal">
+                                            <label>PayPal</label><br> --}}
                                             <input name="payment_method" type="radio" value="cardpay" required> <label>
                                                 Card Payment</label><br>
 
