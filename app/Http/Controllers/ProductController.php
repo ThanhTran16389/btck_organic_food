@@ -69,28 +69,16 @@ class ProductController extends Controller
         } else {
             request()->session()->flash('error', 'Please try again!!');
         }
-
         return redirect()->route('product.index');
+        // return redirect()->route('backend.product.index');
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         // $brand = Brand::get();
@@ -103,12 +91,6 @@ class ProductController extends Controller
             ->with('categories', $category)->with('items', $items); //lấy danh mục sản phẩm
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $product = Product::findOrFail($id);
@@ -145,6 +127,7 @@ class ProductController extends Controller
         }
 
         return redirect()->route('product.index');
+        // return redirect()->route ('backend.product.index');
     }
 
     /**

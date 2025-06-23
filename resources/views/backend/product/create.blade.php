@@ -160,8 +160,13 @@
 
     <script>
         $('#lfm').filemanager('image', {
-            prefix: "http://localhost/aptech-laravel-ecommerce-demo/public/laravel-filemanager"
+            prefix: "http://localhost/btck_organic_food/public/laravel-filemanager"
         });
+
+        //var route_prefix = "{{ asset('laravel-filemanager') }}";
+        // $('#lfm').filemanager('image', {
+        //     prefix: route_prefix
+        // });
 
         $(document).ready(function() {
             $('#summary').summernote({
