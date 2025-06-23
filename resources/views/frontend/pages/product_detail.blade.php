@@ -25,7 +25,7 @@
                     <div class="bread-inner">
                         <ul class="bread-list">
                             <li><a href="{{ route('home') }}">Home<i class="ti-arrow-right"></i></a></li>
-                            <li class="active"><a href="">Shop Details</a></li>
+                            <li class="active"><a href="">Product Details</a></li>
                         </ul>
                     </div>
                 </div>

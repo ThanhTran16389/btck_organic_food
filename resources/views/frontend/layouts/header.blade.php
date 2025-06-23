@@ -3,7 +3,7 @@
     <div class="topbar">
         <div class="container">
             <div class="row">
-                {{-- số điện thoại và email ở thanht trên cùng --}}
+                {{-- số điện thoại và email ở thanh trên cùng --}}
                 <div class="col-lg-6 col-md-12 col-12">
                     <!-- Top Left -->
                     <div class="top-left">
