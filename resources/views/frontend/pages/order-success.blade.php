@@ -16,7 +16,9 @@
                     {{ number_format(session('order_total'), 0, ',', '.') }}$</p>
             </div>
             <div class="modal-footer border-0 justify-content-center">
-                <button type="button" class="btn btn-success" id="closeModalBtn">BACK TO HOMEPAGE</button>
+                <button type="button" class="btn btn-success" id="closeModalBtn">
+                    <a class = "btn" href="{{ route('home') }}">BACK TO HOMEPAGE</a>
+                </button>
             </div>
         </div>
     </div>
