@@ -12,8 +12,18 @@
             <div class="modal-body">
                 <p class="mt-3 mb-2">Thank you for your purchase!</p>
                 <p class="mb-1"><strong>Order Number:</strong> {{ session('order_number') }}</p>
-                <p class="mb-3"><strong>Total Payment:</strong>
-                    {{ number_format(session('order_total'), 0, ',', '.') }}$</p>
+                <p class="mb-3"><strong>Total
+                        Payment:</strong>{{ number_format(session('order_total'), 0, ',', '.') }}$</p>
+                {{-- @if ($order)
+                    <p class="mb-1"><strong>Order Number:</strong> {{ $order->order_number }}</p>
+                    <p class="mb-3"><strong>Total
+                            Payment:</strong>{{ number_format($order->total_amount, 0, ',', '.') }}$</p>
+                @else
+                    <p class="mb-1"><strong>Order Number:</strong> {{ session('order_number') }}</p>
+                    <p class="mb-3"><strong>Total
+                            Payment:</strong>{{ number_format(session('order_total'), 0, ',', '.') }}$</p>
+                @endif --}}
+
             </div>
             <div class="modal-footer border-0 justify-content-center">
                 <button type="button" class="btn btn-success" id="closeModalBtn">

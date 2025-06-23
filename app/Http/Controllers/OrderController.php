@@ -114,7 +114,7 @@ class OrderController extends Controller
         //     }
         // }
 
-         // Chỉ lấy những field thực sự tồn tại trong bảng `orders`
+         // Chỉ lấy những field tồn tại trong bảng `orders`
     $order_data = [
         'name'         => $request->first_name . ' ' . $request->last_name,
         'email'        => $request->email,
@@ -216,7 +216,7 @@ class OrderController extends Controller
     session()->flash('order_total', $order->total_amount);
 
     return redirect()->route('checkout');
-}
+    }
 
     /**
      * Display the specified resource.
@@ -283,7 +283,8 @@ class OrderController extends Controller
 
     public function orderTrack()
     {
-        return view('frontend.pages.order-track');
+        $orders = Order::orderBy('id', 'DESC')->paginate(10);
+        return view('frontend.pages.order-track')->with('orders', $orders);
     }
 
     public function productTrackOrder(Request $request)
@@ -348,8 +349,13 @@ class OrderController extends Controller
 
         return $data;
     }
-    public function success()
-{
-    return view('frontend.pages.order-success');
-}
+    public function success(Request $request)
+    {
+        $orderNumber = session('order_number'); // Nếu truyền qua session
+        // $orders = Order::orderBy('id', 'DESC')->paginate(10); //lấy nhiều đơn
+        // $order=Order::latest()->first(); //lấy 1 đơn mới nhất
+        $order = Order::where('user_id', auth()->user()->id)->where('order_number', $orderNumber)->first();
+        return view('frontend.pages.order-success')->with('order', $order);
+        // return view('frontend.pages.order-success');
+    }
 }
