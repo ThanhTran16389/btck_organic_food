@@ -14,10 +14,10 @@ fi
 # Cài đặt các dependency
 composer i
 
-# Xóa file composer.lock nếu có
-# if [ -f composer.lock ]; then
-#     rm package-lock.json
-# fi
+Xóa file composer.lock nếu có
+if [ -f composer.lock ]; then
+    rm package-lock.json
+fi
 
 chmod -R 777 public/build
 
