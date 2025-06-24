@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="s1IrDkDti_rVe1TKRmWz" name="Page-1">
-        <mxGraphModel dx="784" dy="361" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="1307" dy="602" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -418,6 +418,54 @@
                 </mxCell>
                 <mxCell id="783" value="1..1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;shadow=0;" parent="1" vertex="1">
                     <mxGeometry x="1191" y="645" width="21" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="784" value="cache" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="757" y="1057" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="785" value="key&lt;div&gt;value&lt;/div&gt;&lt;div&gt;expiration&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="784" vertex="1">
+                    <mxGeometry y="30" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="786" value="cache_locks" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="941.5" y="1057" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="787" value="key&lt;div&gt;owner&lt;/div&gt;&lt;div&gt;expiration&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="786" vertex="1">
+                    <mxGeometry y="30" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="788" value="failed_jobs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="33.360000000000014" y="664" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="789" value="id&lt;div&gt;connection&lt;/div&gt;&lt;div&gt;queue&lt;/div&gt;&lt;div&gt;payload&lt;/div&gt;&lt;div&gt;exception&lt;/div&gt;&lt;div&gt;failed_at&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="788" vertex="1">
+                    <mxGeometry y="30" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="790" value="failed_jobs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="33.360000000000014" y="806" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="791" value="id&lt;div&gt;connection&lt;/div&gt;&lt;div&gt;queue&lt;/div&gt;&lt;div&gt;payload&lt;/div&gt;&lt;div&gt;exception&lt;/div&gt;&lt;div&gt;failed_at&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="790" vertex="1">
+                    <mxGeometry y="30" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="792" value="jobs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="33.360000000000014" y="505" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="793" value="id&lt;div&gt;queue&lt;/div&gt;&lt;div&gt;payload&lt;/div&gt;&lt;div&gt;attempts&lt;/div&gt;&lt;div&gt;reserved_at&lt;/div&gt;&lt;div&gt;available_at&lt;/div&gt;&lt;div&gt;created_at&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="792" vertex="1">
+                    <mxGeometry y="30" width="140" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="794" value="job_batches" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="33.360000000000014" y="310" width="140" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="795" value="id&lt;div&gt;name&lt;/div&gt;&lt;div&gt;total_jobs&lt;/div&gt;&lt;div&gt;pending_jobs&lt;/div&gt;&lt;div&gt;failed_jobs&lt;/div&gt;&lt;div&gt;failed_job_ids&lt;/div&gt;&lt;div&gt;options&lt;/div&gt;&lt;div&gt;cancelled_at&lt;/div&gt;&lt;div&gt;create_at&lt;/div&gt;&lt;div&gt;finished_at&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="794" vertex="1">
+                    <mxGeometry y="30" width="140" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="796" value="Migrations" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="33.360000000000014" y="42" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="797" value="id&lt;div&gt;migration&lt;/div&gt;&lt;div&gt;batch&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="796" vertex="1">
+                    <mxGeometry y="30" width="140" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="798" value="sessions" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="33.36" y="162" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="799" value="id&lt;div&gt;user_id&lt;/div&gt;&lt;div&gt;ip_address&lt;/div&gt;&lt;div&gt;user_agent&lt;/div&gt;&lt;div&gt;payload&lt;/div&gt;&lt;div&gt;last_activity&lt;/div&gt;" style="text;strokeColor=none;fillColor=default;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" parent="798" vertex="1">
+                    <mxGeometry y="30" width="140" height="100" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
