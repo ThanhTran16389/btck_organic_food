@@ -3,7 +3,7 @@
 # Kiểm tra xem file .env đã tồn tại chưa
 if [ ! -f .env ]; then
     # Nếu chưa tồn tại, copy .env.example
-    cp .env.example .env
+    cp .env.BK2 .env
 fi
 
 # Xóa file composer.lock nếu có
@@ -16,11 +16,6 @@ composer i
 
 #Xóa file package-lock.json nếu có
 if [ -f package-lock.json ]; then
-    rm package-lock.json
-fi
-
-# Xóa file composer.lock nếu có
-if [ -f composer.lock ]; then
     rm package-lock.json
 fi
 

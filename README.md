@@ -40,7 +40,7 @@ Incase database can't run, the program return with title `mysql command not foun
 
 Example image link: `http://localhost/btck_organic_food/public`.
 
-**Home** (use the link: `...public/`)
+**Step4: Home** (use the link: `...public/`)
 
 **Admin Login Details** (use the link: `...public/login`)
 
