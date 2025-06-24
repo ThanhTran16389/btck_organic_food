@@ -117,6 +117,10 @@ php artisan config:cache
 sh fix-storage-link.sh
 ```
 
+**Step 10: Incase the picture is not load**
+copy all file in folder public from folder: ...\btck_organic_food\storage\app\public
+pase to folder storage follow link: ...\btck_organic\public\storage
+
 <!-- GHI CHÚ CHO PHẦN COMMIT:
 Cách đặt tên file commit: yyyy+MM+dd_Tênfile cần commit_Version1,2,3,4..nn
 ví dụ:

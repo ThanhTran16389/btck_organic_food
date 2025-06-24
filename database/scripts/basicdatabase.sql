@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.28-MariaDB, for osx10.10 (x86_64)
 --
--- Host: localhost    Database: ecommerceadvlara
+-- Host: localhost    Database: btck_organic_food
 -- ------------------------------------------------------
 -- Server version	10.4.28-MariaDB
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */
