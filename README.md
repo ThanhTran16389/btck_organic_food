@@ -12,10 +12,9 @@
 ### Guideline Install | Hướng dẫn cài đặt
 
 **Step 1: install sub-package and config source**
+install composer package, install all files in install.sh by command line
 
 ```shell
-install composer package
-install all files: install.sh by command line
 sh install.sh
 ```
 
