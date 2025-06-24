@@ -65,7 +65,7 @@ Password: customer1@mail.com
 
 **Step 5: Change `php.validate.executablePath` in file `.vscode/settings.json `to suitable with your computer**
 
-Example: `"php.validate.executablePath": "D:/Soft/xampp/php/php.exe",`
+Example: `"php.validate.executablePath": "C:/xampp/php/php.exe",`
 
 **Step 6: Setting support package and extension**
 Follow: [Link](https://ourcodeworld.com/articles/read/349/how-to-install-and-enable-the-imagick-extension-in-xampp-for-windows)
@@ -79,7 +79,7 @@ With window then use: dll and add config for file `php.ini` as below (revise the
 ; Add the following line where the other extensions are loaded
 imagick.skip_version_check=true
 extension=php_imagick.dll
-upload_tmp_dir = C:\xampp\temp
+upload_tmp_dir = C:\xampp\php\ext
 ```
 
 **Step 7: install file manager package**
@@ -91,6 +91,7 @@ install command line as bellow:
 sh laravel-filemanager.sh
 ```
 
+**Step 8: Run commands line as bellow**
 After installation is complete, try going to any screen that has the feature to select images to upload. Example: `.../public/admin/banner/creates`
 
 ```shell
@@ -110,7 +111,7 @@ php artisan config:cache
 // After doing this you can restart Apache:
 ```
 
-**Step 8: install fix-storage-link.sh**
+**Step 9: install fix-storage-link.sh**
 
 ```shell
 sh fix-storage-link.sh
