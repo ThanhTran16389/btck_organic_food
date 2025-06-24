@@ -38,7 +38,7 @@ Incase database can't run, the program return with title `mysql command not foun
 -   Change the setting connect to database
 -   review and Change `APP_URL` by `APP_URL` this will effect to link and resource.
 
-Example image link: `http://localhost/aptech-laravel-ecommerce-demo/public`.
+Example image link: `http://localhost/btck_organic_food/public`.
 
 **Home** (use the link: `...public/`)
 
@@ -48,6 +48,9 @@ Example image link: `http://localhost/aptech-laravel-ecommerce-demo/public`.
 the curent basic database testing with Email and Password is the same.
 Email : admin@gmail.com
 Password: admin@gmail.com
+or acount2:
+Email : admin1@gmail.com
+Password: admin2@gmail.com
 ```
 
 **Customer Login Details** (use the link: `...public/user/login`)
@@ -56,6 +59,9 @@ Password: admin@gmail.com
 the curent basic database testing with Email and Password is the same.
 Email : customer@mail.com
 Password: customer@mail.com
+or acount2:
+Email : customer1@mail.com
+Password: customer1@mail.com
 ```
 
 **Step 5: Change `php.validate.executablePath` in file `.vscode/settings.json `to suitable with your computer**
@@ -103,6 +109,12 @@ sudo chmod -R 775 bootstrap/cache
 php artisan config:cache
 
 // After doing this you can restart Apache:
+```
+
+**Step 8: install fix-storage-link.sh**
+
+```shell
+sh fix-storage-link.sh
 ```
 
 <!-- GHI CHÚ CHO PHẦN COMMIT:
